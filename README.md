@@ -55,6 +55,8 @@ The monorepo is organized as follows:
 ├── apps
 │   │── fastify-app
 │   └── next-app       ✅ Nextjs 14+ / hono api / kysely.
+├── docker
+│   └── sql-edge       ✅ compose.yaml
 └── packages
     └── db-sqlserver   ✅ Manages database creation, types and seeds
 ```
