@@ -55,6 +55,20 @@
     "packages/*"
   ],
   "packageManager": "yarn@4.5.0",
+  "dependenciesMetaHelp": {
+    "tree-sitter/*": "Swagger-ui react depends on node-gyp tree-sitter and this is not wanted at all for client side render."
+  },
+  "dependenciesMeta": {
+    "tree-sitter": {
+      "built": false
+    },
+    "tree-sitter-json": {
+      "built": false
+    },
+    "tree-sitter-yaml": {
+      "built": false
+    }
+  },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "6.0.0-canary.19",
     "@changesets/changelog-github": "0.5.0",
@@ -77,17 +91,6 @@
     "shell-quote": "1.8.1",
     "syncpack": "13.0.0",
     "typescript": "5.6.3"
-  },
-  "dependenciesMeta": {
-    "tree-sitter": {
-      "built": false
-    },
-    "tree-sitter-json": {
-      "built": false
-    },
-    "tree-sitter-yaml": {
-      "built": false
-    }
   },
   "resolutions": {
     "eslint-plugin-react-hooks": "5.0.0",
