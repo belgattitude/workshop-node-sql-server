@@ -78,11 +78,7 @@ Check out the [Nextjs app](apps/nextjs-app/README.md) for more details.
 
 Check out the [@workshop/db-sqlserver](packages/db-sqlserver/README.md) for more details.
 
-## Sponsors
-
-If my OSS work brightens your day, let's take it to new heights together!
-[Sponsor](<[sponsorship](https://github.com/sponsors/belgattitude)>), [coffee](<(https://ko-fi.com/belgattitude)>),
-or star – any gesture of support fuels my passion to improve. Thanks for being awesome! 🙏❤️
+![schema.png](packages/db-sqlserver/docs/images/schema.png)
 
 ## License
 
