@@ -17465,12 +17465,6 @@ __metadata:
     syncpack: "npm:13.0.0"
     typescript: "npm:5.6.3"
   dependenciesMeta:
-    cpu-features:
-      built: false
-    nan:
-      built: false
-    ssh2:
-      built: false
     tree-sitter:
       built: false
     tree-sitter-json:
