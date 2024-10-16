@@ -33,7 +33,7 @@
     "codegen-api": "tsx ./scripts/generate-openapi-local.ts"
   },
   "dependencies": {
-    "@flowblade/source-kysely": "0.0.2",
+    "@flowblade/source-kysely": "0.1.0",
     "@hono/node-server": "1.13.2",
     "@httpx/assert": "0.15.1",
     "@httpx/dsn-parser": "1.8.5",

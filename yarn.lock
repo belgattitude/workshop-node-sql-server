@@ -2657,9 +2657,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flowblade/source-kysely@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@flowblade/source-kysely@npm:0.0.2"
+"@flowblade/source-kysely@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@flowblade/source-kysely@npm:0.1.0"
   dependencies:
     "@httpx/assert": "npm:^0.15.1"
     "@httpx/dsn-parser": "npm:^1.8.5"
@@ -2675,7 +2675,7 @@ __metadata:
       optional: true
     tedious:
       optional: true
-  checksum: 10c0/0ed5bb22729180c668c666d7aa7d07fbfe496ecbfc554c126d5f00f73bd9b2e0cbbe11771596a90b5d75fd78a51aa4e50c79551a11c4127f1d038241387d687f
+  checksum: 10c0/c7bef4974b348831a7a3612d83a247f075cb2da71b8f326843120124cd788abab1fbe3199c879d38c5ba5ac73b8af35e027277057232d4201ae5b2c713d9a30c
   languageName: node
   linkType: hard
 
@@ -6060,7 +6060,7 @@ __metadata:
     dotenv-flow: "npm:4.1.0"
     dotenv-flow-cli: "npm:1.1.1"
     eslint: "npm:8.57.1"
-    execa: "npm:9.4.0"
+    execa: "npm:9.4.1"
     kysely: "npm:0.27.4"
     npm-run-all2: "npm:6.2.3"
     prettier: "npm:3.3.3"
@@ -8068,9 +8068,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.28":
-  version: 1.5.39
-  resolution: "electron-to-chromium@npm:1.5.39"
-  checksum: 10c0/36364f9c68a7d20c54b020fe81cabf3e6022b7feb91f63695dd1039612cac031cc98bbcc0c3ba957f1876dde89853ba48407c590a4227fd13616a028ac1a0944
+  version: 1.5.40
+  resolution: "electron-to-chromium@npm:1.5.40"
+  checksum: 10c0/3f97360627cf179b344a7d45b3d12fd3f18f1287529d9835a8e802c7a3b99f09e326b4ed3097be1b135e45a33e8497e758b0c101e38e5bb405eaa6aa887eca82
   languageName: node
   linkType: hard
 
@@ -9078,9 +9078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:9.4.0":
-  version: 9.4.0
-  resolution: "execa@npm:9.4.0"
+"execa@npm:9.4.1":
+  version: 9.4.1
+  resolution: "execa@npm:9.4.1"
   dependencies:
     "@sindresorhus/merge-streams": "npm:^4.0.0"
     cross-spawn: "npm:^7.0.3"
@@ -9094,7 +9094,7 @@ __metadata:
     signal-exit: "npm:^4.1.0"
     strip-final-newline: "npm:^4.0.0"
     yoctocolors: "npm:^2.0.0"
-  checksum: 10c0/6ad06c627b5d7bb007bc7b6cc35d7e32b5a3365375ffc8ddbcc12d2423651fa9928ba0c447cc9e60079e505e9b24fbe0a57f80371511d7d20302c04c2d3ce95e
+  checksum: 10c0/2166de02c8c940312481e480ef47f54636725b24a402d25bdbaeca97f6eeb82b21def1279e00378872fbe6a0c675d6b5cd144be4d52c1485a7a3895e611ac03e
   languageName: node
   linkType: hard
 
@@ -9289,7 +9289,7 @@ __metadata:
     "@fastify/swagger": "npm:9.2.0"
     "@fastify/swagger-ui": "npm:5.1.0"
     "@fastify/type-provider-typebox": "npm:5.0.0"
-    "@flowblade/source-kysely": "npm:0.0.2"
+    "@flowblade/source-kysely": "npm:0.1.0"
     "@httpx/assert": "npm:0.15.1"
     "@httpx/dsn-parser": "npm:1.8.5"
     "@httpx/exception": "npm:3.0.11"
@@ -12581,7 +12581,7 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.0.0-canary.19"
     "@faker-js/faker": "npm:9.0.3"
-    "@flowblade/source-kysely": "npm:0.0.2"
+    "@flowblade/source-kysely": "npm:0.1.0"
     "@hono/node-server": "npm:1.13.2"
     "@httpx/assert": "npm:0.15.1"
     "@httpx/dsn-parser": "npm:1.8.5"
