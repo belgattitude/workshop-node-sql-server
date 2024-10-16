@@ -35,27 +35,27 @@ jobs:
 
       - name: 🕵️ Typecheck
         if: matrix.node-version == '20.x'
-        run: yarn nx run-many --target=typecheck --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=typecheck --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 🔬 ESLint checks
         if: matrix.node-version == '20.x'
-        run: yarn nx run-many --target=lint --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=lint --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 🧪 Unit tests (no-coverage - node !== 20.x)
         if: matrix.node-version != '20.x'
-        run: yarn nx run-many --target=test-unit --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=test-unit --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 🏗 Build packages
-        run: yarn nx run-many --target=build --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=build --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 📐 Check build for size-limits
         if: matrix.node-version == '20.x'
-        run: yarn nx run-many --target=check-size --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=check-size --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 🛟 Check build for ecmascript compliance
         if: matrix.node-version == '20.x'
-        run: yarn nx run-many --target=check-dist --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=check-dist --exclude='examples/**' --exclude='apps/**' --exclude='docs'
 
       - name: 🛟 Check publishable dist (arethetypeswrong)
         if: matrix.node-version == '20.x'
-        run: yarn nx run-many --target=check-pub --exclude='examples/**' --exclude='docs'
+        run: yarn nx run-many --target=check-pub --exclude='examples/**' --exclude='apps/**' --exclude='docs'
