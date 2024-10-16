@@ -10,7 +10,7 @@ it basically allows workshop participants to try out different scenarios with sq
 > <summary>Requirements: node 18+, corepack, yarn, docker. For Windows users WSL2 unbuntu recommended.</summary>
 >
 > ```bash
-> nvm install v20  // if you don't have nodejs installed
+> nvm install v20  # if you don't have nodejs installed
 > corepack enable
 > npm i -g yarn 
 > ```
