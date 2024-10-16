@@ -1,0 +1,38 @@
+import {
+  createKyselyMssqlDialect,
+  TediousConnUtils,
+} from '@flowblade/source-kysely';
+import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
+import { Kysely } from 'kysely';
+
+import { serverEnv } from '../../env/server.env.mjs';
+
+const config = TediousConnUtils.fromJdbcDsn(
+  serverEnv.DB_FLOWBLADE_SQLSERVER_JDBC ?? ''
+);
+const dialect = createKyselyMssqlDialect(config);
+
+const maskPII = (param: unknown) => {
+  // @todo filter out personal identifiable information
+  return param;
+};
+
+export const dbKyselySqlServer = new Kysely<DBKyselySqlServer>({
+  dialect: dialect,
+  log: (event) => {
+    if (event.level === 'error') {
+      console.error('Query failed :', {
+        durationMs: event.queryDurationMillis,
+        error: event.error,
+        sql: event.query.sql,
+        params: event.query.parameters.map((param) => maskPII(param)),
+      });
+    } else {
+      console.log('Query executed :', {
+        durationMs: event.queryDurationMillis,
+        sql: event.query.sql,
+        params: event.query.parameters.map((param) => maskPII(param)),
+      });
+    }
+  },
+});
