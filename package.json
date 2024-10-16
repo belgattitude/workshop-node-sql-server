@@ -94,7 +94,9 @@
   "resolutions": {
     "eslint-plugin-react-hooks": "5.0.0",
     "esbuild": "0.24.0",
-    "@opentelemetry/instrumentation": "0.53.0"
+    "@opentelemetry/instrumentation": "0.53.0",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   },
   "resolutions-help": {
     "@opentelemetry/instrumentation": "Till prisma is updated"
