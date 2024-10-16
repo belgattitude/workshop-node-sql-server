@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/fastify-app",
+  "name": "fastify-app",
   "version": "0.1.87",
   "type": "module",
   "private": true,
