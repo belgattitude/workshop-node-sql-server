@@ -6181,6 +6181,7 @@ __metadata:
     dotenv-expand: "npm:11.0.6"
     dotenv-flow: "npm:4.1.0"
     dotenv-flow-cli: "npm:1.1.1"
+    es-toolkit: "npm:1.25.2"
     eslint: "npm:8.57.1"
     eslint-config-next: "npm:14.2.15"
     happy-dom: "npm:15.7.4"
@@ -6205,6 +6206,7 @@ __metadata:
     swagger-ui-react: "npm:5.17.14"
     tailwind-merge: "npm:2.5.4"
     tailwindcss: "npm:3.4.14"
+    tarn: "npm:3.0.2"
     tedious: "npm:19.0.0"
     tinyrainbow: "npm:1.2.0"
     tsx: "npm:4.19.1"
@@ -8471,6 +8473,18 @@ __metadata:
     is-date-object: "npm:^1.0.1"
     is-symbol: "npm:^1.0.2"
   checksum: 10/74aeeefe2714cf99bb40cab7ce3012d74e1e2c1bd60d0a913b467b269edde6e176ca644b5ba03a5b865fb044a29bca05671cd445c85ca2cdc2de155d7fc8fe9b
+  languageName: node
+  linkType: hard
+
+"es-toolkit@npm:1.25.2":
+  version: 1.25.2
+  resolution: "es-toolkit@npm:1.25.2"
+  dependenciesMeta:
+    "@trivago/prettier-plugin-sort-imports@4.3.0":
+      unplugged: true
+    prettier-plugin-sort-re-exports@0.0.1:
+      unplugged: true
+  checksum: 10/4bc6984728d8289cd47f1ae87a6ff2a3b54ca9cfbb1cf880e2d3137921aed620d9d6e574daf8430297c61c59e2374356dfd219b84b6f38909d57853bc0c066e7
   languageName: node
   linkType: hard
 
@@ -16171,6 +16185,13 @@ __metadata:
     mkdirp: "npm:^1.0.3"
     yallist: "npm:^4.0.0"
   checksum: 10/bfbfbb2861888077fc1130b84029cdc2721efb93d1d1fb80f22a7ac3a98ec6f8972f29e564103bbebf5e97be67ebc356d37fa48dbc4960600a1eb7230fbd1ea0
+  languageName: node
+  linkType: hard
+
+"tarn@npm:3.0.2":
+  version: 3.0.2
+  resolution: "tarn@npm:3.0.2"
+  checksum: 10/7476ca83a39e0e4b1d951725b6c42071f16fdd65c456936c305500af00731861de0a20e41e59b54cf410b979722816db43acd137a5a580c3c8e48a73f389b523
   languageName: node
   linkType: hard
 
