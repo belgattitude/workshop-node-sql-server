@@ -1,0 +1,92 @@
+{
+  "name": "workshop-node-sql-server",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Vanvelthem Sébastien",
+    "url": "https://github.com/belgattitude"
+  },
+  "homepage": "https://github.com/belgattitude/workshop-node-sql-server",
+  "repository": "belgattitude/workshop-node-sql-server",
+  "scripts": {
+    "g:clean": "yarn clean:global-cache && yarn clean:nx && yarn workspaces foreach --all -pv run clean",
+    "g:bench": "nx run-many --output-style=static --parallel=1 --target=bench --exclude='examples/**' --exclude='docs'",
+    "g:bench-codspeed": "nx run-many --output-style=static --parallel=1 --target=bench-codspeed --exclude='examples/**' --exclude='docs'",
+    "g:build": "nx run-many --output-style=static --target=build --exclude='examples/**' --exclude='docs'",
+    "g:build-release": "yarn workspaces foreach -tv --worktree --from 'packages/*' run build-release",
+    "g:build-packages": "yarn workspaces foreach -tv --worktree --from 'packages/*' run build",
+    "g:build-examples": "nx affected --output-style=static --target=build --include=examples/**",
+    "g:docgen": "nx affected --output-style=static --target=docgen --exclude='examples/**'",
+    "g:test": "yarn workspaces foreach --all -pv run test",
+    "g:test-unit": "nx run-many --output-style=static --target=test-unit --exclude='examples/**' --exclude='docs'",
+    "g:test-unit-coverage": "nx run-many --output-style=static --target=test-unit-coverage --exclude='examples/**' --exclude='docs'",
+    "g:test-unit-edge": "nx run-many --output-style=static --target=test-unit-edge --exclude='examples/**' --exclude='docs'",
+    "g:lint": "nx run-many --output-style=static --target=lint",
+    "g:typecheck": "nx run-many --output-style=static --target=typecheck",
+    "g:lint-staged-files": "lint-staged --allow-empty",
+    "g:fix-all-files": "yarn workspaces foreach --all -ptv run fix-all-files",
+    "g:changeset": "changeset",
+    "g:codegen": "nx run-many --output-style=static --target=codegen --exclude='docs'",
+    "g:check-dist": "nx run-many --output-style=static --target=check-dist --exclude='examples/**' --exclude='docs'",
+    "g:check-size": "nx run-many --output-style=static --target=check-size --exclude='examples/**' --exclude='docs'",
+    "g:check-pub": "nx run-many --output-style=static --target=check-pub --exclude='examples/**' --exclude='docs'",
+    "g:release": "yarn g:build-release && yarn exec changeset publish",
+    "g:ci-coverage-upload": "yarn workspaces foreach --all -tv run ci-coverage-upload",
+    "clean:lint": "rimraf ./.cache/eslint",
+    "clean:global-cache": "rimraf ./.cache",
+    "clean:nx": "nx reset",
+    "website:build": "yarn workspace flowblade-docs run build",
+    "website:deploy": "gh-pages -d ./docs/out -t true",
+    "deps:check": "npx npm-check-updates@latest --configFileName .ncurc.yml --deep",
+    "deps:update": "npx npm-check-updates@latest --configFileName .ncurc.yml -u --deep",
+    "check:install": "yarn dlx @yarnpkg/doctor .",
+    "postinstall": "is-ci || husky",
+    "syncpack:format": "syncpack format",
+    "syncpack:check": "syncpack lint-semver-ranges --types prod,dev --source \"package.json\" --source \"packages/*/package.json\"",
+    "syncpack:list": "syncpack list-semver-ranges --types prod,dev --source \"package.json\" --source \"packages/*/package.json\"",
+    "nuke:node_modules": "rimraf --glob '**/node_modules'",
+    "prettier:format": "prettier --config .prettierrc.js --cache --cache-location=\".cache/prettier/monorepo.prettiercache\" --ignore-path .prettierignore \"**/*.{js,cjs,mjs,ts,mts,md,mdx,json}\" --write",
+    "prepare": "husky"
+  },
+  "workspaces": [
+    "benchmark",
+    "docs",
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.5.0",
+  "devDependencies": {
+    "@belgattitude/eslint-config-bases": "6.0.0-canary.19",
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.9",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
+    "@commitlint/types": "19.5.0",
+    "@types/shell-quote": "1.7.5",
+    "cross-env": "7.0.3",
+    "eslint": "8.57.1",
+    "gh-pages": "6.2.0",
+    "husky": "9.1.6",
+    "is-ci": "3.0.1",
+    "lint-staged": "15.2.10",
+    "npm-run-all2": "6.2.3",
+    "nx": "20.0.1",
+    "prettier": "3.3.3",
+    "rimraf": "6.0.1",
+    "rollup": "4.24.0",
+    "shell-quote": "1.8.1",
+    "syncpack": "13.0.0",
+    "typescript": "5.6.3"
+  },
+  "resolutions": {
+    "eslint-plugin-react-hooks": "5.0.0",
+    "esbuild": "0.24.0",
+    "@opentelemetry/instrumentation": "0.53.0"
+  },
+  "resolutions-help": {
+    "@opentelemetry/instrumentation": "Till prisma is updated"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

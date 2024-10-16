@@ -1,0 +1,22 @@
+{
+  "name": "@workshop/benchmark",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "bench-api-health": "autocannon -c 100 -d 10 -p 10 http://localhost:3000/api/health",
+    "bench-api-product": "autocannon -c 100 -d 10 -p 10 http://localhost:3000/api/product-ex01"
+  },
+  "devDependencies": {
+    "@belgattitude/eslint-config-bases": "6.0.0-canary.19",
+    "@total-typescript/ts-reset": "0.6.1",
+    "@types/node": "22.7.5",
+    "@typescript-eslint/eslint-plugin": "8.9.0",
+    "@typescript-eslint/parser": "8.9.0",
+    "autocannon": "8.0.0",
+    "eslint": "8.57.1",
+    "prettier": "3.3.3",
+    "tsx": "4.19.1",
+    "typescript": "5.6.3"
+  }
+}
