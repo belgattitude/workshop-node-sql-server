@@ -44,6 +44,9 @@ yarn workspace @workshop/db-sqlserver run prisma-studio
 
 ![prisma-studio.png](docs/images/prisma-studio.png)
 
+**tip** Or use a database ui tool like [Jetbrains datagrip](https://www.jetbrains.com/datagrip/),
+[dbbeaver](https://dbeaver.io/) (free) or [azure data studio](https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall) (free).
+
 ## Documentation
 
 ### Repo structure
@@ -70,7 +73,7 @@ cd apps/nextjs-app
 yarn dev
 ```
 
-Check out the [Nextjs app](apps/nextjs-app/README.md) for more details.
+Check out the [Next.js app](apps/nextjs-app/README.md) for more details.
 
 ### @workshop/db-sqlserver
 
@@ -82,4 +85,4 @@ Check out the [@workshop/db-sqlserver](packages/db-sqlserver/README.md) for more
 
 ## License
 
-MIT © [belgattitude](https://github.com/belgattitude).
+MIT © [Sébastien Vanvelthem](https://github.com/belgattitude).
