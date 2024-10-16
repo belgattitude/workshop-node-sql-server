@@ -44,9 +44,10 @@ yarn workspace @workshop/db-sqlserver run prisma-studio
 
 ![prisma-studio.png](docs/images/prisma-studio.png)
 
-**tip** Or use a database ui tool like [Jetbrains datagrip](https://www.jetbrains.com/datagrip/),
+**tip** Install a database ui tool like [Jetbrains datagrip](https://www.jetbrains.com/datagrip/),
 [Jetbrains westorm database plugin](https://plugins.jetbrains.com/plugin/10925-database-tools-and-sql-for-webstorm),
-[dbbeaver](https://dbeaver.io/) (free) or [azure data studio](https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall) (free).
+[dbbeaver](https://dbeaver.io/) (free), [vscode extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+or [azure data studio](https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall) (free).
 
 ## Documentation
 
