@@ -11,8 +11,6 @@ By default the docker database runs on
 
 ### Jetbrains
 
-
-
 ![jetbrains-datasource.png](images/jetbrains-datasource.png)
 
 ![jetbrains-datasource-config.png](images/jetbrains-datasource-config.png)
