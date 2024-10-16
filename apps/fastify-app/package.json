@@ -42,7 +42,7 @@
     "@httpx/plain-object": "2.0.2",
     "@httpx/treeu": "0.4.6",
     "@sinclair/typebox": "0.33.16",
-    "@workshop/db-sqlserver": "workspace:^",
+    "@workshop/db-sqlserver": "workspace:*",
     "close-with-grace": "2.1.0",
     "fastify": "5.0.0",
     "fastify-cli": "7.0.1",
