@@ -6197,7 +6197,6 @@ __metadata:
     prettier: "npm:3.3.3"
     primeicons: "npm:7.0.0"
     primereact: "npm:10.8.4"
-    prisma: "npm:5.21.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-error-boundary: "npm:4.1.0"
