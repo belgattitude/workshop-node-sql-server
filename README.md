@@ -7,11 +7,10 @@ it basically allows workshop participants to try out different scenarios with sq
 ## Getting started
 
 > <details>
-> <summary>Requirements: node 18+, corepack, yarn, docker. For Windows users WSL2 unbuntu recommended.</summary>
+> <summary>Requirements: node 18+, yarn, docker. For Windows users WSL2 unbuntu recommended.</summary>
 >
 > ```bash
 > nvm install v20  # if you don't have nodejs installed
-> corepack enable
 > npm i -g yarn 
 > ```
 > </details> 
@@ -28,6 +27,8 @@ In a new terminal:
 
 ```bash
 docker compose -f ./docker/sql-edge/compose.yml up
+# Alternatively if you want to run in detached mode
+docker compose -f ./docker/sql-edge/compose.yml up -d --wait
 ```
 
 ### Create the database

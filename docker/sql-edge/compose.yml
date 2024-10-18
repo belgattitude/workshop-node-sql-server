@@ -13,6 +13,13 @@ services:
       - flowblade-dev-network
     volumes:
       - flowblade-azure-sql-edge:/var/opt/mssql:rw
+    restart: no
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $$MSSQL_SA_PASSWORD -Q "SELECT 1" -b -o /dev/null
+      interval: 1s
+      timeout: 30s
+      retries: 30
+      start_period: 5s
 
 volumes:
   flowblade-azure-sql-edge:
