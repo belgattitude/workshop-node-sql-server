@@ -49,7 +49,7 @@ export class ProductSeeds extends AbstractSeed {
           FROM OPENJSON(@jsonSeeds)
                         WITH (reference NVARCHAR(255), name NVARCHAR(255), barcode_ean13 CHAR(13), brandName NVARCHAR(255))
                  AS seed
-                 LEFT OUTER JOIN [common].[brand] AS b ON brandName = b.name
+                 LEFT OUTER JOIN [common].[brand] AS b ON brandName = b.name          
         ) AS data (reference, name, barcode_ean13, brand_id)
         ON p.reference = data.reference
         WHEN MATCHED
