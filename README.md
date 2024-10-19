@@ -37,6 +37,10 @@ docker compose -f ./docker/sql-edge/compose.yml up -d --wait
 yarn workspace @workshop/db-sqlserver run db-recreate
 yarn workspace @workshop/db-sqlserver run prisma-db-seed  
 ```
+
+> Tip: login: `sa`, password: `FlowbladeSADev123`
+
+
 ### Open the database studio
 
 ```bash

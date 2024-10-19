@@ -27,7 +27,7 @@
     "directory": "packages/db-sqlserver"
   },
   "scripts": {
-    "clean": "rimraf ./.next ./coverage ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./src/generated/client ./coverage ./tsconfig.tsbuildinfo",
     "test": "vitest run",
     "test-unit": "vitest run",
     "test-unit-watch": "vitest --ui",
