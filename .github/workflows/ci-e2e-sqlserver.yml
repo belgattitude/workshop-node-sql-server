@@ -1,5 +1,4 @@
-name: CI-app
-
+name: CI-e2e-sqlserver
 on:
   push:
     branches:
@@ -13,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  test-apps:
+  test-e2e-sqlserver:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,14 +32,13 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
 
-      - name: 🕵️ Typecheck
-        run: yarn nx run-many --target=typecheck --exclude='packages/**' --exclude='docs'
+      - name: 🧪 Start Azure SQL Edge
+        run: docker compose -f docker/sql-edge/compose.yml up -d --wait
 
-      - name: 🔬 ESLint checks
-        run: yarn nx run-many --target=lint --exclude='packages/**' --exclude='docs'
+      #- name: 🧪 Create database
+      #  working-directory: "packages/db-sqlserver"
+      #  run: yarn db-recreate
 
-      - name: 🧪 Unit tests
-        run: yarn nx run-many --target=test-unit --exclude='packages/**' --exclude='docs'
-
-      - name: 🏗 Build packages
-        run: yarn nx run-many --target=build --exclude='packages/**' --exclude='docs'
+      #- name: 🧪 Populate seed data
+      #  working-directory: "packages/db-sqlserver"
+      #  run: yarn prisma-db-seed

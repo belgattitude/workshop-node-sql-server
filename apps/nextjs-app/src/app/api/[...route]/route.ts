@@ -1,10 +1,13 @@
 import { faker } from '@faker-js/faker';
+import { swaggerUI } from '@hono/swagger-ui';
 import { Hono } from 'hono';
 import { handle } from 'hono/vercel';
 import { createOpenApiDocument, openApi } from 'hono-zod-openapi';
 import { sql } from 'kysely';
 import { z } from 'zod';
 
+import { productRouter } from '@/features/products/server/product.router';
+import { workshopRouter } from '@/features/workshop/workshop.router';
 import { dbKyselySqlServer as db } from '@/server/config/db.kysely-sqlserver.config';
 
 export const dynamic = 'force-dynamic';
@@ -20,38 +23,8 @@ const zProduct = z.object({
   name: z.string(),
 } satisfies Record<string, unknown>);
 
-app.get(
-  '/products/ex1',
-  openApi({
-    request: {
-      query: z.object({
-        limit: z.coerce.number().min(1).max(100_000).optional().default(100),
-      }),
-    },
-    responses: {
-      200: z.array(zProduct),
-    },
-  }),
-  async (c) => {
-    const { limit } = c.req.valid('query');
-    const { rows } = await sql`
-        SELECT TOP ${sql.lit(limit)} 
-            p.id,
-            p.reference,
-            p.name,
-            p.barcode_ean13,
-            p.brand_id,
-            p.created_at,
-            p.updated_at
-        FROM [common].[product] as p 
-    `.execute(db);
-    return c.json(rows);
-  }
-);
-
-/**
- * Sample 2 products
- */
+app.route('/products', productRouter);
+app.route('/workshop', workshopRouter);
 
 app.get(
   '/products/ex2',
@@ -141,13 +114,18 @@ app.get('/transact-sql/ex1', async (c) => {
 
 createOpenApiDocument(app, {
   info: {
-    title: 'Sample api',
+    title: 'Workshop Node SQL Server Api',
     version: '1.0.0',
   },
 });
 
-export const DELETE = handle(app);
-export const GET = handle(app);
-export const PATCH = handle(app);
-export const POST = handle(app);
-export const PUT = handle(app);
+app.get('/documentation', swaggerUI({ url: '/api/doc' }));
+
+const handleRequest = handle(app);
+
+export const DELETE = handleRequest;
+export const GET = handleRequest;
+export const PATCH = handleRequest;
+export const POST = handleRequest;
+export const PUT = handleRequest;
+export const OPTIONS = handleRequest;

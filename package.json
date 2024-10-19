@@ -53,23 +53,9 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "yarn@4.5.0",
-  "dependenciesMetaHelp": {
-    "tree-sitter/*": "Swagger-ui react depends on node-gyp tree-sitter and this is not wanted at all for client side render."
-  },
-  "dependenciesMeta": {
-    "tree-sitter": {
-      "built": false
-    },
-    "tree-sitter-json": {
-      "built": false
-    },
-    "tree-sitter-yaml": {
-      "built": false
-    }
-  },
+  "packageManager": "yarn@4.5.1",
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.0.0-canary.19",
+    "@belgattitude/eslint-config-bases": "6.0.1",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.9",
     "@commitlint/cli": "19.5.0",
@@ -82,25 +68,26 @@
     "husky": "9.1.6",
     "is-ci": "3.0.1",
     "lint-staged": "15.2.10",
-    "npm-run-all2": "6.2.3",
-    "nx": "20.0.1",
+    "npm-run-all2": "6.2.4",
+    "nx": "20.0.3",
     "prettier": "3.3.3",
     "rimraf": "6.0.1",
-    "rollup": "4.24.0",
     "shell-quote": "1.8.1",
     "syncpack": "13.0.0",
     "typescript": "5.6.3"
   },
   "resolutions": {
-    "eslint-plugin-react-hooks": "5.0.0",
-    "esbuild": "0.24.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "esbuild": "^0.24.0",
     "@opentelemetry/instrumentation": "0.53.0"
   },
   "resolutions-help": {
-    "@opentelemetry/instrumentation": "Till prisma is updated"
+    "@opentelemetry/instrumentation": "Till prisma fix issues with opentelemetry",
+    "esbuild": "Generally is safe to keep only the latest version (vite, vitest, tsup...)",
+    "eslint-plugin-react-hooks": "To prevent collision between versions"
   },
   "engines": {
     "node": ">=18.18",
-    "deno": ">=2.0.0"
+    "deno": ">=2.0.2"
   }
 }
