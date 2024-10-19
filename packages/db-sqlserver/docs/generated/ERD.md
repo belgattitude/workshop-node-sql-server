@@ -40,8 +40,9 @@ erDiagram
   Int id PK
   Int brand_id FK "nullable"
   String reference UK
-  String name
   String barcode_ean13 UK "nullable"
+  String name
+  String description "nullable"
   Boolean flag_active
   DateTime created_at
   DateTime updated_at "nullable"
@@ -113,8 +114,9 @@ https://github.com/samchon/prisma-markdown
   - `id`: 
   - `brand_id`: 
   - `reference`: 
-  - `name`: 
   - `barcode_ean13`: 
+  - `name`: 
+  - `description`: 
   - `flag_active`: 
   - `created_at`: 
   - `updated_at`: 

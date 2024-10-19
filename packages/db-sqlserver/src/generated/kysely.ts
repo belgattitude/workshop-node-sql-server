@@ -48,8 +48,9 @@ export type Product = {
   id: Generated<number>;
   brand_id: number | null;
   reference: string;
-  name: string;
   barcode_ean13: string | null;
+  name: string;
+  description: string | null;
   flag_active: Generated<boolean>;
   created_at: Timestamp;
   updated_at: Timestamp | null;
