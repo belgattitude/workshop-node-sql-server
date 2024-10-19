@@ -67,7 +67,7 @@ model Currency {
 
 model Brand {
   id         Int       @id @default(autoincrement()) @db.Int
-  name       String    @unique @map(name: "name") @db.NVarChar(40)
+  name       String    @unique @map(name: "name") @db.NVarChar(200)
   flagActive Boolean   @default(true) @map(name: "flag_active") @db.Bit
   createdAt  DateTime  @map(name: "created_at") @db.DateTime2
   updatedAt  DateTime? @map(name: "updated_at") @db.DateTime2

@@ -30,7 +30,7 @@ CREATE TABLE [common].[currency] (
 GO
 CREATE TABLE [common].[brand] (
     [id] INT NOT NULL IDENTITY(1,1),
-    [name] NVARCHAR(40) NOT NULL,
+    [name] NVARCHAR(200) NOT NULL,
     [flag_active] BIT NOT NULL CONSTRAINT [brand_flag_active_df] DEFAULT 1,
     [created_at] DATETIME2 NOT NULL,
     [updated_at] DATETIME2,
