@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 jobs:
-  test-kysely-e2e:
+  test-sqlserver-e2e:
     runs-on: ubuntu-latest
     strategy:
       matrix:
