@@ -7,7 +7,7 @@ it basically allows workshop participants to try out different scenarios with sq
 ## Getting started
 
 > <details>
-> <summary>Requirements: node 18+, yarn, docker. For Windows users WSL2 unbuntu recommended.</summary>
+> <summary>Requirements: node 18+, yarn, docker. For Windows users WSL2 ubuntu is recommended.</summary>
 >
 > ```bash
 > nvm install v20  # if you don't have nodejs installed
