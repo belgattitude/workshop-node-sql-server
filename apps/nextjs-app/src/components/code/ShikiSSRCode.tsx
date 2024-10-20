@@ -1,3 +1,5 @@
+'use server';
+
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -16,13 +18,15 @@ type Props = {
   lang?: BundledLanguage;
   theme?: BundledTheme;
 };
-export async function ShikiCodeEditor({
-  code,
-  className,
-  filename = '',
-  lang = 'typescript',
-  theme = 'nord',
-}: Props) {
+export async function ShikiSSRCode(props: Props) {
+  const {
+    code = '',
+    className,
+    filename = '',
+    lang = 'typescript',
+    theme = 'nord',
+  } = props;
+
   const html = await codeToHtml(code, {
     lang,
     theme,
@@ -30,15 +34,10 @@ export async function ShikiCodeEditor({
   });
 
   return (
-    <div
-      className={cn(
-        'rounded-lg bg-gradient-to-r from-sky-200 to-sky-400 p-4 !pr-0 md:p-8 lg:p-12 [&>pre]:rounded-none max-w-xl',
-        className
-      )}
-    >
-      <div className="overflow-hidden rounded-s-lg">
+    <div className={cn('', className)}>
+      <div className="overflow-hidden mr-[60px]">
         <div className="flex items-center justify-between bg-gradient-to-r from-neutral-900 to-neutral-800 py-2 pl-2 pr-4 text-sm">
-          <span className="-mb-[calc(0.5rem+2px)] rounded-t-lg border-2 border-white/5 border-b-neutral-700 bg-neutral-800 px-4 py-2 ">
+          <span className="-mb-[calc(0.5rem+2px)] text-white border-2 border-white/5 border-b-neutral-700 bg-neutral-800 px-4 py-2 ">
             {filename}
           </span>
           <CopyToClipboard code={code} />
