@@ -1,10 +1,8 @@
 import { Hono } from 'hono';
 import { openApi } from 'hono-zod-openapi';
 
-import {
-  ProductRepo,
-  productRepo,
-} from '@/features/products/server/product.repo';
+import { productRepo } from '@/features/products/config/product-repo.config';
+import { ProductRepo } from '@/features/products/server/product.repo';
 
 const app = new Hono();
 

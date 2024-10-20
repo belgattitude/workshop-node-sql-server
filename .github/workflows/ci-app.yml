@@ -34,13 +34,13 @@ jobs:
         uses: ./.github/actions/yarn-nm-install
 
       - name: 🕵️ Typecheck
-        run: yarn nx run-many --target=typecheck --exclude='packages/**' --exclude='docs'
+        run: yarn nx run-many --target=typecheck --exclude='libs/**' --exclude='docs'
 
       - name: 🔬 ESLint checks
-        run: yarn nx run-many --target=lint --exclude='packages/**' --exclude='docs'
+        run: yarn nx run-many --target=lint --exclude='libs/**' --exclude='docs'
 
       - name: 🧪 Unit tests
-        run: yarn nx run-many --target=test-unit --exclude='packages/**' --exclude='docs'
+        run: yarn nx run-many --target=test-unit --exclude='libs/**' --exclude='docs'
 
       - name: 🏗 Build packages
-        run: yarn nx run-many --target=build --exclude='packages/**' --exclude='docs'
+        run: yarn nx run-many --target=build --exclude='libs/**' --exclude='docs'

@@ -36,9 +36,9 @@ jobs:
         run: docker compose -f docker/sql-edge/compose.yml up -d --wait
 
       #- name: 🧪 Create database
-      #  working-directory: "packages/db-sqlserver"
+      #  working-directory: "libs/db-sqlserver"
       #  run: yarn db-recreate
 
       #- name: 🧪 Populate seed data
-      #  working-directory: "packages/db-sqlserver"
+      #  working-directory: "libs/db-sqlserver"
       #  run: yarn prisma-db-seed

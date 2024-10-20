@@ -121,6 +121,8 @@ createOpenApiDocument(app, {
 
 app.get('/documentation', swaggerUI({ url: '/api/doc' }));
 
+export type HonoLocalAppType = typeof app;
+
 const handleRequest = handle(app);
 
 export const DELETE = handleRequest;

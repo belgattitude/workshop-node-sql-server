@@ -67,7 +67,7 @@ The monorepo is organized as follows:
 │   └── next-app       ✅ Nextjs 14+ / hono api / kysely.
 ├── docker
 │   └── sql-edge       ✅ compose.yaml
-└── packages
+└── libs
     └── db-sqlserver   ✅ Manages database creation, types and seeds
 ```
 
@@ -86,9 +86,9 @@ Check out the [Next.js app](apps/nextjs-app/README.md) for more details.
 
 > The package responsible for database creation / ddl / seeds and types generation.
 
-Check out the [@workshop/db-sqlserver](packages/db-sqlserver/README.md) for more details.
+Check out the [@workshop/db-sqlserver](libs/db-sqlserver/README.md) for more details.
 
-![schema.png](packages/db-sqlserver/docs/images/schema.png)
+![schema.png](libs/db-sqlserver/docs/images/schema.png)
 
 ## License
 

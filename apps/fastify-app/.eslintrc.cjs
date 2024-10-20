@@ -1,6 +1,6 @@
 /**
  * Specific eslint rules for this workspace, learn how to compose
- * @link https://github.com/belgattitude/perso/tree/main/packages/eslint-config-bases
+ * @link https://github.com/belgattitude/perso/tree/main/belgattitude/eslint-config-bases
  */
 
 // Workaround for https://github.com/eslint/eslint/issues/3458

@@ -24,7 +24,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/belgattitude/workshop-node-sql-server.git",
-    "directory": "packages/db-sqlserver"
+    "directory": "libs/db-sqlserver"
   },
   "scripts": {
     "clean": "rimraf ./src/generated/client ./coverage ./tsconfig.tsbuildinfo",

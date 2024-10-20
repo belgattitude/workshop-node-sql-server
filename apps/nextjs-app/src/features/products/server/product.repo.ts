@@ -1,8 +1,10 @@
-import type { KyselyDatasource } from '@flowblade/source-kysely';
+import type {
+  DatasourceResult,
+  KyselyDatasource,
+} from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
+import type { SimplifyDeep } from 'type-fest';
 import { z } from 'zod';
-
-import { workshopDatasource } from '@/server/config/datasource.kysely-sqlserver.config';
 
 const validators = {
   search: {
@@ -24,19 +26,22 @@ const validators = {
 } as const;
 
 type SearchParams = z.infer<typeof validators.search.params>;
-type SearchResult = z.infer<typeof validators.search.result>;
+type SearchResult = DatasourceResult<
+  SimplifyDeep<z.infer<typeof validators.search.result>>
+>;
 
 export class ProductRepo<T = KyselyDatasource<DBKyselySqlServer>> {
-  private datasource: KyselyDatasource<DBKyselySqlServer>;
+  private ds: KyselyDatasource<DBKyselySqlServer>;
   public static readonly validators = validators;
 
-  constructor(params: { datasource: KyselyDatasource<DBKyselySqlServer> }) {
-    this.datasource = params.datasource;
+  constructor(params: { ds: KyselyDatasource<DBKyselySqlServer> }) {
+    this.ds = params.ds;
   }
   search = async (params: SearchParams): Promise<SearchResult> => {
     const { searchName, limit } = params;
-    const db = this.datasource.getConnection();
-    const rows = db
+
+    const query = this.ds
+      .eb()
       .selectFrom('common.product as p')
       .select([
         'p.id',
@@ -50,10 +55,8 @@ export class ProductRepo<T = KyselyDatasource<DBKyselySqlServer>> {
       .$if(searchName !== undefined, (q) =>
         q.where('p.name', 'like', `%${searchName}%`)
       )
-      .top(limit)
-      .execute();
-    return rows;
+      .top(limit);
+
+    return this.ds.query(query);
   };
 }
-
-export const productRepo = new ProductRepo({ datasource: workshopDatasource });

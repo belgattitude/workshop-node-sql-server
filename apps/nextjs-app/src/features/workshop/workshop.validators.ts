@@ -11,6 +11,8 @@ const zProductWithBrand = z.object({
   brand_name: z.string().nullable(),
 });
 
+type WorkshopValidatorObject = Record<string, WorkshopValidator>;
+
 export const workshopValidators = {
   query1: {
     params: z.object({
@@ -19,6 +21,6 @@ export const workshopValidators = {
     }),
     result: z.array(zProductWithBrand),
   },
-} as const satisfies Record<string, WorkshopValidator>;
+} as const satisfies WorkshopValidatorObject;
 
 export type WorkshopValidators = typeof workshopValidators;
