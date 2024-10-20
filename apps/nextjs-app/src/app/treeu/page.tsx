@@ -1,7 +1,6 @@
+import { CityMultiSelect } from '@/components/prime/CityMultiSelect';
+import { FolderTreeSelect } from '@/components/prime/FolderTreeSelect';
 import { SideBar } from '@/components/sidebar/SideBar';
-
-import { CityMultiSelect } from '../../components/prime/CityMultiSelect';
-import { FolderTreeSelect } from '../../components/prime/FolderTreeSelect';
 
 export default function TreeuDemoRoute() {
   return (

@@ -3,13 +3,14 @@ import '../styles/globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
-import { fontInter } from '@/components/fonts/FontInter';
+import { MainLayout } from '@/components/layout/MainLayout';
 import { ReactQueryClientProvider } from '@/providers/ReactQueryClientProvider';
 import { ReduxStoreProvider } from '@/providers/ReduxProvider';
 
 export const metadata: Metadata = {
-  title: 'Flowblade nextjs app',
-  description: 'Example',
+  title: 'Workshop node sql server',
+  description:
+    'Example for https://github.com/belgattitude/workshop-node-sql-server',
 };
 
 export default function RootLayout({
@@ -19,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontInter.variable} antialiased`}>
+      <body className={`antialiased`}>
         <ReduxStoreProvider>
-          <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+          <ReactQueryClientProvider>
+            <MainLayout>{children}</MainLayout>
+          </ReactQueryClientProvider>
         </ReduxStoreProvider>
       </body>
     </html>
