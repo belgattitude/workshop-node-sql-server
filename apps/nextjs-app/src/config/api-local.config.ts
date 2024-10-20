@@ -1,4 +1,11 @@
+import type { HonoLocalAppType } from '../app/api/[...route]/route';
+
+const apiServer = 'http://localhost:3000';
+
 export const apiLocalConfig = {
-  apiUrl: 'http://localhost:3000/api',
-  schemaUrl: 'http://localhost:3000/api/doc',
+  apiUrl: `${apiServer}/api`,
+  apiServer: `${apiServer}`,
+  schemaUrl: `${apiServer}/api/doc`,
 } as const;
+
+export type LocalApiType = HonoLocalAppType;

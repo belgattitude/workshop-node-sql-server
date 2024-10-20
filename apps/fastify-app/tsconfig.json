@@ -13,7 +13,7 @@
     "jsx": "preserve",
     "paths": {
       "@workshop/db-sqlserver/kysely-types": [
-        "../../../packages/db-sqlserver/src/kysely-types.ts"
+        "../../../libs/db-sqlserver/src/kysely-types.ts"
       ],
       "@/config/*": ["./config/*"],
       "@/routes/*": ["./routes/*"],

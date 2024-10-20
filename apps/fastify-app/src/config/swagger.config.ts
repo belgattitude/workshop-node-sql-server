@@ -6,7 +6,7 @@ export const swaggerConfig: SwaggerOptions = {
     info: {
       title: 'Flowblade API',
       description:
-        'A fastify-based flowblade example api, see https://github.com/packages/workshop-node-sql-server/tree/main/examples/fastify-app',
+        'A fastify-based flowblade example api, see https://github.com/belgattitude/workshop-node-sql-server/tree/main/examples/fastify-app',
       version: '0.1.0',
     },
     servers: [

@@ -1,5 +1,5 @@
 export interface paths {
-  '/api/products/ex1': {
+  '/api/products/search': {
     parameters: {
       query?: never;
       header?: never;
@@ -10,6 +10,7 @@ export interface paths {
       parameters: {
         query?: {
           limit?: number;
+          searchName?: string;
         };
         header?: never;
         path?: never;
@@ -25,7 +26,56 @@ export interface paths {
           content: {
             'application/json': {
               id: number;
+              reference: string;
               name: string;
+              barcode_ean13: string | null;
+              brand_id: number | null;
+              brand_name: string | null;
+            }[];
+          };
+        };
+      };
+    };
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  '/api/workshop/query1': {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: {
+      parameters: {
+        query?: {
+          limit?: number;
+          searchName?: string;
+        };
+        header?: never;
+        path?: never;
+        cookie?: never;
+      };
+      requestBody?: never;
+      responses: {
+        /** @description 200 OK */
+        200: {
+          headers: {
+            [name: string]: unknown;
+          };
+          content: {
+            'application/json': {
+              id: number;
+              reference: string;
+              name: string;
+              barcode_ean13: string | null;
+              brand_id: number | null;
+              brand_name: string | null;
             }[];
           };
         };

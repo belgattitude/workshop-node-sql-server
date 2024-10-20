@@ -1,4 +1,7 @@
-import type { KyselyDatasource } from '@flowblade/source-kysely';
+import type {
+  DatasourceResult,
+  KyselyDatasource,
+} from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import type { z } from 'zod';
 
@@ -54,6 +57,6 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
           barcode_ean13: 'ean13',
         },
       ],
-    };
+    } satisfies DatasourceResult<unknown>;
   };
 }

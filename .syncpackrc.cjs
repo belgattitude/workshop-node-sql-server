@@ -36,6 +36,6 @@ module.exports = {
         "resolutions"
     ],
     "sortFirst": ["name", "description", "version", "private", "license", "author", "homepage", "repository", "keywords", "sideEffects", "browserslist", "type", "main", "module", "types", "exports", "typesVersions?", "typesVersions", "files", "resolutions?", "resolutions", "scripts", "workspaces", "engine", "packageManager"],
-    "source": ["apps/**", "packages/**", "./package.json"],
+    "source": ["apps/**", "libs/**", "./package.json"],
     "versionGroups": []
 }
