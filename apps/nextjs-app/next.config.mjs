@@ -28,7 +28,7 @@ let nextConfig = {
     buildEnv.NEXT_BUILD_PRODUCTION_SOURCEMAPS === 'true',
   reactStrictMode: true,
   typescript: {
-    ignoreBuildErrors: buildEnv.NEXT_BUILD_IGNORE_TYPECHECK !== 'true',
+    ignoreBuildErrors: buildEnv.NEXT_BUILD_IGNORE_TYPECHECK === 'true',
     tsconfigPath: buildEnv.NEXT_BUILD_TSCONFIG,
   },
 };

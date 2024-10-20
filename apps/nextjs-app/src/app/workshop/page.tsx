@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { format } from 'sql-formatter';
 
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';
