@@ -25,9 +25,10 @@
     "test-unit-watch": "vitest --ui",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "typecheck-no-paths": "tsc --project tsconfig.no-paths.json --noEmit",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/nextjs-classic.eslintcache",
-    "prettier-check": "yarn run --top-level prettier --check --cache --cache-location=\"../../.cache/prettier/next-classic.prettiercache\" --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
-    "prettier-fix": "yarn run --top-level prettier --write --cache --cache-location=\"../../.cache/prettier/next-classic.prettiercache\" --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/nextjs-app.eslintcache",
+    "lint-timing": "TIMING=1 eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
+    "prettier-check": "yarn run --top-level prettier --check --cache --cache-location=\"../../.cache/prettier/nextjs-app.prettiercache\" --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
+    "prettier-fix": "yarn run --top-level prettier --write --cache --cache-location=\"../../.cache/prettier/nextjs-app.prettiercache\" --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "fix-staged": "lint-staged --allow-empty",
     "codegen": "run-s codegen-api",
     "codegen-api": "tsx ./scripts/generate-openapi-local.ts"
@@ -75,12 +76,13 @@
     "tailwind-merge": "2.5.4",
     "tarn": "3.0.2",
     "tedious": "19.0.0",
+    "ts-pattern": "5.5.0",
     "type-fest": "4.26.1",
     "valibot": "1.0.0-beta.1",
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.0.2",
+    "@belgattitude/eslint-config-bases": "6.0.3",
     "@faker-js/faker": "9.0.3",
     "@spotlightjs/spotlight": "2.5.0",
     "@tanstack/react-query-devtools": "5.59.15",

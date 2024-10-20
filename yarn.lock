@@ -1706,9 +1706,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@belgattitude/eslint-config-bases@npm:6.0.2":
-  version: 6.0.2
-  resolution: "@belgattitude/eslint-config-bases@npm:6.0.2"
+"@belgattitude/eslint-config-bases@npm:6.0.3":
+  version: 6.0.3
+  resolution: "@belgattitude/eslint-config-bases@npm:6.0.3"
   dependencies:
     "@rushstack/eslint-patch": "npm:^1.10.4"
     "@tanstack/eslint-plugin-query": "npm:^5.59.7"
@@ -1766,7 +1766,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/e504ebc3bfe3efef854efa308bc9c50794a5b2c98e3dea411c9cc9d9f082a428f09a1fa232d1181a964e1e41cc5397bae44e7e8ae5a005cbb5b30d25acab7a12
+  checksum: 10c0/780e598d111c69a3085ad5be54671a50eda86f3aeb507a984e5b85f6d4603aae79b72692c92626c0a71a091be3e0207e38bd489f7b114fc2f8e57c4924ebe50d
   languageName: node
   linkType: hard
 
@@ -5439,7 +5439,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@workshop/benchmark@workspace:benchmark"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:6.0.2"
+    "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@total-typescript/ts-reset": "npm:0.6.1"
     "@types/node": "npm:22.7.7"
     "@typescript-eslint/eslint-plugin": "npm:8.10.0"
@@ -5456,7 +5456,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@workshop/db-sqlserver@workspace:packages/db-sqlserver"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:6.0.2"
+    "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@faker-js/faker": "npm:9.0.3"
     "@httpx/assert": "npm:0.15.1"
     "@prisma/client": "npm:5.21.1"
@@ -8630,7 +8630,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "fastify-app@workspace:apps/fastify-app"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:6.0.2"
+    "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@fastify/autoload": "npm:6.0.2"
     "@fastify/sensible": "npm:6.0.1"
     "@fastify/swagger": "npm:9.2.0"
@@ -11750,7 +11750,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app@workspace:apps/nextjs-app"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:6.0.2"
+    "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@faker-js/faker": "npm:9.0.3"
     "@flowblade/source-kysely": "npm:0.5.0"
     "@hono/node-server": "npm:1.13.2"
@@ -11820,6 +11820,7 @@ __metadata:
     tarn: "npm:3.0.2"
     tedious: "npm:19.0.0"
     tinyrainbow: "npm:1.2.0"
+    ts-pattern: "npm:5.5.0"
     tsx: "npm:4.19.1"
     type-fest: "npm:4.26.1"
     typescript: "npm:5.6.3"
@@ -15292,6 +15293,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-pattern@npm:5.5.0":
+  version: 5.5.0
+  resolution: "ts-pattern@npm:5.5.0"
+  checksum: 10c0/4ae1fbeadcf193e72b27419d5fe71f559c100e45710eabf29e2ff3a8fa9ba29adfcd6d5d7d8169b95e2b264683a2eb8d94dbd3c893357b045b52b0c34c2b7c72
+  languageName: node
+  linkType: hard
+
 "ts-toolbelt@npm:9.6.0":
   version: 9.6.0
   resolution: "ts-toolbelt@npm:9.6.0"
@@ -16143,7 +16151,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "workshop-node-sql-server@workspace:."
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:6.0.2"
+    "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@changesets/changelog-github": "npm:0.5.0"
     "@changesets/cli": "npm:2.27.9"
     "@commitlint/cli": "npm:19.5.0"

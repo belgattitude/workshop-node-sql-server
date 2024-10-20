@@ -31,6 +31,9 @@ module.exports = {
     {
       files: ['**/src/**/*.generated.ts'],
       rules: {
+        'import-x/named': 'off',
+        'import-x/namespace': 'off',
+        'prettier/prettier': 'off',
         '@typescript-eslint/consistent-indexed-object-style': 'off',
         'sonarjs/class-name': 'off',
       },
@@ -45,5 +48,7 @@ module.exports = {
   rules: {
     // optional overrides per project
     'sonarjs/todo-tag': 'off',
+    // 'import-x/namespace': 'off',
+    // 'import-x/named': 'off',
   },
 };
