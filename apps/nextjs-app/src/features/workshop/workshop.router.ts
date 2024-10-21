@@ -26,4 +26,9 @@ app.get('/query1', zodOpenApi(validators.query1), async (c) => {
   return c.json(rows);
 });
 
+app.get('/query2', zodOpenApi(validators.query2), async (c) => {
+  const rows = await workshopRepo.query2(c.req.valid('query'));
+  return c.json(rows);
+});
+
 export { app as workshopRouter };

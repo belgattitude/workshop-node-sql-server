@@ -9,7 +9,7 @@ type Props<T = unknown> = {
   result: QueryResult<T>;
 };
 
-export const QueryResultDebugger = async <T = unknown,>(props: Props) => {
+export const QueryResultDebugger = async (props: Props) => {
   const { result } = props;
   const isError = isQueryResultError(result);
 

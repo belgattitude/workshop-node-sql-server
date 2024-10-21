@@ -2,6 +2,11 @@ import { z } from 'zod';
 
 import type { WorkshopValidator } from '@/features/workshop/workshop-utils';
 
+const zBrand = z.object({
+  id: z.number(),
+  name: z.string(),
+});
+
 const zProductWithBrand = z.object({
   id: z.number(),
   reference: z.string(),
@@ -15,6 +20,12 @@ type WorkshopValidatorObject = Record<string, WorkshopValidator>;
 
 export const workshopValidators = {
   query1: {
+    params: z.object({
+      limit: z.coerce.number().optional().default(100),
+    }),
+    result: z.array(zBrand),
+  },
+  query2: {
     params: z.object({
       limit: z.coerce.number().optional().default(100),
       searchName: z.string().optional(),

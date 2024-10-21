@@ -27,18 +27,20 @@ type SearchResult = QueryResult<
   SimplifyDeep<z.infer<typeof validators.search.result>>
 >;
 
-export class ProductRepo<T = KyselyDatasource<DBKyselySqlServer>> {
-  private ds: KyselyDatasource<DBKyselySqlServer>;
+export class ProductRepo<
+  T extends
+    KyselyDatasource<DBKyselySqlServer> = KyselyDatasource<DBKyselySqlServer>,
+> {
+  private ds: T;
   public static readonly validators = validators;
 
-  constructor(params: { ds: KyselyDatasource<DBKyselySqlServer> }) {
+  constructor(params: { ds: T }) {
     this.ds = params.ds;
   }
   search = async (params: SearchParams): Promise<SearchResult> => {
     const { searchName, limit } = params;
 
-    const query = this.ds
-      .eb()
+    const query = this.ds.queryBuilder
       .selectFrom('common.product as p')
       .select([
         'p.id',

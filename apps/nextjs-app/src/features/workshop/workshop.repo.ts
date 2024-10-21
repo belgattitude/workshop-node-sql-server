@@ -6,12 +6,18 @@ import {
   type WorkshopValidators,
   workshopValidators,
 } from '@/features/workshop/workshop.validators';
-import type { ApiResponse } from '@/features/workshop/workshop-utils';
+import type { AsyncQueryResult } from '@/features/workshop/workshop-utils';
 
 type Q1Params = z.infer<WorkshopValidators['query1']['params']>;
 type Q1Result = z.infer<WorkshopValidators['query1']['result']>;
 
-export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
+type Q2Params = z.infer<WorkshopValidators['query2']['params']>;
+type Q2Result = z.infer<WorkshopValidators['query2']['result']>;
+
+export class WorkshopRepo<
+  T extends
+    KyselyDatasource<DBKyselySqlServer> = KyselyDatasource<DBKyselySqlServer>,
+> {
   private ds: T;
   public static readonly validators = workshopValidators;
 
@@ -22,27 +28,24 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
   /**
    * Query 1: return a list of products
    */
-  query1 = async (params: Q1Params): ApiResponse<Q1Result> => {
-    const { searchName, limit } = params;
+  query1 = async (params: Q1Params): AsyncQueryResult<Q1Result> => {
+    const { limit } = params;
+
     return {
       success: true,
       data: [
         {
           id: 1,
-          brand_id: 1,
-          name: 'name',
-          reference: 'reference',
-          brand_name: 'brand_name',
-          barcode_ean13: 'ean13',
+          name: 'brand name',
         },
-      ],
+      ].slice(0, limit),
     };
   };
 
   /**
    * Query 2: return a list of products
    */
-  query2 = async (params: Q1Params): ApiResponse<Q1Result> => {
+  query2 = async (params: Q2Params): AsyncQueryResult<Q2Result> => {
     const { searchName, limit } = params;
     return {
       success: true,
@@ -50,12 +53,12 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
         {
           id: 1,
           brand_id: 1,
-          name: 'name',
-          reference: 'reference',
-          brand_name: 'brand_name',
-          barcode_ean13: 'ean13',
+          name: 'product name',
+          reference: 'product reference',
+          brand_name: 'brand name',
+          barcode_ean13: 'sample ean13',
         },
-      ],
+      ].slice(0, limit),
     } satisfies QueryResult<unknown>;
   };
 }

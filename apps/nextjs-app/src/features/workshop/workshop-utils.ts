@@ -9,7 +9,7 @@ export type WorkshopValidator = {
   result: z.ZodArray<any> | z.ZodObject<any>;
 };
 
-export type ApiResponse<T> = Promise<QueryResult<T>>;
+export type AsyncQueryResult<T> = Promise<QueryResult<T>>;
 
 export const zodOpenApi = <T extends WorkshopValidator>(validator: T) => {
   return openApi({
