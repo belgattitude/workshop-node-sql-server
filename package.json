@@ -77,14 +77,12 @@
     "typescript": "5.6.3"
   },
   "resolutions": {
-    "eslint-plugin-react-hooks": "^5.0.0",
     "esbuild": "^0.24.0",
     "@opentelemetry/instrumentation": "0.53.0"
   },
   "resolutions-help": {
     "@opentelemetry/instrumentation": "Till prisma fix issues with opentelemetry",
-    "esbuild": "Generally is safe to keep only the latest version (vite, vitest, tsup...)",
-    "eslint-plugin-react-hooks": "To prevent collision between versions"
+    "esbuild": "Generally is safe to keep only the latest version (vite, vitest, tsup...)"
   },
   "engines": {
     "node": ">=18.18",
