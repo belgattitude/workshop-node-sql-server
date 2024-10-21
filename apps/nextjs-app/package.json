@@ -34,7 +34,7 @@
     "codegen-api": "tsx ./scripts/generate-openapi-local.ts"
   },
   "dependencies": {
-    "@flowblade/source-kysely": "0.6.1",
+    "@flowblade/source-kysely": "0.7.0",
     "@hono/node-server": "1.13.2",
     "@hono/swagger-ui": "0.4.1",
     "@httpx/assert": "0.15.1",
@@ -75,7 +75,7 @@
     "react-error-boundary": "4.1.2",
     "react-redux": "9.1.2",
     "shiki": "1.22.0",
-    "sql-formatter": "15.4.4",
+    "sql-formatter": "15.4.5",
     "tailwind-merge": "2.5.4",
     "tarn": "3.0.2",
     "tedious": "19.0.0",

@@ -1,7 +1,4 @@
-import type {
-  DatasourceResult,
-  KyselyDatasource,
-} from '@flowblade/source-kysely';
+import type { KyselyDatasource, QueryResult } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import type { z } from 'zod';
 
@@ -28,6 +25,7 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
   query1 = async (params: Q1Params): ApiResponse<Q1Result> => {
     const { searchName, limit } = params;
     return {
+      success: true,
       data: [
         {
           id: 1,
@@ -47,6 +45,7 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
   query2 = async (params: Q1Params): ApiResponse<Q1Result> => {
     const { searchName, limit } = params;
     return {
+      success: true,
       data: [
         {
           id: 1,
@@ -57,6 +56,6 @@ export class WorkshopRepo<T = KyselyDatasource<DBKyselySqlServer>> {
           barcode_ean13: 'ean13',
         },
       ],
-    } satisfies DatasourceResult<unknown>;
+    } satisfies QueryResult<unknown>;
   };
 }

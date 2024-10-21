@@ -1,7 +1,4 @@
-import type {
-  DatasourceResult,
-  KyselyDatasource,
-} from '@flowblade/source-kysely';
+import type { KyselyDatasource, QueryResult } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import type { SimplifyDeep } from 'type-fest';
 import { z } from 'zod';
@@ -26,7 +23,7 @@ const validators = {
 } as const;
 
 type SearchParams = z.infer<typeof validators.search.params>;
-type SearchResult = DatasourceResult<
+type SearchResult = QueryResult<
   SimplifyDeep<z.infer<typeof validators.search.result>>
 >;
 

@@ -35,7 +35,7 @@ export async function ShikiSSRCode(props: Props) {
 
   return (
     <div className={cn('', className)}>
-      <div className="overflow-hidden mr-[60px]">
+      <div className="overflow-hidden">
         <div className="flex items-center justify-between bg-gradient-to-r from-neutral-900 to-neutral-800 py-2 pl-2 pr-4 text-sm">
           <span className="-mb-[calc(0.5rem+2px)] text-white border-2 border-white/5 border-b-neutral-700 bg-neutral-800 px-4 py-2 ">
             {filename}

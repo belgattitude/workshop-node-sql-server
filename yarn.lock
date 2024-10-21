@@ -2648,9 +2648,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flowblade/source-kysely@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@flowblade/source-kysely@npm:0.6.1"
+"@flowblade/source-kysely@npm:0.7.0":
+  version: 0.7.0
+  resolution: "@flowblade/source-kysely@npm:0.7.0"
   dependencies:
     "@httpx/assert": "npm:^0.15.1"
     "@httpx/dsn-parser": "npm:^1.8.5"
@@ -2666,7 +2666,7 @@ __metadata:
       optional: true
     tedious:
       optional: true
-  checksum: 10c0/c7398eeb96afdd6806746353c9956f0c9414039c89a60f41d0f691c41fbb0d77c840e1e3ba184393edd95b2020289ef3c05fd7c6e32c798dac257dc52fa1e8e2
+  checksum: 10c0/828f700839bed3f3194a9f007552b8061c980a75f949a776d04514d7c59689ad977f308c268bc622030dd9881ededc202ebed5a6580f83e5ad4e6224bed9cc21
   languageName: node
   linkType: hard
 
@@ -3796,8 +3796,8 @@ __metadata:
   linkType: hard
 
 "@redocly/openapi-core@npm:^1.25.3":
-  version: 1.25.7
-  resolution: "@redocly/openapi-core@npm:1.25.7"
+  version: 1.25.8
+  resolution: "@redocly/openapi-core@npm:1.25.8"
   dependencies:
     "@redocly/ajv": "npm:^8.11.2"
     "@redocly/config": "npm:^0.12.1"
@@ -3810,7 +3810,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     pluralize: "npm:^8.0.0"
     yaml-ast-parser: "npm:0.0.43"
-  checksum: 10c0/83bac35a9b0e624d1353c2967d6be2e4ae72d0e32e374280c596ab617c8f0eb14e99a9f675ecbf4bed80bee389a5c4c9dac69a35c782af02058124e31fa2c674
+  checksum: 10c0/ae9038abb9985c6ae6de26018d8a08d65e235d4f070179b34181a700a3860846884549fe1022d5b471c42d05b94b9efa6c4a2ce85059fb18f4c5d0e7e0ba1056
   languageName: node
   linkType: hard
 
@@ -5925,6 +5925,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aria-query@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "aria-query@npm:5.3.2"
+  checksum: 10c0/003c7e3e2cff5540bf7a7893775fc614de82b0c5dde8ae823d47b7a28a9d4da1f7ed85f340bdb93d5649caa927755f0e31ecc7ab63edfdfc00c8ef07e505e03e
+  languageName: node
+  linkType: hard
+
 "aria-query@npm:~5.1.3":
   version: 5.1.3
   resolution: "aria-query@npm:5.1.3"
@@ -7003,15 +7010,15 @@ __metadata:
   linkType: hard
 
 "cosmiconfig-typescript-loader@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "cosmiconfig-typescript-loader@npm:5.0.0"
+  version: 5.1.0
+  resolution: "cosmiconfig-typescript-loader@npm:5.1.0"
   dependencies:
-    jiti: "npm:^1.19.1"
+    jiti: "npm:^1.21.6"
   peerDependencies:
     "@types/node": "*"
     cosmiconfig: ">=8.2"
     typescript: ">=4"
-  checksum: 10c0/0eb1a767a589cf092e68729e184d5917ae0b167b6f5d908bc58cee221d66b937430fc58df64029795ef98bb8e85c575da6e3819c5f9679c721de7bdbb4bde719
+  checksum: 10c0/9c87ade7b0960e6f15711e880df987237c20eabb3088c2bcc558e821f85aecee97c6340d428297a0241d3df4e3c6be66501468aef1e9a719722931a479865f3c
   languageName: node
   linkType: hard
 
@@ -7708,7 +7715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-iterator-helpers@npm:^1.0.19":
+"es-iterator-helpers@npm:^1.0.19, es-iterator-helpers@npm:^1.1.0":
   version: 1.1.0
   resolution: "es-iterator-helpers@npm:1.1.0"
   dependencies:
@@ -8087,7 +8094,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:6.10.0, eslint-plugin-jsx-a11y@npm:^6.10.0, eslint-plugin-jsx-a11y@npm:^6.7.1":
+"eslint-plugin-jsx-a11y@npm:6.10.0":
   version: 6.10.0
   resolution: "eslint-plugin-jsx-a11y@npm:6.10.0"
   dependencies:
@@ -8110,6 +8117,32 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
   checksum: 10c0/9f8e29a3317fb6a82e2ecd333fe0fab3a69fff786d087eb65dc723d6e954473ab681d14a252d7cb2971f5e7f68816cb6f7731766558e1833a77bd73af1b5ab34
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jsx-a11y@npm:^6.10.0, eslint-plugin-jsx-a11y@npm:^6.7.1":
+  version: 6.10.1
+  resolution: "eslint-plugin-jsx-a11y@npm:6.10.1"
+  dependencies:
+    aria-query: "npm:^5.3.2"
+    array-includes: "npm:^3.1.8"
+    array.prototype.flatmap: "npm:^1.3.2"
+    ast-types-flow: "npm:^0.0.8"
+    axe-core: "npm:^4.10.0"
+    axobject-query: "npm:^4.1.0"
+    damerau-levenshtein: "npm:^1.0.8"
+    emoji-regex: "npm:^9.2.2"
+    es-iterator-helpers: "npm:^1.1.0"
+    hasown: "npm:^2.0.2"
+    jsx-ast-utils: "npm:^3.3.5"
+    language-tags: "npm:^1.0.9"
+    minimatch: "npm:^3.1.2"
+    object.fromentries: "npm:^2.0.8"
+    safe-regex-test: "npm:^1.0.3"
+    string.prototype.includes: "npm:^2.0.1"
+  peerDependencies:
+    eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
+  checksum: 10c0/25bf28e3db4f6789c5d4f9300fc6fc54faca19ecc537d0f46e9c873f80ed37103a033e1f716f608fab5f5813dd38af65a9a6ae2e29dd079763ce539ebecf998e
   languageName: node
   linkType: hard
 
@@ -8766,7 +8799,7 @@ __metadata:
     "@fastify/swagger": "npm:9.2.0"
     "@fastify/swagger-ui": "npm:5.1.0"
     "@fastify/type-provider-typebox": "npm:5.0.0"
-    "@flowblade/source-kysely": "npm:0.6.1"
+    "@flowblade/source-kysely": "npm:0.7.0"
     "@httpx/assert": "npm:0.15.1"
     "@httpx/dsn-parser": "npm:1.8.5"
     "@httpx/exception": "npm:3.0.11"
@@ -10678,7 +10711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.19.1, jiti@npm:^1.21.0":
+"jiti@npm:^1.21.0, jiti@npm:^1.21.6":
   version: 1.21.6
   resolution: "jiti@npm:1.21.6"
   bin:
@@ -11923,9 +11956,9 @@ __metadata:
   linkType: hard
 
 "negotiator@npm:^0.6.3":
-  version: 0.6.3
-  resolution: "negotiator@npm:0.6.3"
-  checksum: 10c0/3ec9fd413e7bf071c937ae60d572bc67155262068ed522cf4b3be5edbe6ddf67d095ec03a3a14ebf8fc8e95f8e1d61be4869db0dbb0de696f6b837358bd43fc2
+  version: 0.6.4
+  resolution: "negotiator@npm:0.6.4"
+  checksum: 10c0/3e677139c7fb7628a6f36335bf11a885a62c21d5390204590a1a214a5631fcbe5ea74ef6a610b60afe84b4d975cbe0566a23f20ee17c77c73e74b80032108dea
   languageName: node
   linkType: hard
 
@@ -12007,7 +12040,7 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.0.3"
     "@faker-js/faker": "npm:9.0.3"
-    "@flowblade/source-kysely": "npm:0.6.1"
+    "@flowblade/source-kysely": "npm:0.7.0"
     "@hono/node-server": "npm:1.13.2"
     "@hono/swagger-ui": "npm:0.4.1"
     "@httpx/assert": "npm:0.15.1"
@@ -12072,7 +12105,7 @@ __metadata:
     react-redux: "npm:9.1.2"
     rimraf: "npm:6.0.1"
     shiki: "npm:1.22.0"
-    sql-formatter: "npm:15.4.4"
+    sql-formatter: "npm:15.4.5"
     tailwind-merge: "npm:2.5.4"
     tailwindcss: "npm:3.4.14"
     tarn: "npm:3.0.2"
@@ -14785,16 +14818,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sql-formatter@npm:15.4.4":
-  version: 15.4.4
-  resolution: "sql-formatter@npm:15.4.4"
+"sql-formatter@npm:15.4.5":
+  version: 15.4.5
+  resolution: "sql-formatter@npm:15.4.5"
   dependencies:
     argparse: "npm:^2.0.1"
     get-stdin: "npm:=8.0.0"
     nearley: "npm:^2.20.1"
   bin:
     sql-formatter: bin/sql-formatter-cli.cjs
-  checksum: 10c0/aff0b02da36b9de31b860880e923ab5af4286e92ea5fb32b5d7c796ea45a2b6e2a012264e710566b29d3a2190281da2af629bc6f251bf1e6d232831b6d198f04
+  checksum: 10c0/6c1226f04c2f9b0a8a949cb863082366bd0a159bdb4e1dfbc593328a8fca3793c3e55deddc00e42aafc0c2664b89c7c8250e8d395c86566da14378558b5623d9
   languageName: node
   linkType: hard
 
@@ -14914,7 +14947,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string.prototype.includes@npm:^2.0.0":
+"string.prototype.includes@npm:^2.0.0, string.prototype.includes@npm:^2.0.1":
   version: 2.0.1
   resolution: "string.prototype.includes@npm:2.0.1"
   dependencies:
