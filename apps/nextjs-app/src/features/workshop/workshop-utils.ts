@@ -1,4 +1,4 @@
-import type { DatasourceResult } from '@flowblade/source-kysely';
+import type { QueryResult } from '@flowblade/source-kysely';
 import { openApi } from 'hono-zod-openapi';
 import type { z } from 'zod';
 
@@ -9,7 +9,7 @@ export type WorkshopValidator = {
   result: z.ZodArray<any> | z.ZodObject<any>;
 };
 
-export type ApiResponse<T> = Promise<DatasourceResult<T>>;
+export type ApiResponse<T> = Promise<QueryResult<T>>;
 
 export const zodOpenApi = <T extends WorkshopValidator>(validator: T) => {
   return openApi({
