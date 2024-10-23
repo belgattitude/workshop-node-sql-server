@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`workshop.repo > should work 1`] = `
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "brand name",
+    },
+  ],
+  "success": true,
+}
+`;

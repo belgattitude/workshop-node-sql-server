@@ -78,7 +78,12 @@
   },
   "resolutions": {
     "esbuild": "^0.24.0",
-    "@opentelemetry/instrumentation": "0.54.0"
+    "@opentelemetry/instrumentation": "0.54.0",
+    "@opentelemetry/sdk-logs": "0.54.0",
+    "@opentelemetry/api-logs": "0.54.0",
+    "@opentelemetry/resources": "1.27.0",
+    "@opentelemetry/sdk-metrics": "1.27.0",
+    "@opentelemetry/sdk-trace-base": "1.27.0"
   },
   "resolutions-help": {
     "@opentelemetry/instrumentation": "Till prisma fix issues with opentelemetry",
