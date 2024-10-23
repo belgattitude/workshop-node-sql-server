@@ -4,6 +4,7 @@ import { isQueryResultError, type QueryResult } from '@flowblade/source-kysely';
 import { format } from 'sql-formatter';
 
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';
+import { cn } from '@/components/utils';
 
 type Props<T = unknown> = {
   result: QueryResult<T>;
@@ -44,7 +45,11 @@ export const QueryResultDebugger = async (props: Props) => {
             {errorMsg}
           </div>
         )}
-        <div className={'grid grid-cols-2 gap-5 w-full'}>
+        <div
+          className={cn('grid grid-cols-2 gap-5 w-full', {
+            'grid-cols-1': errorMsg !== null,
+          })}
+        >
           <div className={'flex flex-col gap-5'}>
             <ShikiSSRCode
               filename={'meta'}

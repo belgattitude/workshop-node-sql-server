@@ -19,6 +19,13 @@ const zProductWithBrand = z.object({
 type WorkshopValidatorObject = Record<string, WorkshopValidator>;
 
 export const workshopValidators = {
+  getStarter: {
+    params: z.object({
+      limit: z.coerce.number().optional().default(100),
+      searchName: z.string().optional(),
+    }),
+    result: z.array(zBrand),
+  },
   getBrands: {
     params: z.object({
       limit: z.coerce.number().optional().default(100),
@@ -31,6 +38,18 @@ export const workshopValidators = {
       searchName: z.string().optional(),
     }),
     result: z.array(zProductWithBrand),
+  },
+  getAdvanced: {
+    params: z.object({
+      limit: z.coerce.number().optional().default(100),
+    }),
+    result: z.array(
+      z.object({
+        countryId: z.string(),
+        productId: z.string(),
+        productName: z.string(),
+      })
+    ),
   },
 } as const satisfies WorkshopValidatorObject;
 
