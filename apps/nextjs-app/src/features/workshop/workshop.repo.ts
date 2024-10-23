@@ -38,8 +38,9 @@ export class WorkshopRepo<
 
   /**
    * Exercise 1:
-   * - pass the parameter limit in the query
+   * - pass the parameter searchName with an equal clause
    * - pass the parameter searchName with a like clause
+   * - pass the parameter limit in the query
    * - Transform sqlRaw in a kysely query builder alternative
    *
    * @see https://kysely-org.github.io/kysely-apidoc/interfaces/Sql.html
@@ -55,7 +56,9 @@ export class WorkshopRepo<
        FROM [common].[brand] as b
        -- WHERE b.name like 'brand name'
     `;
-    return this.ds.queryRaw(sqlRaw);
+    return this.ds.queryRaw(sqlRaw, {
+      name: 'workshopRepo.getStarter',
+    });
   };
 
   /**

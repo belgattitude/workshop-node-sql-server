@@ -57,7 +57,11 @@ export const QueryResultDebugger = async (props: Props) => {
               lang={'json'}
             />
             {formattedSql !== undefined && (
-              <ShikiSSRCode filename={'sql'} code={formattedSql} lang={'sql'} />
+              <ShikiSSRCode
+                filename={'formatted sql'}
+                code={formattedSql}
+                lang={'sql'}
+              />
             )}
           </div>
           {data !== null && (
