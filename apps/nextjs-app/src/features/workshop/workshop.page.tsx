@@ -11,10 +11,10 @@ const workshopExamples = {
   getStarter: () => workshopRepo.getStarter({ limit: 10 }),
   getBrands: () => workshopRepo.getBrands({ limit: 10 }),
   getProducts: () => workshopRepo.getProducts({ searchName: 'bio', limit: 10 }),
-  getAdvanced: () => workshopRepo.getAdvanced({ limit: 1 }),
+  getAdvanced: () => workshopRepo.getAdvanced({ limit: 100 }),
 };
 
 export const WorkshopPage: FC = async () => {
-  const result = await workshopExamples.getAdvanced();
+  const result = await workshopExamples.getStarter();
   return <QueryResultDebugger result={result} />;
 };
