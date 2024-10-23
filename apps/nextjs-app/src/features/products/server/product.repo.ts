@@ -1,4 +1,7 @@
-import type { KyselyDatasource, QueryResult } from '@flowblade/source-kysely';
+import type {
+  AsyncQueryResult,
+  KyselyDatasource,
+} from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import type { SimplifyDeep } from 'type-fest';
 import { z } from 'zod';
@@ -23,7 +26,7 @@ const validators = {
 } as const;
 
 type SearchParams = z.infer<typeof validators.search.params>;
-type SearchResult = QueryResult<
+type SearchResult = AsyncQueryResult<
   SimplifyDeep<z.infer<typeof validators.search.result>>
 >;
 
@@ -37,7 +40,7 @@ export class ProductRepo<
   constructor(params: { ds: T }) {
     this.ds = params.ds;
   }
-  search = async (params: SearchParams): Promise<SearchResult> => {
+  search = async (params: SearchParams): SearchResult => {
     const { searchName, limit } = params;
 
     const query = this.ds.queryBuilder

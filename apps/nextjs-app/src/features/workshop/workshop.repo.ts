@@ -1,4 +1,9 @@
-import type { KyselyDatasource, QueryResult } from '@flowblade/source-kysely';
+import type {
+  AsyncQueryResult,
+  KyselyDatasource,
+  QueryResult,
+} from '@flowblade/source-kysely';
+import { isStringNonEmpty } from '@httpx/assert';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import type { z } from 'zod';
 
@@ -6,13 +11,16 @@ import {
   type WorkshopValidators,
   workshopValidators,
 } from '@/features/workshop/workshop.validators';
-import type { AsyncQueryResult } from '@/features/workshop/workshop-utils';
 
 type Q1Params = z.infer<WorkshopValidators['query1']['params']>;
-type Q1Result = z.infer<WorkshopValidators['query1']['result']>;
+type Q1Result = AsyncQueryResult<
+  z.infer<WorkshopValidators['query1']['result']>
+>;
 
 type Q2Params = z.infer<WorkshopValidators['query2']['params']>;
-type Q2Result = z.infer<WorkshopValidators['query2']['result']>;
+type Q2Result = AsyncQueryResult<
+  z.infer<WorkshopValidators['query2']['result']>
+>;
 
 export class WorkshopRepo<
   T extends
@@ -26,9 +34,9 @@ export class WorkshopRepo<
   }
 
   /**
-   * Query 1: return a list of products
+   * Query 1: return a list of brands
    */
-  query1 = async (params: Q1Params): AsyncQueryResult<Q1Result> => {
+  query1 = async (params: Q1Params): Q1Result => {
     const { limit } = params;
 
     return {
@@ -43,9 +51,9 @@ export class WorkshopRepo<
   };
 
   /**
-   * Query 2: return a list of products
+   * Query 2: return a list of products with brand information
    */
-  query2 = async (params: Q2Params): AsyncQueryResult<Q2Result> => {
+  query2 = async (params: Q2Params): Q2Result => {
     const { searchName, limit } = params;
     return {
       success: true,
@@ -58,7 +66,13 @@ export class WorkshopRepo<
           brand_name: 'brand name',
           barcode_ean13: 'sample ean13',
         },
-      ].slice(0, limit),
+      ]
+        .filter((product) =>
+          isStringNonEmpty(searchName)
+            ? product.name.includes(searchName)
+            : true
+        )
+        .slice(0, limit),
     } satisfies QueryResult<unknown>;
   };
 }
