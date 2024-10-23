@@ -19,6 +19,7 @@ const maskPII = (param: unknown) => {
 
 export const dbKyselySqlServer = new Kysely<DBKyselySqlServer>({
   dialect: dialect,
+  /*
   log: (event) => {
     if (event.level === 'error') {
       console.error('Query failed :', {
@@ -34,5 +35,5 @@ export const dbKyselySqlServer = new Kysely<DBKyselySqlServer>({
         params: event.query.parameters.map((param) => maskPII(param)),
       });
     }
-  },
+  }, */
 });

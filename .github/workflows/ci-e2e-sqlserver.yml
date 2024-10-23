@@ -35,10 +35,14 @@ jobs:
       - name: 🧪 Start Azure SQL Edge
         run: docker compose -f docker/sql-edge/compose.yml up -d --wait
 
-      #- name: 🧪 Create database
-      #  working-directory: "libs/db-sqlserver"
-      #  run: yarn db-recreate
+      - name: 🧪 Create database
+        working-directory: "libs/db-sqlserver"
+        run: yarn db-recreate
 
-      #- name: 🧪 Populate seed data
-      #  working-directory: "libs/db-sqlserver"
-      #  run: yarn prisma-db-seed
+      - name: 🧪 Populate seed data
+        working-directory: "libs/db-sqlserver"
+        run: yarn prisma-db-seed
+
+      - name: 🧪 App nextjs-app test-e2e
+        working-directory: "apps/nextjs-app"
+        run: yarn test-e2e
