@@ -185,7 +185,7 @@ export class WorkshopRepo<
       ON tNewData.productId = T.productId and T.countryId = tNewData.countryId;    
       
       -- SELECT
-      SELECT TOP ${sql.lit(limit)} productId, countryId, productName, createdAt, updatedAt 
+      SELECT TOP ${sql.raw(String(limit))} productId, countryId, productName, createdAt, updatedAt 
       FROM #correctedProducts;
     `;
 

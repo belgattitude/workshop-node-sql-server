@@ -78,7 +78,7 @@
   },
   "resolutions": {
     "esbuild": "^0.24.0",
-    "@opentelemetry/instrumentation": "0.53.0"
+    "@opentelemetry/instrumentation": "0.54.0"
   },
   "resolutions-help": {
     "@opentelemetry/instrumentation": "Till prisma fix issues with opentelemetry",

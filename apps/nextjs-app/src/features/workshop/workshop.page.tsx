@@ -11,7 +11,7 @@ const workshopExamples = {
   getStarter: () => workshopRepo.getStarter({ limit: 10 }),
   getBrands: () => workshopRepo.getBrands({ limit: 10 }),
   getProducts: () => workshopRepo.getProducts({ searchName: 'bio', limit: 10 }),
-  getAdvanced: () => workshopRepo.getAdvanced({ limit: 100 }),
+  getAdvanced: () => workshopRepo.getAdvanced({ limit: 1 }),
 };
 
 export const WorkshopPage: FC = async () => {

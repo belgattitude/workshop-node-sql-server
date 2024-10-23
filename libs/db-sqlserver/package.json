@@ -27,7 +27,7 @@
     "directory": "libs/db-sqlserver"
   },
   "scripts": {
-    "clean": "rimraf ./src/generated/client ./coverage ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./src/generated/client ./coverage ./tsconfig.tsbuildinfo && run prisma-generate",
     "test": "vitest run",
     "test-unit": "vitest run",
     "test-unit-watch": "vitest --ui",

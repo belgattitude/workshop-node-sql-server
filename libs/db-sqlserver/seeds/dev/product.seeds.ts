@@ -43,20 +43,25 @@ export class ProductSeeds extends AbstractSeed {
         DECLARE @jsonSeeds NVARCHAR(MAX); -- WARNING LIMIT TO 2GB
         SET @jsonSeeds = ${JSON.stringify(products)};
 
-        MERGE INTO [common].[product] as p
+        MERGE INTO [common].[product] WITH (HOLDLOCK) as p
         USING (
           SELECT seed.reference, seed.name, seed.barcode_ean13, b.id as brand_id
           FROM OPENJSON(@jsonSeeds)
-                        WITH (reference NVARCHAR(255), name NVARCHAR(255), barcode_ean13 CHAR(13), brandName NVARCHAR(255))
+                 WITH (
+                     reference NVARCHAR(255), 
+                     name NVARCHAR(255), 
+                     barcode_ean13 CHAR(13), 
+                     brandName NVARCHAR(255))
                  AS seed
-                 LEFT OUTER JOIN [common].[brand] AS b ON brandName = b.name          
+                 LEFT OUTER JOIN [common].[brand] AS b 
+                     ON brandName = b.name          
         ) AS data (reference, name, barcode_ean13, brand_id)
         ON p.reference = data.reference
         WHEN MATCHED
           THEN UPDATE SET
-                        name = data.name,
-                        barcode_ean13 = data.barcode_ean13,
-                        updated_at = CURRENT_TIMESTAMP
+                name = data.name,
+                barcode_ean13 = data.barcode_ean13,
+                updated_at = CURRENT_TIMESTAMP
         WHEN NOT MATCHED
           THEN INSERT (reference, name, barcode_ean13, brand_id, created_at)
                VALUES (data.reference, data.name, data.barcode_ean13, data.brand_id, CURRENT_TIMESTAMP)
