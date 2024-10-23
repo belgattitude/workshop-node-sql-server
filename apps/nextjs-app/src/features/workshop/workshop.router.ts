@@ -3,7 +3,7 @@ import { sql } from 'kysely';
 
 import { workshopRepo } from '@/features/workshop/workshop.config';
 import { WorkshopRepo } from '@/features/workshop/workshop.repo';
-import { zodOpenApi } from '@/features/workshop/workshop-utils';
+import { zodOpenApi } from '@/features/workshop/workshop.utils';
 import { dbKyselySqlServer } from '@/server/config/db.kysely-sqlserver.config';
 
 const app = new Hono();
@@ -21,12 +21,12 @@ app.get('/query0', async (c) => {
   });
 });
 
-app.get('/query1', zodOpenApi(validators.query1), async (c) => {
-  const rows = await workshopRepo.query1(c.req.valid('query'));
+app.get('/brands', zodOpenApi(validators.getBrands), async (c) => {
+  const rows = await workshopRepo.getBrands(c.req.valid('query'));
   return c.json(rows);
 });
 
-app.get('/query2', zodOpenApi(validators.query2), async (c) => {
+app.get('/products', zodOpenApi(validators.getProducts), async (c) => {
   const rows = await workshopRepo.query2(c.req.valid('query'));
   return c.json(rows);
 });

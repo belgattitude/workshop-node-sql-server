@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import type { WorkshopValidator } from '@/features/workshop/workshop-utils';
+import type { WorkshopValidator } from '@/features/workshop/workshop.utils';
 
 const zBrand = z.object({
   id: z.number(),
@@ -19,13 +19,13 @@ const zProductWithBrand = z.object({
 type WorkshopValidatorObject = Record<string, WorkshopValidator>;
 
 export const workshopValidators = {
-  query1: {
+  getBrands: {
     params: z.object({
       limit: z.coerce.number().optional().default(100),
     }),
     result: z.array(zBrand),
   },
-  query2: {
+  getProducts: {
     params: z.object({
       limit: z.coerce.number().optional().default(100),
       searchName: z.string().optional(),

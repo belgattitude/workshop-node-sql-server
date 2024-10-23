@@ -11,11 +11,11 @@ import {
   workshopValidators,
 } from '@/features/workshop/workshop.validators';
 
-type Q1Params = z.infer<WorkshopValidators['query1']['params']>;
-type Q1Result = z.infer<WorkshopValidators['query1']['result']>;
+type GetBrandsParams = z.infer<WorkshopValidators['getBrands']['params']>;
+type GetBrandsResult = z.infer<WorkshopValidators['getBrands']['result']>;
 
-type Q2Params = z.infer<WorkshopValidators['query2']['params']>;
-type Q2Result = z.infer<WorkshopValidators['query2']['result']>;
+type GetProdutsParams = z.infer<WorkshopValidators['getProducts']['params']>;
+type GetProductsResult = z.infer<WorkshopValidators['getProducts']['result']>;
 
 export class WorkshopRepo<
   T extends
@@ -31,7 +31,9 @@ export class WorkshopRepo<
   /**
    * Query 1: return a list of brands
    */
-  query1 = async (params: Q1Params): AsyncQueryResult<Q1Result> => {
+  getBrands = async (
+    params: GetBrandsParams
+  ): AsyncQueryResult<GetBrandsResult> => {
     const { limit } = params;
 
     return {
@@ -48,7 +50,9 @@ export class WorkshopRepo<
   /**
    * Query 2: return a list of products with brand information
    */
-  query2 = async (params: Q2Params): AsyncQueryResult<Q2Result> => {
+  query2 = async (
+    params: GetProdutsParams
+  ): AsyncQueryResult<GetProductsResult> => {
     const { searchName, limit } = params;
     return {
       success: true,

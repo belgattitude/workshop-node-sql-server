@@ -7,7 +7,7 @@ import { workshopRepo } from '@/features/workshop/workshop.config';
 export default async function WorkshopRoute() {
   const workshopExamples = {
     product: productRepo.search({ searchName: 'bio', limit: 10 }),
-    query1: workshopRepo.query1({ limit: 10 }),
+    query1: workshopRepo.getBrands({ limit: 10 }),
     query2: workshopRepo.query2({ searchName: 'bio', limit: 10 }),
   };
 
