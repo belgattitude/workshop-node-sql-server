@@ -42,3 +42,7 @@ jobs:
       - name: 🧪 Populate seed data
         working-directory: "libs/db-sqlserver"
         run: yarn prisma-db-seed
+
+      - name: 🧪 App nextjs-app test-e2e
+        working-directory: "apps/nextjs-app"
+        run: yarn test-e2e
