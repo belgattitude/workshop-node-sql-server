@@ -5,7 +5,7 @@ services:
     container_name: sql-server-db
     image: mcr.microsoft.com/azure-sql-edge
     # Only when docker is running as "root".
-    # cap_add: ['SYS_PTRACE']
+    cap_add: ['SYS_PTRACE']
     ports:
       - '1433:1433'
     env_file:
