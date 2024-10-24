@@ -25,9 +25,23 @@ export interface paths {
           };
           content: {
             'application/json': {
-              id: number;
-              name: string;
-            }[];
+              success: boolean;
+              data?: {
+                id: number;
+                name: string;
+              }[];
+              error?: {
+                message: string;
+              };
+              meta?: {
+                affectedRows?: number;
+                timeMs?: number;
+                query?: {
+                  sql?: string;
+                  params?: unknown[];
+                };
+              };
+            };
           };
         };
       };
@@ -65,9 +79,23 @@ export interface paths {
           };
           content: {
             'application/json': {
-              id: number;
-              name: string;
-            }[];
+              success: boolean;
+              data?: {
+                id: number;
+                name: string;
+              }[];
+              error?: {
+                message: string;
+              };
+              meta?: {
+                affectedRows?: number;
+                timeMs?: number;
+                query?: {
+                  sql?: string;
+                  params?: unknown[];
+                };
+              };
+            };
           };
         };
       };
@@ -106,13 +134,27 @@ export interface paths {
           };
           content: {
             'application/json': {
-              id: number;
-              reference: string;
-              name: string;
-              barcode_ean13: string | null;
-              brand_id: number | null;
-              brand_name: string | null;
-            }[];
+              success: boolean;
+              data?: {
+                id: number;
+                reference: string;
+                name: string;
+                barcode_ean13: string | null;
+                brand_id: number | null;
+                brand_name: string | null;
+              }[];
+              error?: {
+                message: string;
+              };
+              meta?: {
+                affectedRows?: number;
+                timeMs?: number;
+                query?: {
+                  sql?: string;
+                  params?: unknown[];
+                };
+              };
+            };
           };
         };
       };
@@ -150,10 +192,24 @@ export interface paths {
           };
           content: {
             'application/json': {
-              countryId: string;
-              productId: string;
-              productName: string;
-            }[];
+              success: boolean;
+              data?: {
+                countryId: string;
+                productId: string;
+                productName: string;
+              }[];
+              error?: {
+                message: string;
+              };
+              meta?: {
+                affectedRows?: number;
+                timeMs?: number;
+                query?: {
+                  sql?: string;
+                  params?: unknown[];
+                };
+              };
+            };
           };
         };
       };
