@@ -49,27 +49,28 @@ Another set of features where Prisma lacks (as of 5.11):
 - [ ] No query cancellation support: see [this](https://github.com/prisma/prisma/issues/15594). Same for [Kysely](https://github.com/kysely-org/kysely/issues/783) but
       it can be implemented by running some queries in tedious directly. 
 - [ ] A query builder. While Prisma start to improve raw queries support for [TypedSql](https://www.prisma.io/docs/orm/prisma-client/using-raw-sql)
-      having a query builder offers some advantages in composition.
+      having a query builder offers some advantages in term of composition (cte, parametrization...).
 
 What Prisma has:
 
-- [x] The `schema.prisma` dsl is a very nice way to design the database. The plugin system allows
-      to generate the creation ddl (generally migrations on sql server are handled by dacpac). Plugins
-      exists to generate documentation (ERD diagram) and Kysely types.
-- [x] A very interesting way to simplify N+1 issues in the [relationJoins](https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries#when-to-use-which-load-strategy) preview feature.
-      Something harder to write with an sql builder. Very nice when working with graphql (ie: pothos...)
+- [x] The `schema.prisma` dsl is a very nice way to design the database. Thanks to generators and/or scripts, it's relatively
+      easy to generate [documentation](https://github.com/notiz-dev/prisma-dbml-generator),
+     [kysely types](https://github.com/valtyr/prisma-kysely) and **output a DDL file** that can be
+      used to by migration tools. It's often a good idea to apply migrations with the [SqlServer DacPac](https://learn.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver16)
+      from the generated DDL file rather than using prisma. 
+- [x] A very interesting way to simplify N+1 issues is the [relationJoins](https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries#when-to-use-which-load-strategy) preview feature.
+      Something harder to write with an sql builder. Very nice when working with graphql (ie: pothos...) that by design allows to 
+      retrieve nested structures. Unfortunately support for SQL server is not as tested as Postgres...
 
 What Kysely has:
 
 - [x] The query builder is very nice when having to deal with more complex queries. The fact that
-      we can't mix and match queryRaw and QueryBuilder code is amazing in situtations where there's no choice.
+      we can't mix and match queryRaw and QueryBuilder code is amazing in situations where there's no choice.
 
 So The idea is 
 
 - [x] In development: Use Prisma to maintain the schema, the seeds and kysely types generation.
 - [x] In production: Use Kysely with tedious driver and tarn as a connection pooler.
-
-
 
 
 - 
