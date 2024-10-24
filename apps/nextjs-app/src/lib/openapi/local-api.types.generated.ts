@@ -248,13 +248,27 @@ export interface paths {
           };
           content: {
             'application/json': {
-              id: number;
-              reference: string;
-              name: string;
-              barcode_ean13: string | null;
-              brand_id: number | null;
-              brand_name: string | null;
-            }[];
+              success: boolean;
+              data?: {
+                id: number;
+                reference: string;
+                name: string;
+                barcode_ean13: string | null;
+                brand_id: number | null;
+                brand_name: string | null;
+              }[];
+              error?: {
+                message: string;
+              };
+              meta?: {
+                affectedRows?: number;
+                timeMs?: number;
+                query?: {
+                  sql?: string;
+                  params?: unknown[];
+                };
+              };
+            };
           };
         };
       };

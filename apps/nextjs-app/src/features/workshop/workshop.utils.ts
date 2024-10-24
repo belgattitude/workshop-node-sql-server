@@ -27,7 +27,7 @@ const zError = z.object({
   message: z.string(),
 } satisfies Record<keyof QueryResultError['error'], z.Schema>);
 
-const zQueryResult = <T extends z.Schema>(zSchema: T) =>
+export const zQueryResult = <T extends z.Schema>(zSchema: T) =>
   z.object({
     success: z.boolean(),
     data: zSchema.optional(),

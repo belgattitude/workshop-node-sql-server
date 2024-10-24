@@ -3,6 +3,7 @@ import { openApi } from 'hono-zod-openapi';
 
 import { productRepo } from '@/features/products/config/product-repo.config';
 import { ProductRepo } from '@/features/products/server/product.repo';
+import { zQueryResult } from '@/features/workshop/workshop.utils';
 
 const app = new Hono();
 
@@ -15,7 +16,7 @@ app.get(
       query: validators.search.params,
     },
     responses: {
-      200: validators.search.result,
+      200: zQueryResult(validators.search.result),
     },
   }),
   async (c) => {

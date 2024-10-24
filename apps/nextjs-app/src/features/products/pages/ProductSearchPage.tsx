@@ -26,8 +26,7 @@ export const ProductSearchPage = () => {
   }
 
   const products =
-    // eslint-disable-next-line sonarjs/no-in-misuse
-    'data' in data
+    data?.success === true
       ? (data as unknown as QueryResultSuccess<SearchResult>).data
       : null;
 
