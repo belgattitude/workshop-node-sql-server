@@ -35,7 +35,7 @@ While Prisma has official support for [Microsoft SQL Server](https://www.prisma.
 it does not play well in many scenarios. See some context below:
 
 - [ ] Incomplete azure authentication support: [Azure Ad](https://github.com/prisma/prisma/issues/12562), [Azure Managed identities](https://github.com/prisma/prisma/issues/13853),...
-- [ ] Migration: Does not support NULL unique columns: See this [hack](https://github.com/belgattitude/workshop-node-sql-server/blob/06cc5c93b15971a4db3e95ac631a33f5c4da3a2e/libs/db-sqlserver/src/lib/hacks/fix-sql-server-null-unique-indexes.test.ts)
+- [ ] Migration: Does not support NULL unique columns: See this [hack in the workshop example](https://github.com/belgattitude/workshop-node-sql-server/blob/06cc5c93b15971a4db3e95ac631a33f5c4da3a2e/libs/db-sqlserver/src/lib/hacks/fix-sql-server-null-unique-indexes.ts)
 - [ ] By experience, Prisma has recurring issues with the connection pooler and they can be hard to track down and fix.
 
 Globally Prisma won't handle a few edges cases with SQL Server. On top of that the performance of the rust based engine
