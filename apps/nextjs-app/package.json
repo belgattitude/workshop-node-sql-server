@@ -87,7 +87,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.0.4",
+    "@belgattitude/eslint-config-bases": "6.1.0",
     "@faker-js/faker": "9.0.3",
     "@spotlightjs/spotlight": "2.5.0",
     "@tanstack/react-query-devtools": "5.59.16",
@@ -109,7 +109,7 @@
     "eslint": "8.57.1",
     "eslint-config-next": "15.0.1",
     "happy-dom": "15.7.4",
-    "npm-run-all2": "7.0.0",
+    "npm-run-all2": "7.0.1",
     "openapi-typescript": "7.4.1",
     "postcss": "8.4.47",
     "prettier": "3.3.3",

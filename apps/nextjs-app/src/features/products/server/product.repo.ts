@@ -3,7 +3,6 @@ import type {
   KyselyDatasource,
 } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
-import type { SimplifyDeep } from 'type-fest';
 import { z } from 'zod';
 
 const validators = {
@@ -25,10 +24,8 @@ const validators = {
   },
 } as const;
 
-type SearchParams = z.infer<typeof validators.search.params>;
-type SearchResult = AsyncQueryResult<
-  SimplifyDeep<z.infer<typeof validators.search.result>>
->;
+export type SearchParams = z.infer<typeof validators.search.params>;
+export type SearchResult = z.infer<typeof validators.search.result>;
 
 export class ProductRepo<
   T extends
@@ -40,7 +37,7 @@ export class ProductRepo<
   constructor(params: { ds: T }) {
     this.ds = params.ds;
   }
-  search = async (params: SearchParams): SearchResult => {
+  search = async (params: SearchParams): AsyncQueryResult<SearchResult> => {
     const { searchName, limit } = params;
 
     const query = this.ds.queryBuilder

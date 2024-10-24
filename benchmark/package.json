@@ -8,7 +8,7 @@
     "bench-api-product": "autocannon -c 100 -d 10 -p 10 http://localhost:3000/api/product-ex01"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.0.4",
+    "@belgattitude/eslint-config-bases": "6.1.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "22.7.9",
     "@typescript-eslint/eslint-plugin": "8.11.0",
