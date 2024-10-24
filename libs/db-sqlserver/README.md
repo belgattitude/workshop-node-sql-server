@@ -36,13 +36,13 @@ it does not play well in many scenarios. See some context below:
 
 - [ ] Incomplete azure authentication support: [Azure Ad](https://github.com/prisma/prisma/issues/12562), [Azure Managed identities](https://github.com/prisma/prisma/issues/13853),...
 - [ ] Migration: Does not support NULL unique columns: See this [hack](https://github.com/belgattitude/workshop-node-sql-server/blob/06cc5c93b15971a4db3e95ac631a33f5c4da3a2e/libs/db-sqlserver/src/lib/hacks/fix-sql-server-null-unique-indexes.test.ts)
-- [ ] By experience, Prisma has recurring issues with the connection pooler and they hard to track down.
+- [ ] By experience, Prisma has recurring issues with the connection pooler and they can be hard to track down and fix.
 
 Globally Prisma won't handle a few edges cases with SQL Server. On top of that the performance of the rust based engine
-won't match the performance of pure-js [tedious](https://github.com/tediousjs/tedious) driver for large resultsets. This
-is true for most prisma engines (see also the currently preview [driversAdapters](https://www.prisma.io/docs/orm/overview/databases/database-drivers) alternative). Or
+won't match the performance of pure-js [tedious](https://github.com/tediousjs/tedious) driver for large resultsets and/or long running apps. 
+This last note seems true for most prisma engines (see also the currently preview [driversAdapters](https://www.prisma.io/docs/orm/overview/databases/database-drivers) alternative). Or
 [Drizzle benchmarks](https://orm.drizzle.team/benchmarks) to get an idea of the performance difference. But at the time of writing there
-isn't yet a pure-js tedious based driver (only Pgsql, sqlite...).
+isn't yet a pure-js tedious based driver (only Pgsql, sqlite...). 
 
 Another set of features where Prisma lacks (as of 5.11):
 
@@ -58,8 +58,9 @@ What Prisma has:
      [kysely types](https://github.com/valtyr/prisma-kysely) and **output a DDL file** that can be
       used to by migration tools. It's often a good idea to apply migrations with the [SqlServer DacPac](https://learn.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver16)
       from the generated DDL file rather than using prisma. 
-- [x] A very interesting way to simplify N+1 issues is the [relationJoins](https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries#when-to-use-which-load-strategy) preview feature.
-      Something harder to write with an sql builder. Very nice when working with graphql (ie: pothos...) that by design allows to 
+- [x] [Prisma studio](https://www.prisma.io/studio) can be helpful for quick data exploration and debugging.
+- [x] Another very interesting way to simplify N+1 issues is the [relationJoins](https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries#when-to-use-which-load-strategy) preview feature.
+      Something harder to write with a sql builder (lateral joins, json_agg...). Very nice when working with graphql (ie: pothos...) that by design allows to 
       retrieve nested structures. Unfortunately support for SQL server is not as tested as Postgres...
 
 What Kysely has:
