@@ -2506,10 +2506,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@faker-js/faker@npm:9.0.3":
-  version: 9.0.3
-  resolution: "@faker-js/faker@npm:9.0.3"
-  checksum: 10c0/fde52946e7042e6273cf2ea3726a8a4b794c5b0fa8ac22cb9edcc5c436aec1b07fcb925e13abd663e86cd35d0286be0c65639d429b21bcd458205edaaa6394d0
+"@faker-js/faker@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@faker-js/faker@npm:9.1.0"
+  checksum: 10c0/bfcde8032f0b0ee94e3e52157a86c0a3f8d85899ff126b4e3e030fcb9fec1949e21c9ce5ae3d0af5f192c13641cc2003fefa55768d9620d27eb061cea5b83769
   languageName: node
   linkType: hard
 
@@ -3232,72 +3232,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-arm64@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-darwin-arm64@npm:20.0.5"
+"@nx/nx-darwin-arm64@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-darwin-arm64@npm:20.0.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-darwin-x64@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-darwin-x64@npm:20.0.5"
+"@nx/nx-darwin-x64@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-darwin-x64@npm:20.0.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-freebsd-x64@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-freebsd-x64@npm:20.0.5"
+"@nx/nx-freebsd-x64@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-freebsd-x64@npm:20.0.6"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm-gnueabihf@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-linux-arm-gnueabihf@npm:20.0.5"
+"@nx/nx-linux-arm-gnueabihf@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-linux-arm-gnueabihf@npm:20.0.6"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-gnu@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-linux-arm64-gnu@npm:20.0.5"
+"@nx/nx-linux-arm64-gnu@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-linux-arm64-gnu@npm:20.0.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-arm64-musl@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-linux-arm64-musl@npm:20.0.5"
+"@nx/nx-linux-arm64-musl@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-linux-arm64-musl@npm:20.0.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-gnu@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-linux-x64-gnu@npm:20.0.5"
+"@nx/nx-linux-x64-gnu@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-linux-x64-gnu@npm:20.0.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@nx/nx-linux-x64-musl@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-linux-x64-musl@npm:20.0.5"
+"@nx/nx-linux-x64-musl@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-linux-x64-musl@npm:20.0.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-arm64-msvc@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-win32-arm64-msvc@npm:20.0.5"
+"@nx/nx-win32-arm64-msvc@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-win32-arm64-msvc@npm:20.0.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@nx/nx-win32-x64-msvc@npm:20.0.5":
-  version: 20.0.5
-  resolution: "@nx/nx-win32-x64-msvc@npm:20.0.5"
+"@nx/nx-win32-x64-msvc@npm:20.0.6":
+  version: 20.0.6
+  resolution: "@nx/nx-win32-x64-msvc@npm:20.0.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4960,12 +4960,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.7.9, @types/node@npm:>=18":
-  version: 22.7.9
-  resolution: "@types/node@npm:22.7.9"
+"@types/node@npm:*, @types/node@npm:22.8.1, @types/node@npm:>=18":
+  version: 22.8.1
+  resolution: "@types/node@npm:22.8.1"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10c0/2d1917702b9d9ede8e4d8151cd8b1af8bc147d543486474ffbe0742e38764ea73105939e6a767addf7a4c39e842e16eae762bff90617d7b7f9ee3fbbb2d23bfa
+    undici-types: "npm:~6.19.8"
+  checksum: 10c0/83550fdf72a7db5b55eceac3f4fb038844eaee20202bdd2297a8248370cfa08317bda1605b781a8043eda4f173b75e73632e652fc85509eb14dfef78fa17337f
   languageName: node
   linkType: hard
 
@@ -5716,7 +5716,7 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.1.0"
     "@total-typescript/ts-reset": "npm:0.6.1"
-    "@types/node": "npm:22.7.9"
+    "@types/node": "npm:22.8.1"
     "@typescript-eslint/eslint-plugin": "npm:8.11.0"
     "@typescript-eslint/parser": "npm:8.11.0"
     autocannon: "npm:8.0.0"
@@ -5732,11 +5732,11 @@ __metadata:
   resolution: "@workshop/db-sqlserver@workspace:libs/db-sqlserver"
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.1.0"
-    "@faker-js/faker": "npm:9.0.3"
+    "@faker-js/faker": "npm:9.1.0"
     "@httpx/assert": "npm:0.15.1"
     "@prisma/client": "npm:5.21.1"
     "@total-typescript/ts-reset": "npm:0.6.1"
-    "@types/node": "npm:22.7.9"
+    "@types/node": "npm:22.8.1"
     "@typescript-eslint/eslint-plugin": "npm:8.11.0"
     "@typescript-eslint/parser": "npm:8.11.0"
     "@vitest/coverage-v8": "npm:2.1.3"
@@ -8000,15 +8000,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-toolkit@npm:1.26.0":
-  version: 1.26.0
-  resolution: "es-toolkit@npm:1.26.0"
+"es-toolkit@npm:1.26.1":
+  version: 1.26.1
+  resolution: "es-toolkit@npm:1.26.1"
   dependenciesMeta:
     "@trivago/prettier-plugin-sort-imports@4.3.0":
       unplugged: true
     prettier-plugin-sort-re-exports@0.0.1:
       unplugged: true
-  checksum: 10c0/84db1a08289de9875cec84d79447ff464bc4f4918a3b772cdc90139c8c626fb366b9917e1e64958e3ac35f563d0d24469c93d68bfcecfbc9859088658be018d3
+  checksum: 10c0/73760262267cb64201ff618571bd8c5f3f9f0c8d5ccb3bfb24b15e2b3bc4a58f93b6107a0615fa4906e79055238f638a2fbfc536f1047a6b584f109665c7e67c
   languageName: node
   linkType: hard
 
@@ -9041,7 +9041,7 @@ __metadata:
     "@httpx/treeu": "npm:0.4.6"
     "@sinclair/typebox": "npm:0.33.17"
     "@total-typescript/ts-reset": "npm:0.6.1"
-    "@types/node": "npm:22.7.9"
+    "@types/node": "npm:22.8.1"
     "@typescript-eslint/eslint-plugin": "npm:8.11.0"
     "@typescript-eslint/parser": "npm:8.11.0"
     "@vitest/coverage-v8": "npm:2.1.3"
@@ -10022,10 +10022,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:4.6.6":
-  version: 4.6.6
-  resolution: "hono@npm:4.6.6"
-  checksum: 10c0/9179a9d0cc42890e97e1ee7691b2914eebf70d36d546f477ae3749fc8c73fcfe237f2e0b026949519cd3768a03e870c0ca6e8e8f55c634d09fc8303a9d736343
+"hono@npm:4.6.7":
+  version: 4.6.7
+  resolution: "hono@npm:4.6.7"
+  checksum: 10c0/3452fe76ef2a602d72ec81aa93e93555c3b4f3164b384411c8ac5e3bcfd769b05ffeb45d41968e5a3ddf071bfb6aa5308520c05ff1f90fcebf1d33ae1fca9f2b
   languageName: node
   linkType: hard
 
@@ -12254,7 +12254,7 @@ __metadata:
   resolution: "nextjs-app@workspace:apps/nextjs-app"
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.1.0"
-    "@faker-js/faker": "npm:9.0.3"
+    "@faker-js/faker": "npm:9.1.0"
     "@flowblade/source-kysely": "npm:0.10.0"
     "@hono/node-server": "npm:1.13.2"
     "@hono/swagger-ui": "npm:0.4.1"
@@ -12280,7 +12280,7 @@ __metadata:
     "@tanstack/react-query": "npm:5.59.16"
     "@tanstack/react-query-devtools": "npm:5.59.16"
     "@total-typescript/ts-reset": "npm:0.6.1"
-    "@types/node": "npm:22.7.9"
+    "@types/node": "npm:22.8.1"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     "@typescript-eslint/eslint-plugin": "npm:8.11.0"
@@ -12298,19 +12298,19 @@ __metadata:
     dotenv-expand: "npm:11.0.6"
     dotenv-flow: "npm:4.1.0"
     dotenv-flow-cli: "npm:1.1.1"
-    es-toolkit: "npm:1.26.0"
+    es-toolkit: "npm:1.26.1"
     eslint: "npm:8.57.1"
     eslint-config-next: "npm:15.0.1"
     happy-dom: "npm:15.7.4"
-    hono: "npm:4.6.6"
+    hono: "npm:4.6.7"
     hono-zod-openapi: "npm:0.3.1"
     ky: "npm:1.7.2"
     kysely: "npm:0.27.4"
     next: "npm:15.0.1"
     npm-run-all2: "npm:7.0.1"
-    openapi-fetch: "npm:0.12.2"
-    openapi-react-query: "npm:0.2.0"
-    openapi-typescript: "npm:7.4.1"
+    openapi-fetch: "npm:0.13.0"
+    openapi-react-query: "npm:0.2.4"
+    openapi-typescript: "npm:7.4.2"
     postcss: "npm:8.4.47"
     prettier: "npm:3.3.3"
     primeicons: "npm:7.0.0"
@@ -12537,21 +12537,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:20.0.5":
-  version: 20.0.5
-  resolution: "nx@npm:20.0.5"
+"nx@npm:20.0.6":
+  version: 20.0.6
+  resolution: "nx@npm:20.0.6"
   dependencies:
     "@napi-rs/wasm-runtime": "npm:0.2.4"
-    "@nx/nx-darwin-arm64": "npm:20.0.5"
-    "@nx/nx-darwin-x64": "npm:20.0.5"
-    "@nx/nx-freebsd-x64": "npm:20.0.5"
-    "@nx/nx-linux-arm-gnueabihf": "npm:20.0.5"
-    "@nx/nx-linux-arm64-gnu": "npm:20.0.5"
-    "@nx/nx-linux-arm64-musl": "npm:20.0.5"
-    "@nx/nx-linux-x64-gnu": "npm:20.0.5"
-    "@nx/nx-linux-x64-musl": "npm:20.0.5"
-    "@nx/nx-win32-arm64-msvc": "npm:20.0.5"
-    "@nx/nx-win32-x64-msvc": "npm:20.0.5"
+    "@nx/nx-darwin-arm64": "npm:20.0.6"
+    "@nx/nx-darwin-x64": "npm:20.0.6"
+    "@nx/nx-freebsd-x64": "npm:20.0.6"
+    "@nx/nx-linux-arm-gnueabihf": "npm:20.0.6"
+    "@nx/nx-linux-arm64-gnu": "npm:20.0.6"
+    "@nx/nx-linux-arm64-musl": "npm:20.0.6"
+    "@nx/nx-linux-x64-gnu": "npm:20.0.6"
+    "@nx/nx-linux-x64-musl": "npm:20.0.6"
+    "@nx/nx-win32-arm64-msvc": "npm:20.0.6"
+    "@nx/nx-win32-x64-msvc": "npm:20.0.6"
     "@yarnpkg/lockfile": "npm:^1.1.0"
     "@yarnpkg/parsers": "npm:3.0.0-rc.46"
     "@zkochan/js-yaml": "npm:0.0.7"
@@ -12615,7 +12615,7 @@ __metadata:
   bin:
     nx: bin/nx.js
     nx-cloud: bin/nx-cloud.js
-  checksum: 10c0/f418897b18c65b6eff0a1d8b0a7e6a024fdef06c039903cf357337c7a4841e4c3bd8660c0b33cd748c128d527f4c1365b08f5d8b255387e8168b61a2d2b9b9a9
+  checksum: 10c0/b5413b84507e37056b7ded24eaeed26e583883f6e7f64c6ee374c41fc1c7b7a8537ab23f338f12df92e30b1860a89f9f3ec828dcc11fe22797512df3aa12f135
   languageName: node
   linkType: hard
 
@@ -12801,24 +12801,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openapi-fetch@npm:0.12.2":
-  version: 0.12.2
-  resolution: "openapi-fetch@npm:0.12.2"
+"openapi-fetch@npm:0.13.0":
+  version: 0.13.0
+  resolution: "openapi-fetch@npm:0.13.0"
   dependencies:
-    openapi-typescript-helpers: "npm:^0.0.13"
-  checksum: 10c0/1fede5bd7e224fbc9d125ca35a4149b512c67532d445c738d1606ad043fca9338eafaf4f768bc7a023603193760b4afa5fd585c9b0f7b78b07618617d111aaf1
+    openapi-typescript-helpers: "npm:^0.0.15"
+  checksum: 10c0/675a74102ba2d4433b65c89ec9f5b20254bc399912c069b1b9ca584103992e5eb71680b2b9436fe48eedf4410ad2c2dbead2c5d0c790d5cbc8e16a0b7578879c
   languageName: node
   linkType: hard
 
-"openapi-react-query@npm:0.2.0":
-  version: 0.2.0
-  resolution: "openapi-react-query@npm:0.2.0"
+"openapi-react-query@npm:0.2.4":
+  version: 0.2.4
+  resolution: "openapi-react-query@npm:0.2.4"
   dependencies:
-    openapi-typescript-helpers: "npm:^0.0.13"
+    openapi-typescript-helpers: "npm:^0.0.15"
   peerDependencies:
-    "@tanstack/react-query": ^5.0.0
-    openapi-fetch: ^0.12.2
-  checksum: 10c0/4d5691897534cbb67ebb607da22e5811268b71c20294551bbd6ad31949330cf2e5e4d5f12425fb94febb46baf4faabf68fc0cf9bf6831a7f08f437a6a6cdfd23
+    "@tanstack/react-query": ^5.25.0
+    openapi-fetch: ^0.13.0
+  checksum: 10c0/4f0c8368ebe20835944505c3028b8cf42bd73a15bd8f6875e7b93a132bd5ca623dd306c13a9a1d8f2214fd49c832bc76a8a6d888ed1326cd92072b5ab0a077f4
   languageName: node
   linkType: hard
 
@@ -12829,16 +12829,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"openapi-typescript-helpers@npm:^0.0.13":
-  version: 0.0.13
-  resolution: "openapi-typescript-helpers@npm:0.0.13"
-  checksum: 10c0/2315b7f7e3a7e991a11259daadd65b8d4d33c800d385c99e4a6a648b47deffd08a9eef7a39ded8c741172720621681d645de5078507271830dc28c4e69ae8a44
+"openapi-typescript-helpers@npm:^0.0.15":
+  version: 0.0.15
+  resolution: "openapi-typescript-helpers@npm:0.0.15"
+  checksum: 10c0/5eb68d487b787e3e31266470b1a310726549dd45a1079655ab18066ab291b0b3c343fdf629991013706a2329b86964f8798d56ef0272b94b931fe6c19abd7a88
   languageName: node
   linkType: hard
 
-"openapi-typescript@npm:7.4.1":
-  version: 7.4.1
-  resolution: "openapi-typescript@npm:7.4.1"
+"openapi-typescript@npm:7.4.2":
+  version: 7.4.2
+  resolution: "openapi-typescript@npm:7.4.2"
   dependencies:
     "@redocly/openapi-core": "npm:^1.25.3"
     ansi-colors: "npm:^4.1.3"
@@ -12850,7 +12850,7 @@ __metadata:
     typescript: ^5.x
   bin:
     openapi-typescript: bin/cli.js
-  checksum: 10c0/e671d6e439bf8ec1ce68628cb9091be50f529b7f1fc2247ce5e0837fabd16cf1afd797da195c2c1a1925f6bc20d64fd37190b186f3489250267e0ec831bc21c3
+  checksum: 10c0/a8728957234b39c7d404bc779b53878eb1469d83055983cae8efc4d6467495a4f89afd3699b465bb3548fbea8bab06011f3a613db53b23745e5841a6c47928be
   languageName: node
   linkType: hard
 
@@ -16233,7 +16233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.2":
+"undici-types@npm:~6.19.8":
   version: 6.19.8
   resolution: "undici-types@npm:6.19.8"
   checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
@@ -16909,7 +16909,7 @@ __metadata:
     is-ci: "npm:3.0.1"
     lint-staged: "npm:15.2.10"
     npm-run-all2: "npm:7.0.1"
-    nx: "npm:20.0.5"
+    nx: "npm:20.0.6"
     prettier: "npm:3.3.3"
     rimraf: "npm:6.0.1"
     shell-quote: "npm:1.8.1"

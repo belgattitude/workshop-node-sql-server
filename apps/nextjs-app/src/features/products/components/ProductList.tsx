@@ -14,6 +14,9 @@ export const ProductList: FC<Props> = (props) => {
         return (
           <div className={'border rounded p-5'} key={String(product.id)}>
             {product.name}
+            <div className={'text-xs border rounded text-white bg-black'}>
+              {product.brand_name}
+            </div>
           </div>
         );
       })}

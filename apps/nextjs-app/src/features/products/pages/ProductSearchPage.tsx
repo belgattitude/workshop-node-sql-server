@@ -11,9 +11,11 @@ export const ProductSearchPage = () => {
     'get',
     '/api/products/search',
     {
-      query: {
-        query: 'bio',
-        limit: 10,
+      params: {
+        query: {
+          limit: 100,
+          searchName: 'bio',
+        },
       },
     }
   );
