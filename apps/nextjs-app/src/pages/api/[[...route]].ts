@@ -3,6 +3,7 @@ import { swaggerUI } from '@hono/swagger-ui';
 import { Hono } from 'hono';
 import { createOpenApiDocument } from 'hono-zod-openapi';
 
+import { brandRouter } from '@/features/products/server/brand.router';
 import { productRouter } from '@/features/products/server/product.router';
 import { workshopRouter } from '@/features/workshop/workshop.router';
 
@@ -22,6 +23,7 @@ app.get('/health', (c) => {
 
 app.route('/workshop', workshopRouter);
 app.route('/products', productRouter);
+app.route('/brands', brandRouter);
 
 createOpenApiDocument(app, {
   info: {
