@@ -34,7 +34,7 @@
     "@fastify/swagger": "9.2.0",
     "@fastify/swagger-ui": "5.1.0",
     "@fastify/type-provider-typebox": "5.0.0",
-    "@flowblade/source-kysely": "0.10.0",
+    "@flowblade/source-kysely": "0.11.0",
     "@httpx/assert": "0.15.1",
     "@httpx/dsn-parser": "1.8.5",
     "@httpx/exception": "3.0.11",

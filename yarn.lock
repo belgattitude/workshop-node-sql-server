@@ -2647,9 +2647,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flowblade/source-kysely@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@flowblade/source-kysely@npm:0.10.0"
+"@flowblade/source-kysely@npm:0.11.0":
+  version: 0.11.0
+  resolution: "@flowblade/source-kysely@npm:0.11.0"
   dependencies:
     "@httpx/assert": "npm:^0.15.1"
     "@httpx/dsn-parser": "npm:^1.8.5"
@@ -2665,7 +2665,7 @@ __metadata:
       optional: true
     tedious:
       optional: true
-  checksum: 10c0/ab83557aa9abbba10b772215b2f05d21a72d3db06d4e8efe065008e964c0d27f72833044dce13e05cf8123f868f45b8122cebd672ff3f1b1a7585a4a1996905f
+  checksum: 10c0/9af759058b3ce4fba49c0014bffc2920b97d11d5b242918e41454d445aa9edc73b4d679f8041d39216b16ac280feaa40a0d3223d2ac209a213bcc865c7208111
   languageName: node
   linkType: hard
 
@@ -9037,7 +9037,7 @@ __metadata:
     "@fastify/swagger": "npm:9.2.0"
     "@fastify/swagger-ui": "npm:5.1.0"
     "@fastify/type-provider-typebox": "npm:5.0.0"
-    "@flowblade/source-kysely": "npm:0.10.0"
+    "@flowblade/source-kysely": "npm:0.11.0"
     "@httpx/assert": "npm:0.15.1"
     "@httpx/dsn-parser": "npm:1.8.5"
     "@httpx/exception": "npm:3.0.11"
@@ -12260,7 +12260,7 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.2.0"
     "@faker-js/faker": "npm:9.1.0"
-    "@flowblade/source-kysely": "npm:0.10.0"
+    "@flowblade/source-kysely": "npm:0.11.0"
     "@hono/node-server": "npm:1.13.3"
     "@hono/swagger-ui": "npm:0.4.1"
     "@httpx/assert": "npm:0.15.1"

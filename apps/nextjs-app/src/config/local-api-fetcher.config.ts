@@ -6,7 +6,7 @@ export const localApiFetcher = ky.create({
   prefixUrl: localApiConfig.apiUrl,
   timeout: 30_000,
   retry: {
-    limit: 3,
+    limit: process.env.NODE_ENV === 'development' ? 2 : 3,
     statusCodes: [408, 413, 429, 500, 502, 503, 504],
     afterStatusCodes: [413, 429, 503],
     methods: ['get', 'put', 'head', 'delete', 'options', 'trace'],

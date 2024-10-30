@@ -1,11 +1,10 @@
 import type {
   AsyncQueryResult,
+  InferAsyncQueryResultData,
   KyselyDatasource,
 } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
-
-import type { InferAsyncQueryResultData } from '@/features/products/utils';
 
 export type ProductRepoSearchData = InferAsyncQueryResultData<
   ReturnType<ProductRepo['search']>

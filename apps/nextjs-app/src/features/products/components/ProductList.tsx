@@ -1,10 +1,12 @@
-import type { QueryResultSuccess } from '@flowblade/source-kysely';
+import type { InferAsyncQueryResultData } from '@flowblade/source-kysely';
 import type { FC } from 'react';
 
-import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
+import type { ProductRepo } from '@/features/products/server/product.repo';
 
 type Props = {
-  data: QueryResultSuccess<ProductRepoSearchResult>['data'];
+  data: InferAsyncQueryResultData<
+    ReturnType<InstanceType<typeof ProductRepo>['search']>
+  >;
 };
 export const ProductList: FC<Props> = (props) => {
   const { data } = props;
