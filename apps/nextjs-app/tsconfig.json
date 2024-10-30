@@ -23,6 +23,7 @@
       "@/providers/*": ["./providers/*"],
       "@/redux/*": ["./redux/*"],
       "@/server/*": ["./server/*"],
+      "@/styles/*": ["./styles/*"],
       "@/lib/*": ["./lib/*"]
     },
     "allowJs": true,
@@ -38,19 +39,19 @@
     ],
     "types": ["vitest/globals"]
   },
-  "exclude": ["**/node_modules", "**/.*/*"],
+  "exclude": ["**/node_modules"],
   "include": [
     ".eslintrc.*",
     "next-env.d.ts",
+    ".next/types/**/*.ts",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
     "**/*.cjs",
     "**/*.mjs",
-    "**/*.json",
-    ".next/types/**/*.ts",
-    ".storybook/**/*.ts",
-    ".storybook/**/*.tsx"
+    "**/*.json"
   ]
 }
