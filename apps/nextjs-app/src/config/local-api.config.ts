@@ -24,6 +24,7 @@ type LocalApiConfig = {
 
 export const localApiConfig: LocalApiConfig = {
   apiUrl: isBrowser() ? '/api' : `${apiServer}/api`,
+  // apiUrl: `${apiServer}/api`,
   /**
    * Get the origin of the api server
    * ie: https://localhost:3000 (without pathname)

@@ -1,24 +1,19 @@
 'use client';
 
 import type { QueryResultSuccess } from '@flowblade/source-kysely';
+import { useQuery } from '@tanstack/react-query';
 
-import { $api } from '@/config/openapi-react-query.config';
+import { searchProducts } from '@/features/products/api/search-products';
 import { ProductList } from '@/features/products/components/ProductList';
 import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
 
 export const ProductSearchPage = () => {
-  const { data, isPending, error } = $api.useQuery(
-    'get',
-    '/api/products/search',
-    {
-      params: {
-        query: {
-          limit: 100,
-          searchName: 'bio',
-        },
-      },
-    }
-  );
+  const { isPending, error, data } = useQuery({
+    queryKey: ['products/search'],
+    queryFn: () => {
+      return searchProducts();
+    },
+  });
 
   if (isPending) {
     return <div>Loading...</div>;
@@ -29,7 +24,8 @@ export const ProductSearchPage = () => {
 
   const products =
     data?.success === true
-      ? (data as unknown as QueryResultSuccess<ProductRepoSearchResult>).data
+      ? // isQueryResultSuccess(data)
+        (data as unknown as QueryResultSuccess<ProductRepoSearchResult>).data
       : null;
 
   return (
