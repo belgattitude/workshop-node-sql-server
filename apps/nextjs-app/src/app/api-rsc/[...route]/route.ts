@@ -33,3 +33,4 @@ export const PATCH = handleRequest;
 export const POST = handleRequest;
 export const PUT = handleRequest;
 export const OPTIONS = handleRequest;
+export const HEAD = handleRequest;

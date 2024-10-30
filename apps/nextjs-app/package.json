@@ -89,7 +89,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.2.0",
+    "@belgattitude/eslint-config-bases": "6.3.0",
     "@faker-js/faker": "9.1.0",
     "@spotlightjs/spotlight": "2.5.0",
     "@storybook/addon-essentials": "8.3.6",
