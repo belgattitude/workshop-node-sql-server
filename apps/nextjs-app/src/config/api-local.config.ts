@@ -1,4 +1,4 @@
-import type { HonoLocalAppType } from '../app/api/[...route]/route';
+import type { HonoLocalAppType } from '../pages/api/[[...route]]';
 
 const apiServer = 'http://localhost:3000';
 
