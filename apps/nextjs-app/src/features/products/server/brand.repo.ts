@@ -5,12 +5,6 @@ import type {
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
 
-import type { InferAsyncQueryResultData } from '@/features/products/utils';
-
-export type ProductRepoSearchData = InferAsyncQueryResultData<
-  ReturnType<ProductRepo['search']>
->;
-
 const validators = {
   search: {
     params: z.object({
@@ -30,8 +24,8 @@ const validators = {
   },
 } as const;
 
-export type ProductRepoSearchParams = z.infer<typeof validators.search.params>;
-export type ProductRepoSearchResult = z.infer<typeof validators.search.result>;
+export type SearchParams = z.infer<typeof validators.search.params>;
+export type SearchResult = z.infer<typeof validators.search.result>;
 
 export class ProductRepo<
   T extends
@@ -43,9 +37,7 @@ export class ProductRepo<
   constructor(params: { ds: T }) {
     this.ds = params.ds;
   }
-  search = async (
-    params: ProductRepoSearchParams
-  ): AsyncQueryResult<ProductRepoSearchResult> => {
+  search = async (params: SearchParams): AsyncQueryResult<SearchResult> => {
     const { searchName, limit } = params;
 
     const query = this.ds.queryBuilder

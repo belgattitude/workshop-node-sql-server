@@ -4,7 +4,7 @@ import type { QueryResultSuccess } from '@flowblade/source-kysely';
 
 import { $api } from '@/config/openapi-react-query.config';
 import { ProductList } from '@/features/products/components/ProductList';
-import type { SearchResult } from '@/features/products/server/product.repo';
+import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
 
 export const ProductSearchPage = () => {
   const { data, isPending, error } = $api.useQuery(
@@ -29,7 +29,7 @@ export const ProductSearchPage = () => {
 
   const products =
     data?.success === true
-      ? (data as unknown as QueryResultSuccess<SearchResult>).data
+      ? (data as unknown as QueryResultSuccess<ProductRepoSearchResult>).data
       : null;
 
   return (

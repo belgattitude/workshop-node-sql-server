@@ -1,10 +1,10 @@
 import type { QueryResultSuccess } from '@flowblade/source-kysely';
 import type { FC } from 'react';
 
-import type { SearchResult } from '@/features/products/server/product.repo';
+import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
 
 type Props = {
-  data: QueryResultSuccess<SearchResult>['data'];
+  data: QueryResultSuccess<ProductRepoSearchResult>['data'];
 };
 export const ProductList: FC<Props> = (props) => {
   const { data } = props;

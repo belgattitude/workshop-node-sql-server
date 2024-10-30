@@ -32,6 +32,6 @@ createOpenApiDocument(app, {
 
 app.get('/documentation', swaggerUI({ url: '/api/doc' }));
 
-export type HonoLocalAppType = typeof app;
+export type HonoLocalApiAppType = typeof app;
 
 export default handle(app);
