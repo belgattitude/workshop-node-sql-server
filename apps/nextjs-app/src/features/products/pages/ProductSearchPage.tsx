@@ -32,14 +32,16 @@ export const ProductSearchPage = () => {
 
   return (
     <>
-      <div className="flex">
-        <SideBar className={'w-5/12'}>
+      <div className="flex bg-indigo-600">
+        <SideBar className={'w-4/12'}>
           <div className={'p-5 max-w-full flex'}>
             <BrandMultiSelect />
           </div>
         </SideBar>
-        <div className="border-1 flex flex-col items-center gap-5 rounded-md p-5 shadow-lg">
-          {products && <ProductList data={products} />}
+        <div className="bg-white flex flex-col items-center rounded-tl-xl">
+          {products && (
+            <ProductList className={'bg-white m-5'} data={products} />
+          )}
         </div>
       </div>
     </>

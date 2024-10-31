@@ -1,17 +1,17 @@
 import type { InferAsyncQueryResultData } from '@flowblade/source-kysely';
 import type { FC } from 'react';
 
+import { cn } from '@/components/utils';
 import type { ProductRepo } from '@/features/products/server/product.repo';
 
 type Props = {
-  data: InferAsyncQueryResultData<
-    ReturnType<InstanceType<typeof ProductRepo>['search']>
-  >;
+  className?: string;
+  data: InferAsyncQueryResultData<ReturnType<ProductRepo['search']>>;
 };
 export const ProductList: FC<Props> = (props) => {
-  const { data } = props;
+  const { data, className } = props;
   return (
-    <div className={'grid gap-5 grid-cols-4'}>
+    <div className={cn('grid gap-5 grid-cols-3', className)}>
       {data.map((product) => {
         return (
           <div className={'border rounded p-5'} key={String(product.id)}>
