@@ -33,12 +33,12 @@ export const ProductSearchPage = () => {
   return (
     <>
       <div className="flex bg-indigo-600">
-        <SideBar className={'w-4/12'}>
-          <div className={'p-5 max-w-full flex'}>
+        <SideBar className={'flex w-[250px]'}>
+          <div className={'p-3 flex'}>
             <BrandMultiSelect />
           </div>
         </SideBar>
-        <div className="bg-white flex flex-col items-center rounded-tl-xl">
+        <div className="bg-white flex w-full flex-col items-center rounded-tl-xl">
           {products && (
             <ProductList className={'bg-white m-5'} data={products} />
           )}
