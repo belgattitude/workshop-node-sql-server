@@ -1,9 +1,10 @@
 'use client';
 
 import { TreeSelect, type TreeSelectChangeEvent } from 'primereact/treeselect';
-import React, { type FC, useEffect, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 
-import { cn } from '../utils';
+import { cn } from '@/components/utils';
+
 import { NodeService } from './NodeService';
 
 type Props = {

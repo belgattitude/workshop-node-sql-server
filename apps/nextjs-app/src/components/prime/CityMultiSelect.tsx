@@ -3,7 +3,7 @@
 import { MultiSelect } from 'primereact/multiselect';
 import { type FC, useState } from 'react';
 
-import { cn } from '../utils';
+import { cn } from '@/components/utils';
 
 type City = {
   name: string;
@@ -35,7 +35,7 @@ export const CityMultiSelect: FC<Props> = (props) => {
         placeholder="Select Cities"
         maxSelectedLabels={3}
         filter={true}
-        className="w-full"
+        className="flex"
       />
     </div>
   );

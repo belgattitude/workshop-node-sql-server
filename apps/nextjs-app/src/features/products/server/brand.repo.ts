@@ -1,9 +1,14 @@
 import type {
   AsyncQueryResult,
+  InferAsyncQueryResultData,
   KyselyDatasource,
 } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
+
+export type BrandRepoSearchData = InferAsyncQueryResultData<
+  ReturnType<BrandRepo['search']>
+>;
 
 const validators = {
   search: {
