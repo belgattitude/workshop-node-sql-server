@@ -6,8 +6,8 @@ import type {
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
 
-export type ProductRepoSearchData = InferAsyncQueryResultData<
-  ReturnType<ProductRepo['search']>
+export type BrandRepoSearchData = InferAsyncQueryResultData<
+  ReturnType<BrandRepo['search']>
 >;
 
 const validators = {
@@ -19,20 +19,16 @@ const validators = {
     result: z.array(
       z.object({
         id: z.number(),
-        reference: z.string(),
         name: z.string(),
-        barcode_ean13: z.string().nullable(),
-        brand_id: z.number().nullable(),
-        brand_name: z.string().nullable(),
       })
     ),
   },
 } as const;
 
-export type ProductRepoSearchParams = z.infer<typeof validators.search.params>;
-export type ProductRepoSearchResult = z.infer<typeof validators.search.result>;
+export type BrandRepoSearchParams = z.infer<typeof validators.search.params>;
+export type BrandRepoSearchResult = z.infer<typeof validators.search.result>;
 
-export class ProductRepo<
+export class BrandRepo<
   T extends
     KyselyDatasource<DBKyselySqlServer> = KyselyDatasource<DBKyselySqlServer>,
 > {
@@ -43,23 +39,15 @@ export class ProductRepo<
     this.ds = params.ds;
   }
   search = async (
-    params: ProductRepoSearchParams
-  ): AsyncQueryResult<ProductRepoSearchResult> => {
+    params: BrandRepoSearchParams
+  ): AsyncQueryResult<BrandRepoSearchResult> => {
     const { searchName, limit } = params;
 
     const query = this.ds.queryBuilder
-      .selectFrom('common.product as p')
-      .select([
-        'p.id',
-        'p.reference',
-        'p.name',
-        'p.barcode_ean13',
-        'p.brand_id',
-      ])
-      .leftJoin('common.brand as b', 'b.id', 'p.brand_id')
-      .select(['b.name as brand_name'])
+      .selectFrom('common.brand as b')
+      .select(['b.id', 'b.name'])
       .$if(searchName !== undefined, (q) =>
-        q.where('p.name', 'like', `%${searchName}%`)
+        q.where('b.name', 'like', `%${searchName}%`)
       )
       .top(limit);
 

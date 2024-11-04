@@ -2,10 +2,16 @@ import type { FC } from 'react';
 
 import { IconBell } from '@/components/icons/IconBell';
 import { IconClose } from '@/components/icons/IconClose';
+import { cn } from '@/components/utils';
 
-export const Banner: FC = () => {
+type Props = {
+  className?: string;
+};
+
+export const Banner: FC<Props> = (props) => {
+  const { className } = props;
   return (
-    <div className="bg-indigo-600">
+    <div className={cn('bg-indigo-600', className)}>
       <div className="mx-auto max-w-7xl p-3 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between">
           <div className="flex w-0 flex-1 items-center">

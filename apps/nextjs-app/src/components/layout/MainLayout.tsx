@@ -11,7 +11,7 @@ export const MainLayout: FC<Props> = ({ children }) => {
     <div
       className={`${fontInter.className} ${fontInter.variable} antialiased flex-col`}
     >
-      <Banner />
+      <Banner className={'bg-indigo-600'} />
       <div className={'container-lg'}>
         <main className={''}>{children}</main>
       </div>

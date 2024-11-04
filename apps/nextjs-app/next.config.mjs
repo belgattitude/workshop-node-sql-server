@@ -10,6 +10,7 @@ const isTurbo = process.env.TURBOPACK !== undefined;
 
 /** @type {import('next').NextConfig} */
 let nextConfig = {
+  compress: isDev,
   eslint: {
     dirs: ['src'],
     ignoreDuringBuilds: buildEnv.NEXT_BUILD_IGNORE_ESLINT === 'true',

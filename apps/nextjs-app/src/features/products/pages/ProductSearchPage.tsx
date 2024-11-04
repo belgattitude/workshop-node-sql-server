@@ -1,24 +1,22 @@
 'use client';
 
 import type { QueryResultSuccess } from '@flowblade/source-kysely';
+import { useQuery } from '@tanstack/react-query';
 
-import { $api } from '@/config/openapi-react-query.config';
+import { SideBar } from '@/components/sidebar/SideBar';
+import { searchProducts } from '@/features/products/api/search-products';
+import { BrandMultiSelect } from '@/features/products/components/BrandMultiSelect';
 import { ProductList } from '@/features/products/components/ProductList';
-import type { SearchResult } from '@/features/products/server/product.repo';
+import { SideBarFiltersLoader } from '@/features/products/components/SideBarFiltersLoader';
+import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
 
 export const ProductSearchPage = () => {
-  const { data, isPending, error } = $api.useQuery(
-    'get',
-    '/api/products/search',
-    {
-      params: {
-        query: {
-          limit: 100,
-          searchName: 'bio',
-        },
-      },
-    }
-  );
+  const { isPending, error, data } = useQuery({
+    queryKey: ['products/search'],
+    queryFn: () => {
+      return searchProducts();
+    },
+  });
 
   if (isPending) {
     return <div>Loading...</div>;
@@ -29,14 +27,24 @@ export const ProductSearchPage = () => {
 
   const products =
     data?.success === true
-      ? (data as unknown as QueryResultSuccess<SearchResult>).data
+      ? // isQueryResultSuccess(data)
+        (data as unknown as QueryResultSuccess<ProductRepoSearchResult>).data
       : null;
 
   return (
     <>
-      <div className="flex items-center justify-center">
-        <div className="border-1 flex flex-col items-center gap-5 rounded-md p-5 shadow-lg">
-          {products && <ProductList data={products} />}
+      <div className="flex bg-indigo-600">
+        <SideBarFiltersLoader>
+          <SideBar className={'flex w-[250px]'}>
+            <div className={'p-3 flex'}>
+              <BrandMultiSelect />
+            </div>
+          </SideBar>
+        </SideBarFiltersLoader>
+        <div className="bg-white flex w-full flex-col items-center rounded-tl-xl">
+          {products && (
+            <ProductList className={'bg-white m-5'} data={products} />
+          )}
         </div>
       </div>
     </>

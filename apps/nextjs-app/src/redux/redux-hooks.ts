@@ -8,6 +8,6 @@ import {
 import type { AppDispatch, AppStore, ReduxRootState } from './redux-store';
 
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
-export const useDispatch = useReduxDispatch.withTypes<AppDispatch>();
-export const useSelector = useReduxSelector.withTypes<ReduxRootState>();
-export const useStore = useReduxStore.withTypes<AppStore>();
+export const useAppDispatch = useReduxDispatch.withTypes<AppDispatch>();
+export const useAppSelector = useReduxSelector.withTypes<ReduxRootState>();
+export const useAppStore = useReduxStore.withTypes<AppStore>();

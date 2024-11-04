@@ -6,7 +6,7 @@ import { format } from 'sql-formatter';
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';
 import { cn } from '@/components/utils';
 
-type Props<T = unknown> = {
+type Props<T extends unknown[] = unknown[]> = {
   result: QueryResult<T>;
 };
 
