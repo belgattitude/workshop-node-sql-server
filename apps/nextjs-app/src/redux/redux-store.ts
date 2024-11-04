@@ -1,8 +1,9 @@
 import type { Action, ThunkAction } from '@reduxjs/toolkit';
 import { combineSlices, configureStore } from '@reduxjs/toolkit';
 
-export const reduxRootReducer = combineSlices();
-// add slices here
+import { productSideBarFiltersSlice } from '@/features/products/redux/ProductSideBarFiltersSlice';
+
+export const reduxRootReducer = combineSlices(productSideBarFiltersSlice);
 
 export type ReduxRootState = ReturnType<typeof reduxRootReducer>;
 

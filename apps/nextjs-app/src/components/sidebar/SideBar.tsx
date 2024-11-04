@@ -4,6 +4,7 @@
  */
 
 import { RiSidebarFoldLine } from '@remixicon/react';
+import { clsx } from 'clsx';
 import { type FC, type PropsWithChildren, useState } from 'react';
 
 import { cn } from '@/components/utils';
@@ -29,18 +30,25 @@ export const SideBar: FC<Props> = (props) => {
       )}
     >
       {/* side bar collapse button/icon */}
-      <div className={'absolute w-full grid'}>
+      <div className={'absolute h-0 justify-end w-full flex'}>
         <RiSidebarFoldLine
           className={[
             'mt-5 justify-self-end translate-x-[10px] text-gray-700 cursor-pointer bg-white rounded-full border-2 border-indigo-600 shadow-2xl drop-shadow-2xl size-6 p-[3px]',
-            'group-data-[collapsed=true]:-rotate-180 group-data-[collapsed=true]:translate-x-[10px]',
+            'group-data-[collapsed=true]:-rotate-180',
             'transition-all ease-in-out delay-75 duration-150',
           ].join(' ')}
           onClick={() => setIsCollapsed((prevState) => !prevState)}
         />
       </div>
       {/* sidebar content */}
-      <div>{children}</div>
+      <div
+        className={clsx('transition-all ease-in-out duration-150', {
+          // hidden: isCollapsed,
+          '-translate-x-[200px]': isCollapsed,
+        })}
+      >
+        {children}
+      </div>
     </div>
   );
 };

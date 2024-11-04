@@ -7,6 +7,7 @@ import { SideBar } from '@/components/sidebar/SideBar';
 import { searchProducts } from '@/features/products/api/search-products';
 import { BrandMultiSelect } from '@/features/products/components/BrandMultiSelect';
 import { ProductList } from '@/features/products/components/ProductList';
+import { SideBarFiltersLoader } from '@/features/products/components/SideBarFiltersLoader';
 import type { ProductRepoSearchResult } from '@/features/products/server/product.repo';
 
 export const ProductSearchPage = () => {
@@ -33,11 +34,13 @@ export const ProductSearchPage = () => {
   return (
     <>
       <div className="flex bg-indigo-600">
-        <SideBar className={'flex w-[250px]'}>
-          <div className={'p-3 flex'}>
-            <BrandMultiSelect />
-          </div>
-        </SideBar>
+        <SideBarFiltersLoader>
+          <SideBar className={'flex w-[250px]'}>
+            <div className={'p-3 flex'}>
+              <BrandMultiSelect />
+            </div>
+          </SideBar>
+        </SideBarFiltersLoader>
         <div className="bg-white flex w-full flex-col items-center rounded-tl-xl">
           {products && (
             <ProductList className={'bg-white m-5'} data={products} />
