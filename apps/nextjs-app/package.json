@@ -124,7 +124,7 @@
     "dotenv-flow-cli": "1.1.1",
     "eslint": "8.57.1",
     "eslint-config-next": "15.0.2",
-    "happy-dom": "15.9.0",
+    "happy-dom": "15.10.1",
     "npm-run-all2": "7.0.1",
     "openapi-typescript": "7.4.2",
     "postcss": "8.4.47",
