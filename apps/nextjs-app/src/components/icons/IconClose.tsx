@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 
-import { cn } from '@/components/utils';
-
 type Props = {
   className?: string;
 };
@@ -11,17 +9,11 @@ export const IconClose: FC<Props> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className={cn('size-6', className)}
+      fill="currentColor"
+      className={className}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 18 18 6M6 6l12 12"
-      />
+      <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
     </svg>
   );
 };
