@@ -69,7 +69,7 @@
     "is-ci": "3.0.1",
     "lint-staged": "15.2.10",
     "npm-run-all2": "7.0.1",
-    "nx": "20.0.9",
+    "nx": "20.1.0",
     "prettier": "3.3.3",
     "rimraf": "6.0.1",
     "shell-quote": "1.8.1",
@@ -78,9 +78,9 @@
   },
   "resolutions": {
     "esbuild": "^0.24.0",
-    "@opentelemetry/instrumentation": "0.54.1",
-    "@opentelemetry/sdk-logs": "0.54.1",
-    "@opentelemetry/api-logs": "0.54.1",
+    "@opentelemetry/instrumentation": "0.54.2",
+    "@opentelemetry/sdk-logs": "0.54.2",
+    "@opentelemetry/api-logs": "0.54.2",
     "@opentelemetry/resources": "1.27.0",
     "@opentelemetry/sdk-metrics": "1.27.0",
     "@opentelemetry/sdk-trace-base": "1.27.0"
