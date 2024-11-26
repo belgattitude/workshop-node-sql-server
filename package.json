@@ -53,9 +53,9 @@
     "apps/*",
     "libs/*"
   ],
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "yarn@4.5.3",
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.7.0",
+    "@belgattitude/eslint-config-bases": "6.10.0",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.10",
     "@commitlint/cli": "19.6.0",
@@ -70,7 +70,7 @@
     "lint-staged": "15.2.10",
     "npm-run-all2": "7.0.1",
     "nx": "20.1.3",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "rimraf": "6.0.1",
     "shell-quote": "1.8.1",
     "syncpack": "13.0.0",
