@@ -4856,39 +4856,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spotlightjs/overlay@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@spotlightjs/overlay@npm:2.7.0"
-  checksum: 10c0/a0584b4ce758467fc6346ff4cfa97ae159a450727b20c6eaf1022046078016ce3548741fd7bbb542a6163a58f66d564a49352eea8212f01710bb9a5aa9150914
+"@spotlightjs/overlay@npm:2.7.1":
+  version: 2.7.1
+  resolution: "@spotlightjs/overlay@npm:2.7.1"
+  checksum: 10c0/afa61e1ce506aa4e00d54f89ce744b6b013562ee529ccf6da97626d350a0aa62bc39f39e22d0196ccb4de1d432afa31d0c2570b6e253da35d1e3bacd28d2b2a9
   languageName: node
   linkType: hard
 
-"@spotlightjs/sidecar@npm:1.9.0":
-  version: 1.9.0
-  resolution: "@spotlightjs/sidecar@npm:1.9.0"
+"@spotlightjs/sidecar@npm:1.9.1":
+  version: 1.9.1
+  resolution: "@spotlightjs/sidecar@npm:1.9.1"
   dependencies:
     kleur: "npm:^4.1.5"
     launch-editor: "npm:^2.9.1"
     source-map: "npm:^0.7.4"
   bin:
     spotlight-sidecar: server.js
-  checksum: 10c0/2b1f91155ed24970f9d2b1eb71b319dde8f45e8027ecb84e2a63b18a34720b6a995eb3b6f4aeeffb3fe2a2e65375e5bd1de34837a4f9d4947438cb4cb3250af7
+  checksum: 10c0/74618091301d54560deba40021eeaf7578d3cc35a30f911523306b9a48ebce733793c9a210cfe0eeab5f04baa896efe83425ea16ceb0cfe6237947bfa996023c
   languageName: node
   linkType: hard
 
-"@spotlightjs/spotlight@npm:2.6.0":
-  version: 2.6.0
-  resolution: "@spotlightjs/spotlight@npm:2.6.0"
+"@spotlightjs/spotlight@npm:2.6.1":
+  version: 2.6.1
+  resolution: "@spotlightjs/spotlight@npm:2.6.1"
   dependencies:
-    "@spotlightjs/overlay": "npm:2.7.0"
-    "@spotlightjs/sidecar": "npm:1.9.0"
+    "@spotlightjs/overlay": "npm:2.7.1"
+    "@spotlightjs/sidecar": "npm:1.9.1"
     import-meta-resolve: "npm:^4.1.0"
     macho-unsign: "npm:^2.0.6"
     portable-executable-signature: "npm:^2.0.6"
     postject: "npm:1.0.0-alpha.6"
   bin:
     spotlight: bin/run.js
-  checksum: 10c0/f78689e18ffe13402c29b8eeedc16d0d4bfbd76312211b2f471d35e6d2a21e7b70124719df07fae20a06f1c5c7abffb162ea9056ce5645248290a848502d5c6a
+  checksum: 10c0/b9701d249bae3147ce8277a68f4263336496e943faabc47b1ceef71bfae1d1972426d6bb2b90ccc7b53a061cd9dcf426013148b84edd544a54ff858289278ae3
   languageName: node
   linkType: hard
 
@@ -6288,15 +6288,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/functions@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@vercel/functions@npm:1.5.0"
+"@vercel/functions@npm:1.5.1":
+  version: 1.5.1
+  resolution: "@vercel/functions@npm:1.5.1"
   peerDependencies:
     "@aws-sdk/credential-provider-web-identity": "*"
   peerDependenciesMeta:
     "@aws-sdk/credential-provider-web-identity":
       optional: true
-  checksum: 10c0/679377c18bdbaeba2d387494d1963385f8bde96ebbcc001cfc9991477f52577c04e7833609cc1eba3dfecd2c113552ab15111a7744c1534b6638910f29669517
+  checksum: 10c0/a8f3afcc09349eb8b52abc144bd4514ea3d91690263f0d9dde28a3f17dd2f0db1c81e99878f68816aac2c260141beb47704313201823711c9974e880d4908f7b
   languageName: node
   linkType: hard
 
@@ -6710,7 +6710,7 @@ __metadata:
     tinyrainbow: "npm:1.2.0"
     tsx: "npm:4.19.2"
     typescript: "npm:5.7.2"
-    vite: "npm:6.0.0"
+    vite: "npm:6.0.1"
     vite-tsconfig-paths: "npm:5.1.3"
     vitest: "npm:2.1.6"
   peerDependencies:
@@ -10640,7 +10640,7 @@ __metadata:
     tiny-glob: "npm:0.2.9"
     tsx: "npm:4.19.2"
     typescript: "npm:5.7.2"
-    vite: "npm:6.0.0"
+    vite: "npm:6.0.1"
     vite-tsconfig-paths: "npm:5.1.3"
     vitest: "npm:2.1.6"
     zod: "npm:3.23.8"
@@ -14153,7 +14153,7 @@ __metadata:
     "@remixicon/react": "npm:4.5.0"
     "@sentry/nextjs": "npm:8.40.0"
     "@shikijs/transformers": "npm:1.23.1"
-    "@spotlightjs/spotlight": "npm:2.6.0"
+    "@spotlightjs/spotlight": "npm:2.6.1"
     "@storybook/addon-essentials": "npm:8.4.5"
     "@storybook/addon-interactions": "npm:8.4.5"
     "@storybook/addon-links": "npm:8.4.5"
@@ -14176,7 +14176,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:8.16.0"
     "@typescript-eslint/parser": "npm:8.16.0"
     "@valibot/to-json-schema": "npm:1.0.0-beta.3"
-    "@vercel/functions": "npm:1.5.0"
+    "@vercel/functions": "npm:1.5.1"
     "@vercel/otel": "npm:1.10.0"
     "@vitejs/plugin-react-swc": "npm:3.7.2"
     "@vitest/coverage-v8": "npm:2.1.6"
@@ -14224,7 +14224,7 @@ __metadata:
     type-fest: "npm:4.28.1"
     typescript: "npm:5.7.2"
     valibot: "npm:1.0.0-beta.8"
-    vite: "npm:6.0.0"
+    vite: "npm:6.0.1"
     vite-tsconfig-paths: "npm:5.1.3"
     vitest: "npm:2.1.6"
     webpack: "npm:5.96.1"
@@ -19096,9 +19096,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:6.0.0, vite@npm:^5.0.0 || ^6.0.0":
-  version: 6.0.0
-  resolution: "vite@npm:6.0.0"
+"vite@npm:6.0.1, vite@npm:^5.0.0 || ^6.0.0":
+  version: 6.0.1
+  resolution: "vite@npm:6.0.1"
   dependencies:
     esbuild: "npm:^0.24.0"
     fsevents: "npm:~2.3.3"
@@ -19144,7 +19144,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/2516144161c108452691ec1379aefd8f3201da8f225e628cb1cdb7b35b92d856d990cd31f1c36c0f36517346efe181ea3c096a04bc846c5b0d1416b7b7111af8
+  checksum: 10c0/e4d853eb9042ff29fa4d7cee1484738faaee4b1d9dcf786a94783bebb736b39af0afa7ac1a209000530638098d0a1b240b51f509d32addb028b222453f862916
   languageName: node
   linkType: hard
 
