@@ -55,7 +55,7 @@
   ],
   "packageManager": "yarn@4.5.3",
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.12.0",
+    "@belgattitude/eslint-config-bases": "6.14.0",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.10",
     "@commitlint/cli": "19.6.0",
@@ -66,10 +66,10 @@
     "eslint": "8.57.1",
     "gh-pages": "6.2.0",
     "husky": "9.1.7",
-    "is-ci": "3.0.1",
+    "is-ci": "4.1.0",
     "lint-staged": "15.2.10",
     "npm-run-all2": "7.0.1",
-    "nx": "20.1.4",
+    "nx": "20.2.1",
     "prettier": "3.4.2",
     "rimraf": "6.0.1",
     "shell-quote": "1.8.2",
@@ -78,13 +78,13 @@
   },
   "resolutions": {
     "esbuild": "^0.24.0",
-    "@opentelemetry/instrumentation": "0.56.0",
-    "@opentelemetry/sdk-logs": "0.56.0",
-    "@opentelemetry/api-logs": "0.56.0",
-    "@opentelemetry/resources": "1.29.0",
-    "@opentelemetry/sdk-metrics": "1.29.0",
-    "@opentelemetry/sdk-trace-base": "1.29.0",
-    "vite": "5.1.8"
+    "@opentelemetry/instrumentation": "^0.56.0",
+    "@opentelemetry/sdk-logs": "^0.56.0",
+    "@opentelemetry/api-logs": "^0.56.0",
+    "@opentelemetry/resources": "^1.29.0",
+    "@opentelemetry/sdk-metrics": "^1.29.0",
+    "@opentelemetry/sdk-trace-base": "^1.29.0",
+    "vite": "^5.1.8"
   },
   "resolutions-help": {
     "@opentelemetry/instrumentation": "Till prisma fix issues with opentelemetry",
