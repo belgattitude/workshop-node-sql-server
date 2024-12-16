@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <MainLayout>{children}</MainLayout>
           </ReactQueryClientProvider>
         </ReduxStoreProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

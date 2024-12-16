@@ -5892,6 +5892,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/speed-insights@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@vercel/speed-insights@npm:1.1.0"
+  peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19 || ^19.0.0-rc
+    svelte: ">= 4"
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 10c0/2bfaef328b30b1d8a5a1b65e201875a78076b0223f6719a4cac04dd24e9f336da8f1648f8b33b0fe05624f25f957b67f46b7d6c3c290ac53c6ac3dac4540922a
+  languageName: node
+  linkType: hard
+
 "@vitejs/plugin-react-swc@npm:3.7.2":
   version: 3.7.2
   resolution: "@vitejs/plugin-react-swc@npm:3.7.2"
@@ -13611,6 +13638,7 @@ __metadata:
     "@valibot/to-json-schema": "npm:1.0.0-beta.3"
     "@vercel/functions": "npm:1.5.2"
     "@vercel/otel": "npm:1.10.0"
+    "@vercel/speed-insights": "npm:1.1.0"
     "@vitejs/plugin-react-swc": "npm:3.7.2"
     "@vitest/coverage-v8": "npm:2.1.8"
     "@vitest/ui": "npm:2.1.8"
