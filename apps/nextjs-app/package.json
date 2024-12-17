@@ -15,7 +15,7 @@
     "directory": "apps/nextjs-app"
   },
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "dev-sidecar": "npx @spotlightjs/spotlight",
     "build": "next build",
     "build-no-paths": "cross-env TSCONFIG=./tsconfig.no-paths.json next build",
@@ -56,7 +56,7 @@
     "@prisma/client": "6.0.1",
     "@reduxjs/toolkit": "2.5.0",
     "@remixicon/react": "4.6.0",
-    "@sentry/nextjs": "8.45.1",
+    "@sentry/nextjs": "8.46.0",
     "@shikijs/transformers": "1.24.2",
     "@t3-oss/env-nextjs": "0.11.1",
     "@tanstack/react-query": "5.62.7",
