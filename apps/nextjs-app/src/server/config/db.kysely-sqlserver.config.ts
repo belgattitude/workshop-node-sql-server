@@ -10,7 +10,28 @@ import { serverEnv } from '../../env/server.env.mjs';
 const config = TediousConnUtils.fromJdbcDsn(
   serverEnv.DB_FLOWBLADE_SQLSERVER_JDBC ?? ''
 );
-const dialect = createKyselySqlServerDialect(config);
+
+const logPooler = (msg: string) => {
+  console.log(`[pooler] ${msg}`);
+};
+
+const dialect = createKyselySqlServerDialect({
+  tediousConfig: config,
+  poolOptions: {
+    min: 0,
+    max: 10,
+    // 👇 disable connection validation (avoid a round trip to the database)
+    validateConnections: false,
+    // 👇 if the database connection fails, propagate the error to the caller
+    //
+    propagateCreateError: true,
+    log: process.env.NODE_ENV === 'development' ? logPooler : undefined,
+  },
+  dialectConfig: {
+    // 👇 disable connection reset (avoid a round trip to the database)
+    resetConnectionOnRelease: false,
+  },
+});
 
 const maskPII = (param: unknown) => {
   // @todo filter out personal identifiable information

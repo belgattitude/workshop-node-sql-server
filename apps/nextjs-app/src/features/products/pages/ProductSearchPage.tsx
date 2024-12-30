@@ -1,6 +1,6 @@
 'use client';
 
-import type { QueryResultSuccess } from '@flowblade/source-kysely';
+import type { QueryResultSuccess } from '@flowblade/core';
 import { useQuery } from '@tanstack/react-query';
 
 import { SideBar } from '@/components/sidebar/SideBar';

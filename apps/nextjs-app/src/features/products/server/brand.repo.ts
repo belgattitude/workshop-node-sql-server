@@ -1,8 +1,8 @@
 import type {
   AsyncQueryResult,
   InferAsyncQueryResultData,
-  KyselyDatasource,
-} from '@flowblade/source-kysely';
+} from '@flowblade/core';
+import type { KyselyDatasource } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
 

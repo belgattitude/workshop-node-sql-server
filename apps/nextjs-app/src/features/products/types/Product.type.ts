@@ -1,4 +1,4 @@
-import type { InferAsyncQueryResultData } from '@flowblade/source-kysely';
+import type { InferAsyncQueryResultData } from '@flowblade/core';
 
 import type { BrandRepo } from '@/features/products/server/brand.repo';
 import type { ProductRepo } from '@/features/products/server/product.repo';

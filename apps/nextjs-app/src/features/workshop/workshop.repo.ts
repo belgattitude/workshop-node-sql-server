@@ -1,8 +1,6 @@
 import { faker } from '@faker-js/faker';
-import type {
-  AsyncQueryResult,
-  KyselyDatasource,
-} from '@flowblade/source-kysely';
+import type { AsyncQueryResult } from '@flowblade/core';
+import type { KyselyDatasource } from '@flowblade/source-kysely';
 import { isStringNonEmpty } from '@httpx/assert';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { sql } from 'kysely';

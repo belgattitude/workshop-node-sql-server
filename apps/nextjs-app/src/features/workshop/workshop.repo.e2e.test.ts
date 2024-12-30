@@ -1,4 +1,4 @@
-import { assertQueryResultSuccess } from '@flowblade/source-kysely';
+import { assertQueryResultSuccess } from '@flowblade/core';
 
 import { workshopRepo } from '@/features/workshop/workshop.config';
 

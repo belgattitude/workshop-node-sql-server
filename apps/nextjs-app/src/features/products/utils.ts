@@ -1,4 +1,4 @@
-import type { QueryResult, QueryResultSuccess } from '@flowblade/source-kysely';
+import type { QueryResult, QueryResultSuccess } from '@flowblade/core';
 
 export type UnwrappedQueryResultData<T extends QueryResult<unknown[]>> =
   T extends QueryResult<infer TData> ? QueryResultSuccess<TData> : never;
