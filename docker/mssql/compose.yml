@@ -1,7 +1,7 @@
 name: workshop-node-sql-server-mssql
 
 services:
-  azure-sql-edge:
+  mssql:
     container_name: workshop-node-sql-server-mssql
     image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-22.04
     # Only when docker is running as "root".
