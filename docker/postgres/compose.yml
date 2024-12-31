@@ -1,4 +1,4 @@
-name: flowblade-postgres
+name: workshop-node-sql-server-postgres
 
 services:
   main-db:

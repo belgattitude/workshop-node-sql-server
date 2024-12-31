@@ -1,19 +1,19 @@
-name: workshop-node-sql-server-azure-sql-edge
+name: workshop-node-sql-server-mssql
 
 services:
   azure-sql-edge:
-    container_name: sql-server-db
-    image: mcr.microsoft.com/azure-sql-edge
+    container_name: workshop-node-sql-server-mssql
+    image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-22.04
     # Only when docker is running as "root".
     cap_add: ['SYS_PTRACE']
     ports:
       - '1433:1433'
     env_file:
-      - .env.azure-sql-edge.development
+      - .env.mssql.development
     networks:
-      - flowblade-dev-network
+      - workshop-node-sql-server
     volumes:
-      - flowblade-azure-sql-edge:/var/opt/mssql:rw
+      - workshop-node-sql-server:/var/opt/mssql:rw
     restart: no
     healthcheck:
       test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $$MSSQL_SA_PASSWORD -Q "SELECT 1" -b -o /dev/null
@@ -23,9 +23,9 @@ services:
       start_period: 5s
 
 volumes:
-  flowblade-azure-sql-edge:
+  workshop-node-sql-server:
 
 networks:
-  flowblade-dev-network:
+  workshop-node-sql-server:
     driver: bridge
     enable_ipv6: false

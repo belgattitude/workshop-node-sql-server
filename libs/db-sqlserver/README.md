@@ -7,7 +7,7 @@ Example of a product database using SQL Server, Prisma and Kysely.
 ### Quick start
 
 ```bash
-yarn db-recreate-dev
+yarn db-recreate
 yarn prisma-db-seed
 ```
 
@@ -73,26 +73,23 @@ So The idea is
 - [x] In development: Use Prisma to maintain the schema, the seeds and kysely types generation.
 - [x] In production: Use Kysely with tedious driver and tarn as a connection pooler.
 
-
-- 
-
 ### Schema
 
 ![schema.png](docs%2Fimages%2Fschema.png)
 
 ### Local scripts
 
-| Name                        | Description                                               |
-|-----------------------------|-----------------------------------------------------------|
-| `yarn codegen`              | Run codegen (prisma generate...)                          |
-| `yarn db-recreate-dev`      | Reset the database and apply the latest schema with seeds |
-| `yarn prisma-db-seed`       | Load seeds into database                                  |
-| `yarn prisma-db-reset-push` | Drop and recreate database                                |
-| `yarn prisma-db-push`       | Attempt to apply schema changes to database               |
-| `yarn prisma-studio`        | Launch prisma studio (ui admin)                           |
-| `yarn prisma-validate`      | Validate schema.prisma                                    |
-| `yarn prisma-format`        | Format schema.prisma                                      |
-| `yarn lint`                 | Check for lint errors                                     |
-| `yarn lint --fix`           | Attempt to run linter auto-fix                            |
-| `yarn test-unit`            | Run unit tests                                            |
-| `yarn clean`                | Remove all caches                                         |
+| Name                        | Description                                 |
+|-----------------------------|---------------------------------------------|
+| `yarn codegen`              | Run codegen (prisma generate...)            |
+| `yarn db-recreate`          | Reset the database                          |
+| `yarn prisma-db-seed`       | Load seeds into database                    |
+| `yarn prisma-db-reset-push` | Drop and recreate database                  |
+| `yarn prisma-db-push`       | Attempt to apply schema changes to database |
+| `yarn prisma-studio`        | Launch prisma studio (ui admin)             |
+| `yarn prisma-validate`      | Validate schema.prisma                      |
+| `yarn prisma-format`        | Format schema.prisma                        |
+| `yarn lint`                 | Check for lint errors                       |
+| `yarn lint --fix`           | Attempt to run linter auto-fix              |
+| `yarn test-unit`            | Run unit tests                              |
+| `yarn clean`                | Remove all caches                           |

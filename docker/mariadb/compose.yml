@@ -1,4 +1,4 @@
-name: flowblade-azure-mariadb
+name: workshop-node-sql-server-mariadb
 
 services:
   mariadb:
