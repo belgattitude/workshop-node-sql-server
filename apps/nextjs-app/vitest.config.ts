@@ -1,4 +1,4 @@
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -7,12 +7,7 @@ export default defineConfig(({ mode }) => {
   process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
   return {
     cacheDir: '../../.cache/vitest/nextjs-app',
-    plugins: [
-      react({
-        devTarget: 'es2022',
-      }),
-      tsconfigPaths(),
-    ],
+    plugins: [react(), tsconfigPaths()],
     test: {
       globals: true,
       deps: {
