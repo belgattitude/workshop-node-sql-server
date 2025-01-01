@@ -37,10 +37,6 @@ export default defineConfig({
         isolate: true,
       },
     },
-    environmentMatchGlobs: [
-      ['**/*.ts', 'node'],
-      ['**/*.tsx', 'happy-dom'],
-    ],
     passWithNoTests: true,
     // setupFiles: './setup/tests/setupVitest.ts',
     coverage: {

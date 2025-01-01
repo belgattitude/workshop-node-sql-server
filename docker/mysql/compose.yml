@@ -1,4 +1,4 @@
-name: flowblade-azure-mysql
+name: workshop-node-sql-server-mysql
 
 services:
   mysql:

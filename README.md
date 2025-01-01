@@ -26,9 +26,9 @@ cd workshop-node-sql-server
 In a new terminal:
 
 ```bash
-docker compose -f ./docker/sql-edge/compose.yml up
+docker compose -f ./docker/mssql/compose.yml up
 # Alternatively if you want to run in detached mode
-docker compose -f ./docker/sql-edge/compose.yml up -d --wait
+docker compose -f ./docker/mssql/compose.yml up -d --wait
 ```
 
 ### Create the database
@@ -66,7 +66,7 @@ The monorepo is organized as follows:
 │   │── fastify-app
 │   └── next-app       ✅ Nextjs 14+ / hono api / kysely.
 ├── docker
-│   └── sql-edge       ✅ compose.yaml
+│   └── mssql          ✅ compose.yaml
 └── libs
     └── db-sqlserver   ✅ Manages database creation, types and seeds
 ```

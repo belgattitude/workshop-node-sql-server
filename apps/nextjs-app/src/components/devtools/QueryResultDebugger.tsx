@@ -1,6 +1,6 @@
 'use server';
 
-import { isQueryResultError, type QueryResult } from '@flowblade/source-kysely';
+import { isQueryResultError, type QueryResult } from '@flowblade/core';
 import { format } from 'sql-formatter';
 
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';

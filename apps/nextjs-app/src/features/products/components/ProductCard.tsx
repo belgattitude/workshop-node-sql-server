@@ -1,4 +1,4 @@
-import type { InferAsyncQueryResultData } from '@flowblade/source-kysely';
+import type { InferAsyncQueryResultData } from '@flowblade/core';
 import type { FC } from 'react';
 
 import { cn } from '@/components/utils';

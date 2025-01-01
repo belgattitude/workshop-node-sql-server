@@ -33,7 +33,7 @@ jobs:
         uses: ./.github/actions/yarn-nm-install
 
       - name: 🧪 Start Azure SQL Edge
-        run: docker compose -f docker/sql-edge/compose.yml up -d --wait
+        run: docker compose -f docker/mssql/compose.yml up -d --wait
 
       - name: 🧪 Create database
         working-directory: "libs/db-sqlserver"

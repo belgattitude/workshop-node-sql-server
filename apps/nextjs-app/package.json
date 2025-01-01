@@ -37,7 +37,10 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@flowblade/source-kysely": "0.11.0",
+    "@flowblade/core": "0.2.2",
+    "@flowblade/source-duckdb": "0.1.2",
+    "@flowblade/source-kysely": "0.13.2",
+    "@flowblade/sql-tag": "0.1.2",
     "@hono/node-server": "1.13.7",
     "@hono/swagger-ui": "0.5.0",
     "@httpx/assert": "0.15.1",
@@ -66,6 +69,7 @@
     "@workshop/db-sqlserver": "workspace:*",
     "clsx": "2.1.1",
     "dequal": "2.0.3",
+    "duckdb-async": "1.1.3",
     "es-toolkit": "1.31.0",
     "hono": "4.6.15",
     "hono-zod-openapi": "0.5.0",
@@ -92,7 +96,7 @@
     "zod": "3.24.1"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.17.0",
+    "@belgattitude/eslint-config-bases": "6.18.0",
     "@faker-js/faker": "9.3.0",
     "@spotlightjs/spotlight": "2.9.0",
     "@storybook/addon-essentials": "8.4.7",
@@ -109,15 +113,15 @@
     "@testing-library/react": "16.1.0",
     "@testing-library/user-event": "14.5.2",
     "@total-typescript/ts-reset": "0.6.1",
-    "@types/node": "22.10.2",
+    "@types/node": "22.10.3",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
-    "@typescript-eslint/eslint-plugin": "8.18.2",
-    "@typescript-eslint/parser": "8.18.2",
+    "@typescript-eslint/eslint-plugin": "8.19.0",
+    "@typescript-eslint/parser": "8.19.0",
     "@valibot/to-json-schema": "1.0.0-beta.3",
-    "@vitejs/plugin-react-swc": "3.7.2",
-    "@vitest/coverage-v8": "2.1.8",
-    "@vitest/ui": "2.1.8",
+    "@vitejs/plugin-react": "4.3.4",
+    "@vitest/coverage-v8": "3.0.0-beta.3",
+    "@vitest/ui": "3.0.0-beta.3",
     "autoprefixer": "10.4.20",
     "cross-env": "7.0.3",
     "dotenv-expand": "12.0.1",
@@ -125,7 +129,7 @@
     "dotenv-flow-cli": "1.1.1",
     "eslint": "8.57.1",
     "eslint-config-next": "15.1.3",
-    "happy-dom": "16.0.1",
+    "happy-dom": "16.2.9",
     "npm-run-all2": "7.0.2",
     "openapi-typescript": "7.4.4",
     "postcss": "8.4.49",
@@ -138,7 +142,7 @@
     "typescript": "5.7.2",
     "vite": "6.0.6",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "2.1.8",
+    "vitest": "3.0.0-beta.3",
     "webpack": "5.97.1"
   }
 }
