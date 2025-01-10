@@ -2556,37 +2556,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flowblade/core@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@flowblade/core@npm:0.2.2"
+"@flowblade/core@npm:0.2.3":
+  version: 0.2.3
+  resolution: "@flowblade/core@npm:0.2.3"
   dependencies:
-    "@httpx/plain-object": "npm:^2.0.3"
-  checksum: 10c0/e81e2dab500c865b7c072c2fff9de5bab160607ed80d7051234fdce877505a6d9875194a9cc20b5979a9c253341525fce38f10dc6c56958bd1f81fcf1b709709
+    "@httpx/plain-object": "npm:^2.0.4"
+    typescript-result: "npm:^3.1.1"
+  checksum: 10c0/f0c1ae838581eeb46a1518e102899c9ba95ef5bc48ce3b7a77697644e47e30d5a3000466585092df27bd46aeac7503f13df355c9cf01915a541cb967c136a88c
   languageName: node
   linkType: hard
 
-"@flowblade/source-duckdb@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@flowblade/source-duckdb@npm:0.1.3"
+"@flowblade/source-duckdb@npm:0.1.4":
+  version: 0.1.4
+  resolution: "@flowblade/source-duckdb@npm:0.1.4"
   peerDependencies:
-    "@flowblade/core": ^0.2.2
-    "@flowblade/sql-tag": ^0.1.3
+    "@flowblade/core": ^0.2.3
+    "@flowblade/sql-tag": ^0.1.4
     duckdb-async: ^1.1.3
-  checksum: 10c0/41bf318a720b5a1dc472f8a5562650b82c0afb8f08a0dee6e50e99932759e6832e58c520ef3806baa14cf9df2cca6c93492821bdff5a7d50b574c5ed048b6599
+  checksum: 10c0/85176545e1ebb931d3d1c044889ba54e665802341aa3e67197f1a4cd4d62bd9aa4506638f9bef7ccc6dd79814f3c557841e3f28d8e6f27eaa525dd57f9a10765
   languageName: node
   linkType: hard
 
-"@flowblade/source-kysely@npm:0.13.2":
-  version: 0.13.2
-  resolution: "@flowblade/source-kysely@npm:0.13.2"
+"@flowblade/source-kysely@npm:0.13.3":
+  version: 0.13.3
+  resolution: "@flowblade/source-kysely@npm:0.13.3"
   dependencies:
     "@httpx/assert": "npm:^0.15.1"
     "@httpx/dsn-parser": "npm:^1.8.5"
-    "@httpx/plain-object": "npm:^2.0.3"
-    type-fest: "npm:^4.31.0"
-    valibot: "npm:^1.0.0-beta.9"
+    "@httpx/plain-object": "npm:^2.0.4"
+    type-fest: "npm:^4.32.0"
+    valibot: "npm:^1.0.0-beta.11"
   peerDependencies:
-    "@flowblade/core": ^0.2.2
+    "@flowblade/core": ^0.2.3
+    "@flowblade/sql-tag": ^0.1.4
     kysely: ^0.27.5
     tarn: ^3.0.2
     tedious: ^19.0.0
@@ -2595,14 +2597,14 @@ __metadata:
       optional: true
     tedious:
       optional: true
-  checksum: 10c0/83f295d011ec6ba085748dec03da97ee3f8d6b9630330f2090ab8de84f30e27bd8f77fd98b4a4b1453b5c19e6b1fdd7216590526d7289a8741b66cf15b4c7c75
+  checksum: 10c0/f7971dfeab0f7559eaac03a9f8d95388056efda8d15164831a5eff0ce05ce6bb512622d63e2afb6150946c13354f9ef862afb41887208bb968ee3364bed3fe5a
   languageName: node
   linkType: hard
 
-"@flowblade/sql-tag@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@flowblade/sql-tag@npm:0.1.3"
-  checksum: 10c0/4fd8b43c81853d0eb6b1d6ce1ca3c6cb8b0888424df27a79d92c45c1333153e766340884eca4d612a298bd2cccf6c6bb890371505b619bc001d5ef26a26cc6a4
+"@flowblade/sql-tag@npm:0.1.4":
+  version: 0.1.4
+  resolution: "@flowblade/sql-tag@npm:0.1.4"
+  checksum: 10c0/41c5998f726b1e3b9ace3b82b92c4bd9fba836c3ad0a45510562c619314397183ab7616af20ff5883e22e945f60c86e16a4bcb5dcd5630e8515416ab358eb32b
   languageName: node
   linkType: hard
 
@@ -2671,7 +2673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@httpx/plain-object@npm:2.0.4, @httpx/plain-object@npm:^2.0.3, @httpx/plain-object@npm:^2.0.4":
+"@httpx/plain-object@npm:2.0.4, @httpx/plain-object@npm:^2.0.4":
   version: 2.0.4
   resolution: "@httpx/plain-object@npm:2.0.4"
   checksum: 10c0/47563cb3213206afd0421e00d86930730fe48ede479c412f572571de45ba9b5ed12e30c6a8c8ff03ee48673a87ea66f9b074e1dcd041b34959e99a3f7e5e8299
@@ -10287,8 +10289,8 @@ __metadata:
     "@fastify/swagger": "npm:9.4.0"
     "@fastify/swagger-ui": "npm:5.2.0"
     "@fastify/type-provider-typebox": "npm:5.1.0"
-    "@flowblade/core": "npm:0.2.2"
-    "@flowblade/source-kysely": "npm:0.13.2"
+    "@flowblade/core": "npm:0.2.3"
+    "@flowblade/source-kysely": "npm:0.13.3"
     "@httpx/assert": "npm:0.15.1"
     "@httpx/dsn-parser": "npm:1.8.5"
     "@httpx/exception": "npm:3.0.11"
@@ -13994,10 +13996,10 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:6.18.2"
     "@faker-js/faker": "npm:9.3.0"
-    "@flowblade/core": "npm:0.2.2"
-    "@flowblade/source-duckdb": "npm:0.1.3"
-    "@flowblade/source-kysely": "npm:0.13.2"
-    "@flowblade/sql-tag": "npm:0.1.3"
+    "@flowblade/core": "npm:0.2.3"
+    "@flowblade/source-duckdb": "npm:0.1.4"
+    "@flowblade/source-kysely": "npm:0.13.3"
+    "@flowblade/sql-tag": "npm:0.1.4"
     "@hono/node-server": "npm:1.13.7"
     "@hono/swagger-ui": "npm:0.5.0"
     "@httpx/assert": "npm:0.15.1"
@@ -18702,7 +18704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:4.32.0, type-fest@npm:^4.31.0, type-fest@npm:^4.7.1":
+"type-fest@npm:4.32.0, type-fest@npm:^4.32.0, type-fest@npm:^4.7.1":
   version: 4.32.0
   resolution: "type-fest@npm:4.32.0"
   checksum: 10c0/e2e877055487d109eba99afc58211db4a480837ff7b243c7de0b3e2ac29fdce55ab55e201c64cb1a8b2aeffce7e8f60ae3ce3a2f7e6fb68261d62743e54288ba
@@ -18818,6 +18820,13 @@ __metadata:
     possible-typed-array-names: "npm:^1.0.0"
     reflect.getprototypeof: "npm:^1.0.6"
   checksum: 10c0/e38f2ae3779584c138a2d8adfa8ecf749f494af3cd3cdafe4e688ce51418c7d2c5c88df1bd6be2bbea099c3f7cea58c02ca02ed438119e91f162a9de23f61295
+  languageName: node
+  linkType: hard
+
+"typescript-result@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "typescript-result@npm:3.1.1"
+  checksum: 10c0/fd628418e9d98af28bf793ef9bd27f9d379d41cbb2c86b8dc85fe2d87608fd7f7e992ef4e469ef88d095d45e36e1c7ef008d0669b9644173b560c937e0b0fe11
   languageName: node
   linkType: hard
 
@@ -19144,7 +19153,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"valibot@npm:1.0.0-beta.11, valibot@npm:^1.0.0-beta.9":
+"valibot@npm:1.0.0-beta.11, valibot@npm:^1.0.0-beta.11":
   version: 1.0.0-beta.11
   resolution: "valibot@npm:1.0.0-beta.11"
   peerDependencies:

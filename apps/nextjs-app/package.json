@@ -37,10 +37,10 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@flowblade/core": "0.2.2",
-    "@flowblade/source-duckdb": "0.1.3",
-    "@flowblade/source-kysely": "0.13.2",
-    "@flowblade/sql-tag": "0.1.3",
+    "@flowblade/core": "0.2.3",
+    "@flowblade/source-duckdb": "0.1.4",
+    "@flowblade/source-kysely": "0.13.3",
+    "@flowblade/sql-tag": "0.1.4",
     "@hono/node-server": "1.13.7",
     "@hono/swagger-ui": "0.5.0",
     "@httpx/assert": "0.15.1",
