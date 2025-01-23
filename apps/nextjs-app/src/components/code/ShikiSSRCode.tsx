@@ -30,7 +30,14 @@ export async function ShikiSSRCode(props: Props) {
   const html = await codeToHtml(code, {
     lang,
     theme,
-    transformers: [transformerNotationHighlight(), transformerNotationDiff()],
+    transformers: [
+      transformerNotationHighlight({
+        matchAlgorithm: 'v3',
+      }),
+      transformerNotationDiff({
+        matchAlgorithm: 'v3',
+      }),
+    ],
   });
 
   return (

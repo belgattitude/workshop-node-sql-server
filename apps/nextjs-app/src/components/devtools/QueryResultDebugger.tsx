@@ -1,18 +1,18 @@
 'use server';
 
-import type { QResult } from '@flowblade/core';
+import type { QError, QResult } from '@flowblade/core';
 import { format } from 'sql-formatter';
 
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';
 import { cn } from '@/components/utils';
 
 type Props<T extends unknown[] = unknown[]> = {
-  result: QResult<T>;
+  result: QResult<T, QError>;
 };
 
 export const QueryResultDebugger = async (props: Props) => {
   const { result } = props;
-  const isError = isQueryResultError(result);
+  const isError = result.error !== undefined;
 
   const { errorMsg, meta, data } = {
     errorMsg: isError ? result.error.message : null,
@@ -21,9 +21,11 @@ export const QueryResultDebugger = async (props: Props) => {
   };
 
   let formattedSql: string | undefined;
-  if (meta?.query?.sql !== undefined) {
+  const firstSqlSpan = meta?.getSpans().find((span) => span.type === 'sql');
+  const sql = firstSqlSpan === undefined ? undefined : firstSqlSpan.sql;
+  if (sql !== undefined) {
     try {
-      formattedSql = format(meta.query.sql, { language: 'tsql' });
+      formattedSql = format(sql, { language: 'tsql' });
     } catch (e) {
       formattedSql = `Failed to format SQL ${(e as Error).message}`;
     }

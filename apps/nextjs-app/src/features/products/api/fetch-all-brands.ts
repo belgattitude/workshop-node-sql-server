@@ -2,7 +2,6 @@ import type { BrandRepo } from '@/features/products/server/brand.repo';
 
 type Response = Awaited<ReturnType<BrandRepo['search']>>;
 const tempResponse = {
-  success: true,
   data: [
     {
       name: 'Nestlé',
@@ -13,7 +12,7 @@ const tempResponse = {
 
 export const fetchAllBrands = async () => {
   return Promise.resolve(tempResponse).then((result) => {
-    if (!result.success) {
+    if (result.error !== undefined) {
       throw new Error(result.error.message);
     }
     return result.data;

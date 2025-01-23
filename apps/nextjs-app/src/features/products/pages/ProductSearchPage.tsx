@@ -1,6 +1,6 @@
 'use client';
 
-import type { QueryResultSuccess } from '@flowblade/core';
+import type { InferQResult } from '@flowblade/core';
 import { useQuery } from '@tanstack/react-query';
 
 import { SideBar } from '@/components/sidebar/SideBar';
@@ -26,9 +26,9 @@ export const ProductSearchPage = () => {
   }
 
   const products =
-    data?.success === true
+    data?.error === undefined
       ? // isQueryResultSuccess(data)
-        (data as unknown as QueryResultSuccess<ProductRepoSearchResult>).data
+        (data.data as unknown as InferQResult<ProductRepoSearchResult>)
       : null;
 
   return (

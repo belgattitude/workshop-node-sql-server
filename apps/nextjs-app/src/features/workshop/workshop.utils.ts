@@ -1,4 +1,4 @@
-import type { QMeta } from '@flowblade/core';
+import type { QMetaSqlSpan } from '@flowblade/core';
 import { openApi } from 'hono-zod-openapi';
 import { z } from 'zod';
 
@@ -10,19 +10,16 @@ export type WorkshopValidator = {
 };
 
 const zMeta = z.object({
+  type: z.literal('sql'),
   affectedRows: z.number().optional(),
   timeMs: z.number().optional(),
-  query: z
-    .object({
-      sql: z.string().optional(),
-      params: z.array(z.unknown()).optional(),
-    } satisfies Record<keyof QMeta['spans'][''], z.Schema>)
-    .optional(),
-} satisfies Record<keyof QueryResultMeta, z.Schema>);
+  sql: z.string().optional(),
+  params: z.array(z.unknown()).optional(),
+} satisfies Record<keyof QMetaSqlSpan, z.Schema>);
 
 const zError = z.object({
   message: z.string(),
-} satisfies Record<keyof QueryResultError['error'], z.Schema>);
+});
 
 export const zQueryResult = <T extends z.Schema>(zSchema: T) =>
   z.object({
