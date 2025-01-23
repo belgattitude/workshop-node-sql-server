@@ -1,5 +1,52 @@
 @layer tailwind-base, primereact, tailwind-utilities;
 
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --font-*: initial;
+  --font-sans: var(--font-family-text-primary), ui-sans-serif, system-ui,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --font-family-inter: var(--font-family-inter), ui-sans-serif, system-ui,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  --color-brand-color-50: hsl(150, 27%, 92%);
+  --color-brand-color-100: hsl(150, 27%, 88%);
+  --color-brand-color-200: hsl(150, 27%, 85%);
+  --color-brand-color-300: hsl(150, 27%, 82%);
+  --color-brand-color-400: hsl(150, 27%, 78%);
+  --color-brand-color-500: hsl(150, 27%, 74%);
+  --color-brand-color-600: hsl(150, 27%, 71%);
+  --color-brand-color-700: hsl(150, 27%, 67%);
+  --color-brand-color-800: hsl(150, 27%, 62%);
+  --color-brand-color-900: hsl(150, 27%, 45%);
+  --color-brand-color: hsl(150, 27%, 78%);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
 /*
 @import 'primereact/resources/themes/soho-light/theme.css' layer(primereact);
 */
@@ -9,15 +56,13 @@
 */
 
 @layer tailwind-base {
-  @tailwind base;
+  @import 'tailwindcss';
 }
 /*
 @layer primereact {
 }*/
 
 @layer tailwind-utilities {
-  @tailwind components;
-  @tailwind utilities;
 }
 
 .shiki {
@@ -31,7 +76,7 @@
     }
     &.highlighted,
     &.diff {
-      @apply -ml-4 -mr-5 inline-block w-[calc(100%+(theme(spacing.5)+theme(spacing.4)))] pl-4 pr-5;
+      @apply -ml-4 -mr-5 inline-block w-[calc(100%+(--spacing(5)+(--spacing(4))))] pl-4 pr-5;
     }
     &.highlighted {
       @apply border-neutral-500 bg-neutral-800;
@@ -50,7 +95,7 @@
         }
       }
       &.remove {
-        @apply border-orange-500 bg-orange-500/30 opacity-70 *:!text-neutral-400 before:text-orange-500;
+        @apply border-orange-500 bg-orange-500/30 opacity-70 *:text-neutral-400! before:text-orange-500;
         span:first-child::before {
           @apply text-orange-500 content-["-"];
         }

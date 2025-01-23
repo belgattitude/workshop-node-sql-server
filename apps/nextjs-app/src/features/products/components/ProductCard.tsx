@@ -13,7 +13,7 @@ export const ProductCard: FC<Props> = (props) => {
 
   return (
     <div
-      className={cn('max-w-sm overflow-hidden rounded shadow-lg', className)}
+      className={cn('max-w-sm overflow-hidden rounded-sm shadow-lg', className)}
     >
       <div className="aspect-h-9 aspect-w-16 lg:aspect-none h-40">
         <img

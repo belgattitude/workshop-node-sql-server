@@ -25,7 +25,7 @@ export const CityMultiSelect: FC<Props> = (props) => {
   const [selectedCities, setSelectedCities] = useState<City[]>();
 
   return (
-    <div className={cn('', className)}>
+    <div className={cn('flex', className)}>
       <MultiSelect
         value={selectedCities}
         onChange={(e) => setSelectedCities(e.value as City[])}
@@ -35,7 +35,7 @@ export const CityMultiSelect: FC<Props> = (props) => {
         placeholder="Select Cities"
         maxSelectedLabels={3}
         filter={true}
-        className="flex"
+        className="flex w-full"
       />
     </div>
   );

@@ -35,7 +35,7 @@ export const QueryResultDebugger = async (props: Props) => {
     <div className={'m-5 p-5'}>
       <div
         className={
-          'rounded-lg bg-gradient-to-r from-sky-200 to-sky-400 p-3 md:p-8 lg:p-12'
+          'rounded-lg bg-linear-to-r from-sky-200 to-sky-400 p-3 md:p-8 lg:p-12'
         }
       >
         {errorMsg !== null && (
