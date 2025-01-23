@@ -1,5 +1,5 @@
 import {
-  createKyselySqlServerDialect,
+  createKyselyMssqlDialect,
   TediousConnUtils,
 } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
@@ -15,7 +15,7 @@ const logPooler = (msg: string) => {
   console.log(`[pooler] ${msg}`);
 };
 
-const dialect = createKyselySqlServerDialect({
+const dialect = createKyselyMssqlDialect({
   tediousConfig: config,
   poolOptions: {
     min: 0,

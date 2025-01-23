@@ -1,13 +1,13 @@
 'use server';
 
-import { isQueryResultError, type QueryResult } from '@flowblade/core';
+import type { QResult } from '@flowblade/core';
 import { format } from 'sql-formatter';
 
 import { ShikiSSRCode } from '@/components/code/ShikiSSRCode';
 import { cn } from '@/components/utils';
 
 type Props<T extends unknown[] = unknown[]> = {
-  result: QueryResult<T>;
+  result: QResult<T>;
 };
 
 export const QueryResultDebugger = async (props: Props) => {

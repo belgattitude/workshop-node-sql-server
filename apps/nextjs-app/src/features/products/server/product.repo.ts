@@ -1,7 +1,4 @@
-import type {
-  AsyncQueryResult,
-  InferAsyncQueryResultData,
-} from '@flowblade/core';
+import type { QResult } from '@flowblade/core';
 import type { KyselyDatasource } from '@flowblade/source-kysely';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
 import { z } from 'zod';
@@ -44,7 +41,7 @@ export class ProductRepo<
   }
   search = async (
     params: ProductRepoSearchParams
-  ): AsyncQueryResult<ProductRepoSearchResult> => {
+  ): QResult<ProductRepoSearchResult> => {
     const { searchName, limit } = params;
 
     const query = this.ds.queryBuilder

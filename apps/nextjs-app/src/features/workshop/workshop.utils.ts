@@ -1,4 +1,4 @@
-import type { QueryResultError, QueryResultMeta } from '@flowblade/core';
+import type { QMeta } from '@flowblade/core';
 import { openApi } from 'hono-zod-openapi';
 import { z } from 'zod';
 
@@ -16,7 +16,7 @@ const zMeta = z.object({
     .object({
       sql: z.string().optional(),
       params: z.array(z.unknown()).optional(),
-    } satisfies Record<keyof QueryResultMeta['query'], z.Schema>)
+    } satisfies Record<keyof QMeta['spans'][''], z.Schema>)
     .optional(),
 } satisfies Record<keyof QueryResultMeta, z.Schema>);
 
