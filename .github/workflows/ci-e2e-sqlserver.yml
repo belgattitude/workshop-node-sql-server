@@ -32,7 +32,7 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
 
-      - name: 🧪 Start Azure SQL Edge
+      - name: 🧪 Start Mssql server
         run: docker compose -f docker/mssql/compose.yml up -d --wait
 
       - name: 🧪 Create database
