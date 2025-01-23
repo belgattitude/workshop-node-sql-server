@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import type { AsyncQueryResult } from '@flowblade/core';
+import { type AsyncQResult, QMeta, QResult } from '@flowblade/core';
 import type { KyselyDatasource } from '@flowblade/source-kysely';
 import { isStringNonEmpty } from '@httpx/assert';
 import type { DBKyselySqlServer } from '@workshop/db-sqlserver/kysely-types';
@@ -45,7 +45,7 @@ export class WorkshopRepo<
    */
   getStarter = async (
     params: GetStarterParams
-  ): AsyncQueryResult<GetStarterResult> => {
+  ): AsyncQResult<GetStarterResult> => {
     const { limit, searchName } = params;
     const sqlRaw = sql<GetStarterResult>` 
        SELECT
@@ -54,7 +54,7 @@ export class WorkshopRepo<
        FROM [common].[brand] as b
        -- WHERE b.name like 'brand name'
     `;
-    return this.ds.queryRaw(sqlRaw, {
+    return this.ds.query(sqlRaw, {
       name: 'workshopRepo.getStarter',
     });
   };
@@ -64,18 +64,18 @@ export class WorkshopRepo<
    */
   getBrands = async (
     params: GetBrandsParams
-  ): AsyncQueryResult<GetBrandsResult> => {
+  ): AsyncQResult<GetBrandsResult> => {
     const { limit } = params;
 
-    return {
-      success: true,
+    return new QResult({
+      meta: new QMeta({ name: 'workshopRepo.getBrands' }),
       data: [
         {
           id: 1,
           name: 'brand name',
         },
       ].slice(0, limit),
-    };
+    });
   };
 
   /**
@@ -83,10 +83,10 @@ export class WorkshopRepo<
    */
   getProducts = async (
     params: GetProductsParams
-  ): AsyncQueryResult<GetProductsResult> => {
+  ): AsyncQResult<GetProductsResult> => {
     const { searchName, limit } = params;
-    return {
-      success: true,
+    return new QResult({
+      meta: new QMeta({ name: 'workshopRepo.getProducts' }),
       data: [
         {
           id: 1,
@@ -103,7 +103,7 @@ export class WorkshopRepo<
             : true
         )
         .slice(0, limit),
-    }; // satisfies QueryResult<Q2Result>;
+    });
   };
 
   /**
@@ -130,7 +130,7 @@ export class WorkshopRepo<
    */
   getAdvanced = async (
     params: GetAdvancedParams
-  ): AsyncQueryResult<GetAdvancedResult> => {
+  ): AsyncQResult<GetAdvancedResult> => {
     const { limit } = params;
 
     const initialTableData: GetAdvancedResult = Array.from(
@@ -190,6 +190,6 @@ export class WorkshopRepo<
       FROM #correctedProducts;
     `;
 
-    return this.ds.queryRaw(sqlRaw);
+    return this.ds.query(sqlRaw);
   };
 }

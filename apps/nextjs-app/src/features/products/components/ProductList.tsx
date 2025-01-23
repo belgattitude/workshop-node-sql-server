@@ -1,4 +1,4 @@
-import type { InferAsyncQueryResultData } from '@flowblade/core';
+import type { InferQResult } from '@flowblade/core';
 import type { FC } from 'react';
 
 import { cn } from '@/components/utils';
@@ -7,7 +7,7 @@ import type { ProductRepo } from '@/features/products/server/product.repo';
 
 type Props = {
   className?: string;
-  data: InferAsyncQueryResultData<ReturnType<ProductRepo['search']>>;
+  data: InferQResult<ReturnType<ProductRepo['search']>>;
 };
 export const ProductList: FC<Props> = (props) => {
   const { data, className } = props;

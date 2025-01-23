@@ -1,4 +1,4 @@
-import type { InferAsyncQueryResultData } from '@flowblade/core';
+import type { InferQResult } from '@flowblade/core';
 import type { FC } from 'react';
 
 import { cn } from '@/components/utils';
@@ -6,14 +6,14 @@ import type { ProductRepo } from '@/features/products/server/product.repo';
 
 type Props = {
   className?: string;
-  product: InferAsyncQueryResultData<ReturnType<ProductRepo['search']>>[number];
+  product: InferQResult<ReturnType<ProductRepo['search']>>[number];
 };
 export const ProductCard: FC<Props> = (props) => {
   const { product, className } = props;
 
   return (
     <div
-      className={cn('max-w-sm overflow-hidden rounded shadow-lg', className)}
+      className={cn('max-w-sm overflow-hidden rounded-sm shadow-lg', className)}
     >
       <div className="aspect-h-9 aspect-w-16 lg:aspect-none h-40">
         <img

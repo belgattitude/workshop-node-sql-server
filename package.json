@@ -55,7 +55,7 @@
   ],
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.18.2",
+    "@belgattitude/eslint-config-bases": "6.20.0",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.11",
     "@commitlint/cli": "19.6.1",
@@ -67,9 +67,9 @@
     "gh-pages": "6.3.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "lint-staged": "15.3.0",
+    "lint-staged": "15.4.2",
     "npm-run-all2": "7.0.2",
-    "nx": "20.3.1",
+    "nx": "20.3.2",
     "prettier": "3.4.2",
     "rimraf": "6.0.1",
     "shell-quote": "1.8.2",
@@ -77,10 +77,12 @@
     "typescript": "5.7.3"
   },
   "resolutions": {
-    "esbuild": "^0.24.2"
+    "esbuild": "^0.24.2",
+    "source-map": ">=0.8.0-beta <0.9.0"
   },
   "resolutions-help": {
-    "esbuild": "Generally is safe to keep only the latest version (vite, vitest, tsup...)"
+    "esbuild": "Generally is safe to keep only the latest version (vite, vitest, tsup...)",
+    "source-map": "Till https://github.com/getsentry/spotlight/pull/667 is fixed"
   },
   "engines": {
     "node": ">=18.20.5",
