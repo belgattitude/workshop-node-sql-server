@@ -38,7 +38,7 @@ const maskPII = (param: unknown) => {
   return param;
 };
 
-export const dbKyselySqlServer = new Kysely<DBKyselySqlServer>({
+export const dbKyselyMssql = new Kysely<DBKyselySqlServer>({
   dialect: dialect,
   /*
   log: (event) => {

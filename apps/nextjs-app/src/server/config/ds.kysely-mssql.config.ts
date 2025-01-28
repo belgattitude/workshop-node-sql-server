@@ -1,7 +1,7 @@
 import { KyselyDatasource } from '@flowblade/source-kysely';
 
-import { dbKyselySqlServer } from '@/server/config/db.kysely-sqlserver.config';
+import { dbKyselyMssql } from '@/server/config/db.kysely-mssql.config';
 
 export const workshopDatasource = new KyselyDatasource({
-  connection: dbKyselySqlServer,
+  connection: dbKyselyMssql,
 });
