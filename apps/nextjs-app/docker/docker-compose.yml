@@ -1,0 +1,15 @@
+name: flowblade-nextjs-app
+services:
+  nextjs-app:
+    build:
+      context: ../../../..
+      dockerfile: ./docker/Dockerfile
+    restart: no
+    networks:
+      - flowblade-nextjs-app-net
+    ports:
+      - 3000:3000
+
+networks:
+  flowblade-nextjs-app-net:
+    driver: bridge
