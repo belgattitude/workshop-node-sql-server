@@ -62,9 +62,9 @@
     }
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.20.0",
+    "@belgattitude/eslint-config-bases": "6.21.0",
     "@faker-js/faker": "9.4.0",
-    "@httpx/assert": "0.15.1",
+    "@httpx/assert": "0.15.2",
     "@prisma/client": "6.3.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "22.12.0",
