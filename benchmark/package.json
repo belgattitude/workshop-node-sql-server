@@ -8,15 +8,15 @@
     "bench-api-product": "autocannon -c 100 -d 10 -p 10 http://localhost:3000/api/product-ex01"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.30.0",
+    "@belgattitude/eslint-config-bases": "6.35.0",
     "@total-typescript/ts-reset": "0.6.1",
-    "@types/node": "22.13.13",
-    "@typescript-eslint/eslint-plugin": "8.27.0",
-    "@typescript-eslint/parser": "8.27.0",
+    "@types/node": "22.14.1",
+    "@typescript-eslint/eslint-plugin": "8.29.1",
+    "@typescript-eslint/parser": "8.29.1",
     "autocannon": "8.0.0",
     "eslint": "8.57.1",
     "prettier": "3.5.3",
     "tsx": "4.19.3",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   }
 }
