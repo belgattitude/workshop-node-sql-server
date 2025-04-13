@@ -10,10 +10,8 @@ export const ReduxStoreProvider: FC<PropsWithChildren> = (props) => {
   const { children } = props;
   const storeRef = useRef<AppStore | null>(null);
 
-  if (!storeRef.current) {
-    // create new store instance to avoid leaking in ssr context
-    storeRef.current = makeReduxStore();
-  }
+  // create new store instance to avoid leaking in ssr context
+  storeRef.current ??= makeReduxStore();
 
   return <Provider store={storeRef.current}>{children}</Provider>;
 };

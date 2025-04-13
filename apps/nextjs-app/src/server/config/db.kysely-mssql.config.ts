@@ -20,16 +20,17 @@ const dialect = createKyselyMssqlDialect({
   poolOptions: {
     min: 0,
     max: 10,
-    // 👇 disable connection validation (avoid a round trip to the database)
-    validateConnections: false,
+
     // 👇 if the database connection fails, propagate the error to the caller
     //
     propagateCreateError: true,
     log: process.env.NODE_ENV === 'development' ? logPooler : undefined,
   },
   dialectConfig: {
+    // 👇 disable connection validation (avoid a round trip to the database)
+    validateConnections: false,
     // 👇 disable connection reset (avoid a round trip to the database)
-    resetConnectionOnRelease: false,
+    resetConnectionsOnRelease: false,
   },
 });
 

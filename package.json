@@ -51,9 +51,9 @@
     "apps/*",
     "libs/*"
   ],
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.9.1",
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "6.30.0",
+    "@belgattitude/eslint-config-bases": "6.35.0",
     "@changesets/changelog-github": "0.5.1",
     "@changesets/cli": "2.28.1",
     "@commitlint/cli": "19.8.0",
@@ -65,14 +65,14 @@
     "gh-pages": "6.3.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "lint-staged": "15.5.0",
+    "lint-staged": "15.5.1",
     "npm-run-all2": "7.0.2",
-    "nx": "20.6.2",
+    "nx": "20.7.2",
     "prettier": "3.5.3",
     "rimraf": "6.0.1",
     "shell-quote": "1.8.2",
     "syncpack": "13.0.3",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   },
   "resolutions": {
     "esbuild": "^0.25.0"

@@ -8,21 +8,21 @@
 erDiagram
 "locale" {
   Int id PK
-  String locale UK
-  String name_native
+  String(5) locale UK
+  String(40) name_native
   Boolean flag_active
   DateTime created_at
   DateTime updated_at "nullable"
 }
 "currency" {
   Int id PK
-  String code UK
+  String(3) code UK
   Int numeric_code UK
-  String name
-  String name_plural "nullable"
-  String symbol "nullable"
-  String symbol_native "nullable"
-  String rounding "nullable"
+  String(40) name
+  String(40) name_plural "nullable"
+  String(5) symbol "nullable"
+  String(5) symbol_native "nullable"
+  String(5) rounding "nullable"
   Int display_decimals "nullable"
   DateTime withdrawal_at "nullable"
   Boolean flag_active
@@ -31,7 +31,7 @@ erDiagram
 }
 "brand" {
   Int id PK
-  String name UK
+  String(200) name UK
   Boolean flag_active
   DateTime created_at
   DateTime updated_at "nullable"
@@ -39,10 +39,10 @@ erDiagram
 "product" {
   Int id PK
   Int brand_id FK "nullable"
-  String reference UK
-  String barcode_ean13 UK "nullable"
-  String name
-  String description "nullable"
+  String(40) reference UK
+  String(13) barcode_ean13 UK "nullable"
+  String(200) name
+  String(4000) description "nullable"
   Boolean flag_active
   DateTime created_at
   DateTime updated_at "nullable"
@@ -50,17 +50,17 @@ erDiagram
 "product_i18n" {
   Int id PK
   Int product_id FK
-  String locale FK
-  String name
+  String(5) locale FK
+  String(40) name
   DateTime created_at
   DateTime updated_at "nullable"
 }
 "currency_i18n" {
   Int id PK
   Int currency_id FK
-  String locale FK
-  String name
-  String name_plural "nullable"
+  String(5) locale FK
+  String(40) name
+  String(40) name_plural "nullable"
   DateTime created_at
   DateTime updated_at "nullable"
 }
